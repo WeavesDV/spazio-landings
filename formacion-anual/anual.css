@@ -110,8 +110,12 @@
 .steps h3 { font-family: var(--serif); font-weight: 400; font-size: 1.15rem; margin: 0 0 .35rem; }
 .steps p { font-size: var(--fs-small); color: var(--muted); margin: 0; }
 .steps .here-tag {
+  /* En la misma línea que el número, a la derecha: así el paso marcado no baja respecto a los otros tres */
+  position: absolute;
+  top: var(--s-3);
+  right: 0;
   display: inline-block;
-  margin-bottom: .4rem;
+  margin: 0;
   font-family: var(--sans);
   font-weight: 700;
   font-size: .68rem;
@@ -588,4 +592,16 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
 /* Pantallas bajas: mismo aire proporcional, sin pasarse del alto útil */
 @media (max-width: 1600px) and (max-height: 800px) {
   .section.formats, .section.cuando { padding-block: clamp(3.5rem, 10vh, 6.5rem); }
+}
+
+/* 31 · Rejillas simétricas: la cabecera y el contenido comparten las mismas dos columnas
+   (antes la cabecera iba a 7/5 y el contenido a 1/1, y la columna derecha arrancaba en dos sitios distintos) */
+@media (min-width: 960px) {
+  #precio .sec-head,
+  .ladder .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; }
+  #precio .price-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  #precio .sec-head h2,
+  .ladder .sec-head h2 { max-width: none; }
+  #precio .sec-sub,
+  .ladder .sec-sub { max-width: none; }
 }
