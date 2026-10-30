@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Spazio Bodywork · maquetas de revisión</title>
+<style>
+  :root { --malva:#928490; --arena:#DBC1AD; --ciruela:#35243E; --papel:#F3E8EB; --roto:#FBF8F6; --texto:#433E49; --sec:#6B6170; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; padding:clamp(1.5rem,4vw,4rem);
+         background:var(--roto); color:var(--texto);
+         font-family: ui-sans-serif, system-ui, "Helvetica Neue", Arial, sans-serif; }
+  main { width:100%; max-width:56rem; }
+  .iso { width:44px; height:44px; margin-bottom:1.6rem; image-rendering:auto; }
+  .eyebrow { margin:0 0 .6rem; font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--sec); }
+  h1 { margin:0 0 1rem; font-family: Georgia, "Times New Roman", serif; font-weight:400;
+       font-size:clamp(2rem,1.4rem+2.4vw,3.4rem); line-height:1.08; color:var(--ciruela); }
+  h1 em { font-style:italic; color:var(--malva); }
+  .lead { margin:0 0 2.6rem; max-width:44ch; font-size:1.05rem; line-height:1.6; color:var(--sec); }
+  ul { list-style:none; margin:0; padding:0; display:grid; gap:1px; background:#DED3D8; border:1px solid #DED3D8; }
+  li { background:var(--roto); }
+  a.card { display:grid; grid-template-columns:1fr auto; align-items:center; gap:1rem; padding:1.5rem 1.6rem;
+           text-decoration:none; color:inherit; transition:background-color .18s ease; }
+  a.card:hover { background:var(--papel); }
+  .card h2 { margin:0 0 .3rem; font-family: Georgia, serif; font-weight:400; font-size:1.3rem; color:var(--ciruela); }
+  .card p { margin:0; font-size:.9rem; color:var(--sec); }
+  .go { display:grid; place-items:center; width:2.4rem; height:2.4rem; border-radius:50%;
+        background:var(--malva); color:#fff; font-size:1rem; }
+  footer { margin-top:2.4rem; font-size:.78rem; line-height:1.7; color:var(--sec); }
+  footer b { color:var(--texto); font-weight:600; }
+</style>
+</head>
+<body>
+<main>
+  <img class="iso" src="formacion-anual/img/isotipo-spazio.webp" alt="">
+  <p class="eyebrow">Spazio Bodywork · maquetas</p>
+  <h1>Previews para revisión, <em>no publicadas</em>.</h1>
+  <p class="lead">Dos maquetas de la Formación Anual tal y como se están trabajando. La información marcada como pendiente
+     espera confirmación de la escuela antes de publicarse.</p>
+
+  <ul>
+    <li>
+      <a class="card" href="formacion-anual/">
+        <div>
+          <h2>Formación Anual · landing de venta</h2>
+          <p>Oferta completa, dos formatos, calendario por sede y reserva de 500 €</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="inmersion/">
+        <div>
+          <h2>Inmersión · landing del curso</h2>
+          <p>El curso de introducción, con plazas y fechas</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>
+    Maqueta estática para revisión de la escuela. No indexada en buscadores.<br>
+    <b>Pendiente de confirmación:</b> fechas del formato intensivo, precio del intensivo, licencia de las fotografías.
+  </footer>
+</main>
+</body>
+</html>

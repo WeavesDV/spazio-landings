@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inmersión en la esencia · Spazio Bodywork®</title>
+  <meta name="description" content="Dos días de práctica viva para incorporar los fundamentos del Masaje Californiano y del trabajo corporal psicosomático. Barcelona y Madrid.">
+  <!--
+    MAQUETA HTML/CSS · Landing «Inmersión Esencia Bodywork» · MLAB-427 · v6
+    (v6, 29-10-2026: revisión con Consultoría MTA — banner y naming, menú más grande,
+     sedes y fechas debajo del horario, convocatorias reservables con panel flotante,
+     formulario de dudas en el pie, menú móvil.)
+    Copy: copy-v2.md, literal. Los tramos [CONFIRMAR] y [PENDIENTE] NO están escritos.
+    Tipografías: fonts.css carga Nyght Serif y Nourd (las reales del sitio) solo para la maqueta;
+    en spaziobodywork.com ya están cargadas por Elementor.
+    Versiones anteriores: index.v4.html / index.v3.html
+  -->
+  <link rel="stylesheet" href="fonts.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+
+<!-- 00 · CABECERA (transparente sobre el hero) -->
+<header class="site-header">
+  <a class="wordmark" href="#inicio"><img class="isotipo" src="img/isotipo-spazio.webp" width="256" height="256" alt=""><span>Spazio Bodywork<sup>®</sup></span></a>
+  <nav class="site-nav" id="site-nav" aria-label="Secciones">
+    <a href="#programa">Programa</a>
+    <a href="#docentes">Docentes</a>
+    <a href="#precio">Precio</a>
+    <a class="nav-cta" href="#reserva">Reservar plaza</a>
+  </nav>
+  <a class="btn btn--solid btn--sm" href="#reserva">Reservar plaza</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- 01 · HERO (foto a sangre, toda la ventana) -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <!--
+      AVISO LEGAL: esta fotografía lleva marca de agua «© Farideh Diehl».
+      Hay que LICENCIARLA o SUSTITUIRLA antes de publicar.
+      (Se reutiliza como recorte de detalle en la sección 02: mismo aviso.)
+    -->
+    <img class="hero-img"
+         src="img/65A9077-1.jpg"
+         data-licencia="pendiente"
+         width="800" height="1199"
+         alt="Terapeuta inclinada sobre una persona tumbada en camilla, con las manos apoyadas en su pierna; luz cálida y un muro beige al fondo.">
+
+    <div class="hero-content wrap">
+      <p class="eyebrow">Ediciones presenciales en España</p>
+      <p class="product-name">Inmersión Esencia Bodywork<sup>®</sup></p>
+      <h1 id="hero-title">
+        <span class="h1-a">Un fin de semana <br>en la esencia de <br>Spazio&nbsp;Bodywork®</span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lead">Dos días de práctica viva para incorporar los fundamentos del Masaje Californiano y del trabajo corporal psicosomático. En el instituto fundado por Sujati Lacanna, que introdujo el Masaje Californiano en España con la primera escuela del país (2006).</p>
+        <div class="hero-action">
+          <p class="hero-price"><strong>250&nbsp;€</strong> <span>el fin de semana completo<br>reservas tu plaza con 80&nbsp;€</span></p>
+          <a class="btn btn--light" href="#reserva"><span>Elegir sede y reservar mi plaza</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · SEDES Y FECHAS (titular + ciudades con fechas debajo del horario + salas por sede a sangre) -->
+  <section class="section scene" aria-labelledby="scene-title">
+    <div class="wrap">
+      <h2 id="scene-title" class="display-mixed">Dos días para tocar <em>desde&nbsp;el&nbsp;centro.</em></h2>
+      <p class="scene-hours">Sábado y domingo · 10:00 — 19:30</p>
+    </div>
+
+    <!--
+      SEDES: radio + label + figure (sin JS). El selector de sede va DEBAJO de los horarios,
+      separado de la imagen, como pidió la revisión del 29-10.
+      FOTOS SIMULADAS (Unsplash, ver img/simuladas/CREDITOS.md): sustituir por las fotos reales de cada sala antes de publicar.
+      Para añadir una sede: copiar un <input>, un <label> con su fecha, un <figure class="room"> y su p de .room-info.
+    -->
+    <div class="rooms">
+      <input class="room-radio" type="radio" name="sala" id="sala-barcelona" checked>
+      <input class="room-radio" type="radio" name="sala" id="sala-madrid">
+      <input class="room-radio" type="radio" name="sala" id="sala-vigo">
+
+      <div class="rooms-bar wrap">
+        <div class="rooms-tabs" role="group" aria-label="Elegir sede">
+          <label for="sala-barcelona"><b>Barcelona</b> <span>21 y 22 de noviembre de 2026</span></label>
+          <label for="sala-madrid"><b>Madrid</b> <span>17 y 18 de abril 2027</span></label>
+          <label for="sala-vigo"><b>Vigo</b> <span>Fecha por confirmar</span></label>
+        </div>
+      </div>
+
+      <div class="rooms-stage">
+        <figure class="room room--barcelona">
+          <img src="img/simuladas/sala-barcelona-simulada.webp" width="1800" height="2700" loading="lazy"
+               alt="Foto simulada: sala de formación con muros de ladrillo, ventanales altos y suelo de madera con luz de tarde.">
+        </figure>
+        <figure class="room room--madrid">
+          <img src="img/simuladas/sala-madrid-simulada.webp" width="1800" height="1013" loading="lazy"
+               alt="Foto simulada: sala amplia tipo loft con pared de ladrillo, lámparas colgantes y luz lateral.">
+        </figure>
+        <figure class="room room--vigo">
+          <img src="img/simuladas/sala-vigo-simulada.webp" width="1800" height="1200" loading="lazy"
+               alt="Foto simulada: sala de práctica con techo de madera, ventanales y esterillas en el suelo.">
+        </figure>
+
+        <p class="room-flag">Foto simulada</p>
+
+        <p class="room-info room-info--barcelona"><span>Sala de formación · Barcelona</span> Sede Central · C/ Viladomat 152, 2ª</p>
+        <p class="room-info room-info--madrid"><span>Sala de formación · Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</p>
+        <p class="room-info room-info--vigo"><span>Sala de formación · Vigo</span> Espacio por confirmar</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="scene-body">
+        <p class="scene-lead"><span class="lead-open">La sala está en silencio y tus manos descansan sobre la espalda de otra persona.</span> No estás empujando con los hombros: tu peso nace desde tu centro y cae limpio hacia el suelo, tu respiración acompaña y la ola va de los pies a la cabeza sin que tengas que forzarla. Al terminar te das cuenta de que no te has cansado.</p>
+        <div class="scene-text">
+          <p>Así se aprende aquí: en presencia, con aceite, practicando por parejas en un espacio cuidado. Das y recibes en cada propuesta, porque el toque consciente solo se comprende desde dentro.</p>
+          <p>En la sala no se memorizan posturas rígidas. Se aprende a apoyar el peso, a respirar mientras se toca y a esperar. Cuando el cuerpo se apoya, la mano deja de empujar.</p>
+          <p class="more"><a class="link-arrow" href="#programa">Ver programa <span aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · TRES PREGUNTAS (como titulares, numeradas, con filete) -->
+  <section class="section questions bg-paper" aria-labelledby="q-title">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-aside">
+          <p class="label">Tres preguntas</p>
+          <h2 id="q-title" class="visually-hidden">Tres preguntas para empezar</h2>
+        </div>
+        <div class="split-main">
+          <ol class="q-list">
+            <li><span class="q-num" aria-hidden="true">01</span><p class="question">¿Te apasiona el bienestar y el contacto, pero no sabes por dónde empezar ni cómo usar tu cuerpo para no&nbsp;cansarte?</p></li>
+            <li><span class="q-num" aria-hidden="true">02</span><p class="question">¿Has aprendido con vídeos sueltos o técnicas mecánicas y te quedan dudas de postura, peso o&nbsp;fluidez?</p></li>
+            <li><span class="q-num" aria-hidden="true">03</span><p class="question">¿Quieres sentir en tu propio cuerpo si este es un oficio para ti antes de comprometerte con una formación&nbsp;larga?</p></li>
+          </ol>
+          <p class="answer">En estos dos días vas a tocar desde el primer momento, con supervisión cercana mientras practicas, y vas a salir sabiendo si quieres seguir este&nbsp;camino.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · LOS DOS DÍAS (cabecera a dos columnas + tres tarjetas) -->
+  <section class="section days" id="programa" aria-labelledby="days-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Los dos días</p>
+          <h2 id="days-title">Sábado y domingo, <em class="nowrap">de 10:00 a 19:30</em></h2>
+        </div>
+        <p class="sec-sub">Vas a aprender a usar el peso de todo tu cuerpo para no cargar la espalda, a tocar sin desgaste y a acompañar sin invadir. Sábado y domingo de 10:00 a 19:30, con pausa al mediodía. Presencial, en grupo y trabajando por parejas sobre camilla: en cada secuencia das y recibes.</p>
+      </header>
+
+      <ol class="cards cards--3">
+        <li class="card">
+          <span class="card-num" aria-hidden="true">1</span>
+          <h3>Enraizamiento y consciencia sensorial</h3>
+          <p>Empezamos preparando nuestro propio instrumento: prácticas de movimiento y presencia para despertar la conciencia sensorial y encontrar el centro antes de ir al contacto.</p>
+          <a class="link-arrow" href="#precio">Ver convocatorias <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="card">
+          <span class="card-num" aria-hidden="true">2</span>
+          <h3>La ola envolvente <span class="sub">(práctica con aceite)</span></h3>
+          <p>Cómo situarnos, cómo entregar el peso del cuerpo sin forzar la zona lumbar y cómo trazar los movimientos largos, fluidos e integradores —con manos, antebrazos y codos— que caracterizan al Masaje Californiano.</p>
+          <a class="link-arrow" href="#precio">Ver convocatorias <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="card">
+          <span class="card-num" aria-hidden="true">3</span>
+          <h3>Escucha psicosomática</h3>
+          <p>Integramos recursos para autorregularnos, neurocepción (la sensación de seguridad en quien da y quien recibe) y presencia para acompañar desde el respeto profundo.</p>
+          <a class="link-arrow" href="#precio">Ver convocatorias <span aria-hidden="true">→</span></a>
+        </li>
+      </ol>
+
+      <div class="days-extra">
+        <div>
+          <h3>Cómo se enseña</h3>
+          <p>Demostración explicada en el centro de la sala y práctica en pareja con acompañamiento directo a tu lado, cuidando tu eje corporal, tu respiración y la calidad del toque.</p>
+        </div>
+        <div>
+          <h3>Nivel y qué llevar</h3>
+          <p>No hace falta experiencia previa. Ropa cómoda que pueda mancharse de aceite. Camillas y aceites los ponemos nosotros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · PRECIO Y CONVOCATORIAS (tres tarjetas; la próxima, primera y destacada) -->
+  <section class="section pricing bg-paper" id="precio" aria-labelledby="price-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Convocatorias con inscripción abierta</p>
+          <h2 id="price-title">Precio y <em>condiciones</em></h2>
+        </div>
+        <div class="sec-sub">
+          <p class="caps">Sábado y domingo · 10:00 a 19:30</p>
+          <p>Para quien nunca ha tocado y para quien ya se dedica al masaje. Es una experiencia completa en sí misma y, a la vez, el primer paso del camino formativo de Spazio Bodywork® en nuestras distintas sedes.</p>
+        </div>
+      </header>
+
+      <ul class="cards cards--price">
+        <li class="price-card price-card--featured">
+          <p class="tag">Próxima convocatoria</p>
+          <h3>Barcelona</h3>
+          <p class="pc-date"><time datetime="2026-11-21"><b>21 y 22</b> de noviembre 2026</time></p>
+          <p class="pc-meta">Sede Central · C/ Viladomat 152, 2ª<br>Imparte Sujati</p>
+          <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
+          <ul class="checks">
+            <li>Los dos días de formación</li>
+            <li>Camillas y aceites</li>
+            <li>Reserva online de 80 €</li>
+            <li>Sábado y domingo 10:00–19:30</li>
+          </ul>
+          <a class="btn btn--solid btn--block" href="#reserva"><span>Reservar plaza</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </li>
+        <li class="price-card">
+          <h3>Barcelona</h3>
+          <p class="pc-date"><time datetime="2027-02-20"><b>20 y 21</b> de febrero 2027</time></p>
+          <p class="pc-meta">Sede Central · C/ Viladomat 152, 2ª<br>Imparte Sujati</p>
+          <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
+          <ul class="checks">
+            <li>Los dos días de formación</li>
+            <li>Camillas y aceites</li>
+            <li>Reserva online de 80 €</li>
+            <li>Sábado y domingo 10:00–19:30</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="#reserva"><span>Reservar plaza</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </li>
+        <li class="price-card">
+          <h3>Madrid</h3>
+          <p class="pc-date"><time datetime="2027-04-17"><b>17 y 18</b> de abril 2027</time></p>
+          <p class="pc-meta">Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)<br>Imparte María Lucas</p>
+          <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
+          <ul class="checks">
+            <li>Los dos días de formación</li>
+            <li>Camillas y aceites</li>
+            <li>Reserva online de 80 €</li>
+            <li>Sábado y domingo 10:00–19:30</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="#reserva"><span>Reservar plaza</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </li>
+      </ul>
+
+      <!-- Franja de condiciones: desglose 80/170 + qué incluye / no incluye / cómo se paga -->
+      <div class="terms">
+        <dl class="terms-split">
+          <div>
+            <dt>Reserva de plaza <span>(o el total)</span></dt>
+            <dd>80&nbsp;€</dd>
+          </div>
+          <div>
+            <dt>El resto, antes del inicio</dt>
+            <dd>170&nbsp;€</dd>
+          </div>
+        </dl>
+        <!-- PENDIENTE [CONFIRMAR]: fecha límite del resto, certificado y qué pasa con los 80 € si no puedes asistir -->
+        <section class="term" aria-labelledby="inc-title">
+          <h3 id="inc-title">Qué incluye</h3>
+          <p>Los dos días de formación, camillas y aceites.</p>
+        </section>
+        <section class="term" aria-labelledby="exc-title">
+          <h3 id="exc-title">Qué no incluye</h3>
+          <p>Alojamiento, comidas ni desplazamiento.</p>
+        </section>
+        <section class="term" aria-labelledby="pay-title">
+          <h3 id="pay-title">Cómo se paga</h3>
+          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro. Los 170 € restantes, por transferencia bancaria antes del inicio: al reservar recibes los datos de ingreso.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · QUÉ TE LLEVAS (banda arena: lista a la izquierda, cita grande a la derecha; no es un testimonio) -->
+  <section class="section band takeaway" aria-labelledby="take-title">
+    <div class="wrap take-grid">
+      <div class="take-aside">
+        <h2 id="take-title">Qué te <em>llevas</em></h2>
+        <ul class="take-list">
+          <li>Elementos básicos de las técnicas del Masaje Californiano</li>
+          <li>Trabajo Corporal Psicosomático básico</li>
+          <li>Conexión con el cliente / Presencia</li>
+          <li>Práctica de la Conciencia Sensorial</li>
+        </ul>
+      </div>
+      <blockquote class="take-quote">
+        <p><span class="lead-open">«Tocar con manos relajadas y presentes.</span> Aprender a mover la energía en todo mi cuerpo y el de la persona que recibe. Encontrar mi centro desde donde dar, sin esfuerzo. Ser consciente de mi respiración. Estar enraizad@, utilizando el peso de todo mi cuerpo. Atravesar las barreras de tocar y ser tocados desde este lugar de presencia y conexión. Tomar consciencia de la importancia de un espacio seguro.»</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 07 · QUIÉN LO IMPARTE (retrato a sangre por la izquierda + texto) -->
+  <section class="section teacher" id="docentes" aria-labelledby="teacher-title">
+    <div class="teacher-grid">
+      <figure class="teacher-photo">
+        <img src="img/sujati-experta-masaje-californiano-spain-portugal-barcelona-madrid-canarias-valencia-baleares-europe-france-1.webp"
+             width="686" height="826" loading="lazy"
+             alt="Retrato de Sujati en exterior, con mono blanco y una sonrisa, bajo luz suave.">
+        <figcaption>Sujati (Sandra C. Lacanna), creadora y directora de Spazio Bodywork®.</figcaption>
+      </figure>
+      <div class="teacher-text">
+        <p class="label">Docentes</p>
+        <h2 id="teacher-title">Quién lo <em>imparte</em></h2>
+        <p class="teacher-intro">El Instituto Spazio Bodywork® lleva La Inmersión en la esencia a distintas ciudades de España, manteniendo en todas las sedes el mismo programa, ritmo y cuidado del grupo.</p>
+        <div class="person">
+          <h3>Sujati (Sandra C. Lacanna)</h3>
+          <p class="role">Creadora y directora de Spazio Bodywork®. Ediciones de Barcelona y sedes invitadas.</p>
+          <p>Fundó la primera escuela de Masaje Californiano en España (2006). Más de 23 años de experiencia profesional: comenzó su formación como terapeuta en India en 1994, vivió dos años en la Comuna Internacional de Osho, se formó en Masaje Californiano en 2000 en la Oasis Massage School (donde fue asistente e instructora seis años) y está certificada internacionalmente como terapeuta de Masaje Esalen® por el Instituto Esalen de Big Sur (California), con formación en Experiencia Somática®.</p>
+          <figure class="signature">
+            <img src="img/sujati-signature-plum.png" width="1394" height="567" loading="lazy" alt="Firma de Sujati.">
+          </figure>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 07 · MARÍA LUCAS (fila espejo: texto a la izquierda, retrato a sangre por la derecha) -->
+    <div class="teacher-grid teacher-grid--alt">
+      <figure class="teacher-photo teacher-photo--alt">
+        <img src="img/maria-lucas.webp" width="1000" height="608" loading="lazy"
+             alt="Retrato de María Lucas tumbada sobre la hierba entre margaritas, mirando a cámara.">
+        <figcaption>María Lucas, directora de Espacio Calithai Masajes (Madrid).</figcaption>
+      </figure>
+      <div class="teacher-text">
+        <div class="person">
+          <h3>María Lucas</h3>
+          <p class="role">Instructora titular en la sede de Madrid.</p>
+          <p>Terapeuta en Masaje Californiano y Masaje Esalen, directora de Espacio Calithai Masajes. Comienza su formación en Masaje Californiano viviendo en Argentina en el año 2006 donde descubre la Escuela de Masajes y Artes Curativas Oasis. En el 2008 se instala de nuevo en Madrid donde conoce a Sujati, con quien colaborará como asistenta para el Instituto Spazio Bodywork®. El camino prosigue nutriéndolo en base a la vivencia personal y a la formación.</p>
+          <p>Realiza la Certificación en Masaje Esalen, Tejido Profundo (con Yamuna y Roger – Oasis) y talleres de especialización con Ingrid May (Oasis).</p>
+          <p>En el 2015 inaugura su propio espacio de trabajo en Madrid: Espacio Calithai Masajes, donde se dedica a dar sesiones de Masaje Californiano Esalen y a participar más estrechamente con el Instituto Spazio Bodywork®, abriendo el espacio de prácticas para los alumnos.</p>
+          <p>Se encuentra en el tercer año de formación de Somatic Experience®.</p>
+          <blockquote class="person-quote"><p>«Contemplo el cuerpo como una llave de exploración interna que nos conduce al silencio y a la alegría intrínseca de la vida.»</p></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07b · RESEÑAS DE GOOGLE (texto literal de Google Maps, capturado el 28-10-2026; ver resenas-google.json)
+       Valoración y recuentos de las fichas de Barcelona y Madrid. Se citan con nombre tal como aparecen publicados.
+       En Elementor: se puede sustituir por el widget de Trustindex que ya tiene el sitio. -->
+  <section class="section reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head">
+        <div class="reviews-score">
+          <p class="label">Reseñas en Google</p>
+          <h2 id="reviews-title" class="visually-hidden">Reseñas en Google</h2>
+          <p class="score"><span class="score-num">5,0</span> <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></p>
+          <ul class="score-list">
+            <li><span>323 reseñas</span> Barcelona</li>
+            <li><span>20 reseñas</span> Madrid</li>
+          </ul>
+          <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto+Spazio+Bodywork+Barcelona" target="_blank" rel="noopener">Leer todas en Google <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="reviews-lead">
+          <blockquote><p>«Mucho más allá de la técnica, esta escuela plantea un acompañamiento profundo, basado en la presencia y la escucha.»</p></blockquote>
+          <figcaption>Alicia Domínguez <span>· Reseña en Google</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <!-- Carrusel sin JS: scroll horizontal con snap -->
+    <ul class="reviews-track" aria-label="Reseñas de alumnas y alumnos">
+          <li class="review">
+            <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <p class="review-text">Una hermosa experiencia con el grupo de Spazio Bodywork. En los 9 días del intensivo básico pude incorporar nuevas herramientas para poder mejorar mi calidad de vida y la de mi entorno. El masaje californiano es una de las tantas ramas de trabajo y terapias interpersonales originadas en California en los 60 que hasta el día de hoy están vigentes y ganan cada vez más espacio en la salud considerando a cada individuo como tal y escuchando activamente sus necesidades individuales. El contacto consciente y de calidad es una de sus bases y en esta formación fue lo que más pude mejorar.<br>Recomiendo enormemente para todos los que quieran una experiencia profunda y enriquecedora.</p>
+            <p class="review-author">Ignacio Giordano</p>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <p class="review-text">Ha sido todo un privilegio descubrir el Arte del Masaje Californiano bajo la amorosa y profesional guía de dos auténticas Maestras como son Sujati y María. Un viaje experiencial altamente recomendable por su holística función, pues no se limita únicamente a la enseñanza de una técnica de masaje, sino que además, te eleva en tu sendero espiritual...liberando, sanando y regulando nuestro preciado Sistema Nervioso. Agradecer infinitamente a todo el equipo de Spazio Bodywork y de Dimas su afectuoso recibimiento, así como la dulce atención y extremo cuidado con los que en todo momento cubrían los corazones y estómagos de los que llegamos siendo auténticos desconocidos, para salir formando parte de esta bella comunidad del Masaje Californiano engendrada por Sujati, una alma cuya dedicación y vocación son derramadas en sus talleres. Namaste🙌</p>
+            <p class="review-author">María P. L.</p>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <p class="review-text">Nunca había contactado con el masaje Californiano y esta experiencia en Mallorca ha sido para mi de profunda  transformación, un viaje hacia mi parte mas afectiva, compasiva y  humana. Ha merecido la pena!!! El entorno, la sala, el  contacto, la presencia, la atención cuidadosa, el respeto hacia mi propio cuerpo y el de los demás.....Maravilloso!!! Gracias infinitas a Sujati y a todo el equipo por vuestra calidad humana y profesional. Hasta pronto!!!</p>
+            <p class="review-author">Eva Spreafico</p>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <p class="review-text">Descubrí el masaje californiano de una manera casual, podría decir que llegó a mi vida en el momento adecuado. Seguí mi intuición y me lance a realizar el curso de iniciación. Puedo afirmar que ha sido un antes y un después en mi vida. Jamás pensé que algo tan simple pudiera tener tanto que enseñarme y que descubrirme sobre mi verdadero ser.<br>Invito a todos a seguir su intuición y probar, si el algún momento, este masaje llega a tu vida.</p>
+            <p class="review-author">Luis Yanguas</p>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <p class="review-text">¡Maravillosa e inolvidable experiencia! Renovadora y nutritiva 🌱 A todos los niveles profesional y personal<br>Estupendo equipo de profesionales.<br>Un espacio y un lugar cálido y acogedor<br>Donde se siente el acompañamiento, la escucha y el cuidado del grupo, no solo a través del masaje, sino también de las dinámicas que se comparten que permiten conectar con nuestro interior bajar al cuerpo y disfrutar del momento presente<br>Un camino auténtico y profundo de auto conocimiento a través del contacto dando sino recibiendo<br>Gracias por todo lo vivido y compartido<br>a cada uno de los miembros de la escuela que lo hacen posible❤️</p>
+            <p class="review-author">Miriam García Fernández-Reija</p>
+          </li>
+    </ul>
+  </section>
+
+  <!-- 08 · TRAYECTORIA (cuatro fotos a sangre, de borde a borde) -->
+  <section class="section archive bg-paper" aria-labelledby="archive-title">
+    <div class="wrap archive-head">
+      <div>
+        <p class="label">Memoria · 2007 — 2015</p>
+        <h2 id="archive-title">Nuestra <em>trayectoria</em></h2>
+      </div>
+      <!-- PENDIENTE: enlazar «Ver trayectoria» a la página de historia del sitio (no existe aún en la maqueta) -->
+      <a class="btn btn--outline btn--sm" href="#"><span>Ver trayectoria</span> <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="archive-strip">
+      <figure>
+        <img src="img/MADRID-1er-curso-2007-1.webp" loading="lazy"
+             alt="Fotografía de archivo del primer curso en Madrid, 2007.">
+        <figcaption><span>2007</span> Madrid</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Esalen-2014-1.webp" loading="lazy"
+             alt="Fotografía de archivo de la estancia en Esalen, 2014.">
+        <figcaption><span>2014</span> Esalen</figcaption>
+      </figure>
+      <!-- PENDIENTE: confirmar año de la foto «Tribu en BCN» para completar el pie -->
+      <figure>
+        <img src="img/Tribu-en-BCN-1.webp" loading="lazy"
+             alt="Fotografía de archivo de un grupo de alumnado en Barcelona.">
+        <figcaption><span>Barcelona</span> Tribu en BCN</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Intensivo-2015-2.webp" loading="lazy"
+             alt="Fotografía de archivo de un curso intensivo, 2015.">
+        <figcaption><span>2015</span> Intensivo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 09 · CONVOCATORIAS Y RESERVA -->
+  <section class="section dates" id="reserva" aria-labelledby="dates-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Convocatorias y reserva</p>
+          <h2 id="dates-title">Convocatorias <em>abiertas</em></h2>
+        </div>
+        <div class="sec-sub">
+          <p class="caps">Sábado y domingo, de 10:00 a 19:30</p>
+        </div>
+      </header>
+
+      <!-- Tabla: Fecha · Ciudad y espacio · Imparte. Para añadir una convocatoria, copiar un <tr>. -->
+      <table class="dates-table">
+        <caption class="visually-hidden">Convocatorias abiertas: fecha, ciudad y espacio, y quién imparte</caption>
+        <thead>
+          <tr><th scope="col">Fecha</th><th scope="col">Ciudad y espacio</th><th scope="col">Imparte</th><th scope="col">Reservar</th></tr>
+        </thead>
+        <tbody>
+          <tr id="conv-barcelona-nov-2026" data-sede="Barcelona" data-fecha="21 y 22 de noviembre de 2026" data-lugar="Sede Central · C/ Viladomat 152, 2ª" data-imparte="Sujati">
+            <th scope="row" class="c-date"><time datetime="2026-11-21"><span class="d">21 y 22</span> de noviembre 2026</time></th>
+            <td class="c-place"><span class="city">Barcelona</span> <span class="venue-addr">Sede Central · C/ Viladomat 152, 2ª</span></td>
+            <td class="c-who"><span class="who-label">Imparte</span> Sujati</td>
+            <td class="c-cta"><button class="btn btn--solid btn--sm js-reserva" type="button">Reservar</button></td>
+          </tr>
+          <tr id="conv-barcelona-feb-2027" data-sede="Barcelona" data-fecha="20 y 21 de febrero de 2027" data-lugar="Sede Central · C/ Viladomat 152, 2ª" data-imparte="Sujati">
+            <th scope="row" class="c-date"><time datetime="2027-02-20"><span class="d">20 y 21</span> de febrero 2027</time></th>
+            <td class="c-place"><span class="city">Barcelona</span> <span class="venue-addr">Sede Central · C/ Viladomat 152, 2ª</span></td>
+            <td class="c-who"><span class="who-label">Imparte</span> Sujati</td>
+            <td class="c-cta"><button class="btn btn--outline btn--sm js-reserva" type="button">Reservar</button></td>
+          </tr>
+          <tr id="conv-madrid-abr-2027" data-sede="Madrid" data-fecha="17 y 18 de abril de 2027" data-lugar="Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)" data-imparte="María Lucas">
+            <th scope="row" class="c-date"><time datetime="2027-04-17"><span class="d">17 y 18</span> de abril 2027</time></th>
+            <td class="c-place"><span class="city">Madrid</span> <span class="venue-addr">Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</span></td>
+            <td class="c-who"><span class="who-label">Imparte</span> María Lucas</td>
+            <td class="c-cta"><button class="btn btn--outline btn--sm js-reserva" type="button">Reservar</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="booking">
+        <p class="table-note">La fecha más próxima viene preseleccionada en el formulario. ¿Nos escribes desde otra ciudad (Vigo, Málaga, Mallorca…)? Abre el desplegable de dudas del formulario o déjanos tu contacto y te avisaremos en cuanto abramos fecha en tu zona.</p>
+        <!-- HUECO: aquí se incrusta el widget de reserva del sitio (formulario de 4 pasos) -->
+        <div class="booking-slot" id="form-reserva">
+          <p class="booking-slot-title">Formulario de reserva</p>
+          <p class="booking-slot-sel" id="booking-sel">Convocatoria más próxima · Barcelona, 21 y 22 de noviembre de 2026</p>
+          <p class="booking-slot-note">Aquí va el formulario de reserva · widget de 4 pasos del sitio</p>
+        </div>
+      </div>
+      <p class="ethic">La Inmersión en la esencia es una formación vivencial. No es una terapia ni sustituye a un tratamiento.</p>
+    </div>
+  </section>
+
+  <!-- 10 · PREGUNTAS FRECUENTES (titular a la izquierda, lista a la derecha; primera abierta) -->
+  <section class="section faq bg-paper" aria-labelledby="faq-title">
+    <div class="wrap split">
+      <div class="split-aside">
+        <p class="label">Dudas</p>
+        <h2 id="faq-title">Preguntas <em>frecuentes</em></h2>
+      </div>
+      <div class="split-main faq-list">
+        <details open>
+          <summary>¿Necesito experiencia previa?</summary>
+          <p>No. Está pensado tanto para quien nunca ha aplicado el toque consciente como para quien ya practica masaje: empezamos por la base corporal y la escucha.</p>
+        </details>
+        <details>
+          <summary>Soy masajista, ¿me va a aportar algo?</summary>
+          <p>Sí: revisar desde dónde tocas y trabajar sin desgaste. Incorporas el peso de todo el cuerpo, la fluidez de la ola envolvente con manos, antebrazos y codos, y recursos de presencia y autorregulación.</p>
+        </details>
+        <details>
+          <summary>¿Es un curso suelto o el inicio de la formación?</summary>
+          <p>Funciona por sí mismo como inmersión de dos días y, a la vez, es la puerta de entrada al camino formativo de Spazio Bodywork®.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se paga la reserva?</summary>
+          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro al elegir sede y fecha. El resto, 170 €, se abona por transferencia bancaria antes del inicio de la formación.</p>
+        </details>
+        <details>
+          <summary>¿Qué tengo que llevar?</summary>
+          <p>Ropa cómoda que pueda mancharse. Camillas y aceites los ponemos nosotros.</p>
+        </details>
+        <details>
+          <summary>¿Puedo venir solo a recibir?</summary>
+          <p>No: esto es una formación y se aprende tocando a otras personas. Si lo que buscas es recibir un masaje, <a href="#dudas">escríbenos</a> y te orientamos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10b · DUDAS (formulario de consultas; teléfono, email y redes van en el pie).
+       Va ANTES del pie, a continuación de las preguntas frecuentes. -->
+  <section class="section dudas" id="dudas" aria-labelledby="dudas-title">
+    <div class="wrap split">
+      <div class="split-aside">
+        <p class="label">Dudas y consultas</p>
+        <h2 id="dudas-title">¿Te queda <em>alguna duda?</em></h2>
+        <p class="dudas-intro">Escríbenos aquí y te contestamos en menos de 24&nbsp;h.</p>
+      </div>
+      <form class="split-main dudas-form" action="#" method="post">
+        <label>Nombre<input type="text" name="nombre" autocomplete="name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Ciudad
+          <select name="ciudad">
+            <option>Barcelona</option>
+            <option>Madrid</option>
+            <option>Vigo</option>
+            <option>Otra ciudad</option>
+          </select>
+        </label>
+        <label class="dudas-msg">Tu duda<textarea name="mensaje" rows="4" required></textarea></label>
+        <button class="btn btn--solid" type="submit">Enviar consulta</button>
+        <p class="dudas-ok" hidden>Gracias. Te contestamos en menos de 24 h.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- 11 · PIE DE PÁGINA + CIERRE (ciruela, a sangre) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-close">
+      <h2 id="closing-title">Aprender a tocar empieza por darte dos días para <em>habitar tu cuerpo, encontrar tu centro</em> y practicar sin&nbsp;prisa.</h2>
+      <div class="footer-cta">
+        <p class="footer-date">Barcelona, 21 y 22 de noviembre.</p>
+        <a class="btn btn--light" href="#reserva"><span>Elegir sede y reservar mi plaza</span> <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="wordmark" href="#inicio"><img class="isotipo" src="img/isotipo-spazio.webp" width="256" height="256" alt=""><span>Spazio Bodywork<sup>®</sup></span></a>
+        <p class="footer-name">Instituto Spazio Bodywork®</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">Sedes</h2>
+        <!-- PENDIENTE: fotos reales de las salas por sede (Barcelona, Madrid, Vigo); Vigo: espacio por confirmar -->
+        <address>
+          <p><span>Barcelona</span> Sede Central · C/ Viladomat 152, 2ª</p>
+          <p><span>Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</p>
+        </address>
+      </div>
+      <div class="footer-col footer-contact">
+        <h2 class="footer-h">Contacto</h2>
+        <p><a href="tel:+34693059088">+34 693 059 088</a></p>
+        <p><a href="mailto:info@spaziobodywork.com">info@spaziobodywork.com</a></p>
+        <p><a href="https://spaziobodywork.com/" target="_blank" rel="noopener">spaziobodywork.com</a></p>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/spaziobodywork/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.facebook.com/Spaziobodywork" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@spaziobodywork4322" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.2 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Secciones (pie)">
+        <a href="#programa">Programa</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#precio">Precio</a>
+        <a href="#reserva">Reserva</a>
+        <a href="#dudas">Dudas</a>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      <nav class="legal" aria-label="Legal">
+        <a href="https://spaziobodywork.com/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+        <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
+        <a href="https://spaziobodywork.com/politica-de-cookies/" target="_blank" rel="noopener">Política de cookies</a>
+        <a href="https://spaziobodywork.com/politica-de-cancelacion/" target="_blank" rel="noopener">Política de cancelación</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- PANEL FLOTANTE DE RESERVA · se abre al pulsar cualquier convocatoria (tabla de §09) -->
+<div class="reserva" id="reserva-panel" hidden>
+  <div class="reserva-card" role="dialog" aria-labelledby="reserva-sede">
+    <button class="reserva-close" type="button" aria-label="Cerrar">×</button>
+    <p class="label">Tu convocatoria</p>
+    <h2 class="reserva-sede" id="reserva-sede">Barcelona</h2>
+    <p class="reserva-fecha">21 y 22 de noviembre de 2026</p>
+    <p class="reserva-lugar">Sede Central · C/ Viladomat 152, 2ª</p>
+    <p class="reserva-imparte">Imparte Sujati</p>
+    <dl class="reserva-precio">
+      <div><dt>Fin de semana completo</dt><dd>250&nbsp;€</dd></div>
+      <div><dt>Reserva online</dt><dd>80&nbsp;€</dd></div>
+    </dl>
+    <a class="btn btn--solid btn--block" href="#form-reserva">Continuar con la reserva</a>
+    <p class="reserva-nota">Los 170&nbsp;€ restantes, por transferencia antes del inicio.</p>
+  </div>
+</div>
+
+<script src="main.js?v=9" defer></script>
+</body>
+</html>

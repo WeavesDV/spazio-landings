@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es" data-formato="anual" data-sede="madrid">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formación Anual de Masaje Californiano Psicosomático · Spazio Bodywork®</title>
+  <meta name="description" content="Una formación de un año: diez módulos, un fin de semana al mes, para convertirte en practicante de trabajo corporal holístico. Barcelona y Madrid.">
+  <!--
+    MAQUETA · Landing «Formación Anual» · MLAB-428 · v2
+    Arquitectura: dictamen de AURA del 30-10-2026 (9 bloques):
+      ~/wiki/proyectos/spazio-bodywork/2026-10-30_dictamen-aura-landing-formacion-anual.md
+    Copy: agy (Antigravity CLI, claude-opus-5-5-high) sobre brief de hechos verificados; sin datos inventados.
+    Diseño: identidad de Spazio (styles.css, heredada de la landing de la Inmersión) + anual.css.
+
+    LOS MARCADORES [CONFIRMAR: …] SON VISIBLES A PROPÓSITO: son lo que falta cerrar con Sujati.
+    No quitar ninguno hasta que lo responda por escrito. Lista completa: REVISION.md en esta carpeta.
+  -->
+  <link rel="stylesheet" href="fonts.css?v=33">
+  <link rel="stylesheet" href="styles.css?v=33">
+  <link rel="stylesheet" href="anual.css?v=33">
+</head>
+<body>
+
+<!-- 00 · CABECERA -->
+<header class="site-header">
+  <a class="wordmark" href="#inicio"><img class="isotipo" src="img/isotipo-spazio.webp" width="256" height="256" alt=""><span>Spazio Bodywork<sup>®</sup></span></a>
+  <nav class="site-nav" id="site-nav" aria-label="Secciones">
+    <a href="#formatos">Formatos</a>
+    <a href="#calendario" data-elegir="anual">Calendario</a>
+    <a href="#precio">Precio</a>
+    <a href="#docentes">Docentes</a>
+    <a class="nav-cta" href="#reserva">Reservar</a>
+  </nav>
+  <a class="btn btn--solid btn--sm" href="#reserva">Reservar</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- BLOQUE 1 · HERO DE DECISIÓN -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <!-- Foto del reportaje de Farideh Diehl (taller de julio de 2026). Uso pendiente de licencia y permiso de imagen. -->
+    <picture>
+      <source media="(max-width: 899px)" srcset="img/hero-tall.webp">
+      <img class="hero-img"
+           src="img/hero-wide.webp"
+           width="2400" height="1400"
+           alt="Docente inclinada sobre una camilla, con las manos en la espalda de la persona que recibe, en una sala de piedra con luz cálida de ventana.">
+    </picture>
+
+    <div class="hero-content wrap">
+      <div class="hero-top">
+        <p class="eyebrow">Spazio Bodywork<sup>®</sup> · formación profesional</p>
+        <h1 id="hero-title">
+          <span class="h1-a">Formación Anual <br>de Masaje Californiano <br><em>Psicosomático</em></span>
+        </h1>
+        <p class="hero-kicker">Diez módulos, un fin de semana al mes en Madrid o Barcelona — o nueve días en Mallorca. Mismo temario y misma titulación.</p>
+      </div>
+
+      <div class="hero-action">
+        <div class="hero-price-box" data-fmt="anual">
+          <p class="hero-price"><span class="hero-price-tag">Formato fin de semana</span><strong>2.250&nbsp;€</strong></p>
+          <ul class="hero-price-det">
+            <li>Diez módulos, un fin de semana al mes</li>
+            <li>Reservas la plaza con la matrícula de 500&nbsp;€</li>
+            <li>Formación completa con el mismo grupo</li>
+          </ul>
+        </div>
+        <div class="hero-price-box" data-fmt="intensivo">
+          <p class="hero-price"><span class="hero-price-tag">Formato intensivo</span><strong>2 estancias</strong></p>
+          <ul class="hero-price-det">
+            <li>Dos estancias de nueve días en Mallorca</li>
+            <li>Casa rural, comida vegetariana y grupo que convive</li>
+            <li>Precio y fechas por confirmar</li>
+          </ul>
+        </div>
+        <div class="hero-btns" data-fmt="anual">
+          <a class="btn btn--light" href="#reserva"><span>Reservar mi plaza · 500&nbsp;€</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-btns" data-fmt="intensivo">
+          <a class="btn btn--light" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener"><span>Pedir fechas del intensivo</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <p class="hero-sec-link" data-fmt="anual"><a href="#calendario">Ver las fechas de las dos sedes</a></p>
+        <p class="hero-sec-link" data-fmt="intensivo"><a href="#intensivo">Ver cómo funciona el intensivo</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franja de datos: lo que antes cargaba el hero, sobre papel y legible -->
+  <div class="hero-data">
+    <div class="wrap">
+      <p><span class="hd-k">Próxima entrada</span> Barcelona · Módulo 1 · 21-22 de noviembre de 2026 <em>(o 20-21 de febrero de 2027)</em></p>
+      <p><span class="hd-k">Madrid</span> grupo en curso desde octubre de 2026</p>
+      <p><span class="hd-k">Sedes</span> C/ Viladomat 152, 2ª (Barcelona) · C/ Gonzalo de Córdoba 17, of. B (Madrid)</p>
+      <p><a href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20la%20Formaci%C3%B3n%20Anual" target="_blank" rel="noopener">WhatsApp · +34 693 059 088</a></p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2 · PARA QUIÉN ES / PARA QUIÉN NO -->
+  <section class="section questions bg-paper" id="para-quien" aria-labelledby="fit-title">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-aside">
+          <p class="label">Para quién es</p>
+          <h2 id="fit-title">¿Es <em>tu</em> formación?</h2>
+        </div>
+        <div class="split-main">
+          <p class="answer">No es un curso de fin de semana: es un recorrido largo, sostenido por un grupo que crea un espacio seguro.</p>
+        </div>
+      </div>
+
+      <div class="fit">
+        <div class="fit-col fit-yes">
+          <h3>Es para ti si…</h3>
+          <ul class="fit-list">
+            <li>Quieres un recorrido largo, no un curso de fin de semana.</li>
+            <li>Buscas adquirir conocimientos, habilidades y experiencia para acompañar con herramientas de regulación del sistema nervioso y trauma.</li>
+            <li>Quieres aprender sostenido por un grupo que crea un espacio seguro.</li>
+          </ul>
+        </div>
+        <div class="fit-col fit-no">
+          <h3>No es para ti si…</h3>
+          <ul class="fit-list">
+            <li>Buscas una colección rápida de técnicas.</li>
+            <li>No puedes reservar un fin de semana al mes durante todo el año.</li>
+            <li>Prefieres aprender sin poner el cuerpo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="fit-note">Es una experiencia íntima entre compañeros de estudio. <span class="pending">[CONFIRMAR: si hace falta haber hecho un curso introductorio o la formación básica intensiva]</span></p>
+      <p class="more"><a class="link-arrow" href="https://wa.me/34693059088?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20Formaci%C3%B3n%20Anual" target="_blank" rel="noopener">¿Dudas si encajas? Pregúntanos por WhatsApp <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- BLOQUE 2b · DOS MANERAS DE CURSARLO (texto del cliente, literal) -->
+  <section class="section formats" id="formatos" aria-labelledby="fmt-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Dos maneras de cursarlo</p>
+          <h2 id="fmt-title">El mismo contenido, <em>dos formas de vivirlo</em></h2>
+        </div>
+        <p class="sec-sub">Mismo temario y misma titulación. Cambia el calendario y la experiencia, no lo que aprendes. Puedes empezar en un formato y continuar en el otro.</p>
+      </header>
+
+      <p class="sede-ask fmt-ask">Elige cómo quieres cursarlo</p>
+      <div class="fmt-switch" role="group" aria-label="Elegir formato">
+        <button type="button" class="fmt-opt is-active" data-elegir="anual" aria-pressed="true">
+          <span class="fmt-opt-k">Fin de semana</span>
+          <span class="fmt-opt-v">Madrid y Barcelona</span>
+        </button>
+        <button type="button" class="fmt-opt" data-elegir="intensivo" aria-pressed="false">
+          <span class="fmt-opt-k">Intensivo</span>
+          <span class="fmt-opt-v">Mallorca · dos estancias</span>
+        </button>
+      </div>
+
+      <div class="fmt-panel">
+        <div class="fmt-card" data-fmt="anual">
+          <p class="tag">Formato fin de semana</p>
+          <h3>Un fin de semana al mes</h3>
+          <dl class="fmt-data">
+            <div><dt>Dónde</dt><dd>Madrid y Barcelona</dd></div>
+            <div><dt>Ritmo</dt><dd>10 módulos en un año</dd></div>
+            <div><dt>Para quién</dt><dd>Vives cerca y prefieres un proceso largo y sostenido</dd></div>
+          </dl>
+          <p class="fmt-price"><strong>2.250&nbsp;€</strong> <span>reservas con 500&nbsp;€ a cuenta del total</span></p>
+          <a class="btn btn--solid btn--block" href="#calendario" data-elegir="anual"><span>Ver las fechas de mi sede</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="fmt-card" data-fmt="intensivo">
+          <p class="tag">Formato intensivo</p>
+          <h3>Nueve días en Mallorca</h3>
+          <dl class="fmt-data">
+            <div><dt>Dónde</dt><dd>Sant Joan, Mallorca · casa rural</dd></div>
+            <div><dt>Ritmo</dt><dd>Dos estancias de nueve días</dd></div>
+            <div><dt>Para quién</dt><dd>No puedes comprometer diez fines de semana, o quieres inmersión</dd></div>
+          </dl>
+          <p class="fmt-price"><span class="pending">[CONFIRMAR: precio y fechas]</span></p>
+          <a class="btn btn--outline btn--block" href="#intensivo" data-elegir="intensivo"><span>Ver cómo funciona</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="fmt-text">
+          <div data-fmt="anual">
+            <p class="fmt-lead">Diez meses de proceso con el mismo grupo. El cuerpo asienta entre módulo y módulo, y lo que se abre tiene tiempo de integrarse.</p>
+            <p>Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Madrid o en Barcelona. Cada sede mantiene su propio grupo y su propio recorrido.</p>
+            <p class="fmt-extra">Si un fin de semana al mes no te encaja, el formato intensivo da el mismo temario en dos estancias de nueve días.</p>
+          </div>
+          <div data-fmt="intensivo">
+            <p class="fmt-lead">Una casa rural en plena naturaleza, comida vegetariana y un grupo que convive. Te formas mientras desconectas de todo lo demás.</p>
+            <p>Dos estancias de nueve días en Sant Joan (Mallorca), con el tiempo entre ellas para practicar e integrar lo aprendido.</p>
+            <p class="fmt-extra">Mismo temario y misma titulación que el formato de fin de semana. Puedes empezar en un formato y continuar en el otro.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ancla fuera de los bloques con data-fmt: existe y se puede saltar a ella en los dos formatos -->
+      <div id="calendario" class="fmt-ancla"></div>
+
+      <!-- Cuerpo según el formato · intensivo -->
+      <div class="fmt-bloque" id="intensivo" data-fmt="intensivo">
+        <header class="fmt-bloque-head">
+          <p class="label">Formato intensivo</p>
+          <h3>Cómo funciona <em>el intensivo</em></h3>
+        </header>
+
+      <div class="cal">
+        <div class="cal-col">
+          <h4>Dónde <span>Sant Joan, Mallorca · casa rural</span></h4>
+          <p class="cal-note">Alojamiento y comida vegetariana en la misma casa: el grupo convive durante los nueve días.</p>
+          <p class="cal-pending"><span class="pending">[CONFIRMAR: fechas de las dos estancias, precio, qué incluye (alojamiento, comidas) y plazas]</span></p>
+          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener">Pedir fechas del intensivo</a></p>
+        </div>
+
+        <div class="cal-col">
+          <h4>Cómo se cursa <span>Dos estancias, un mismo grupo</span></h4>
+          <p class="cal-note">La primera estancia abre las bases del masaje californiano y la regulación del sistema nervioso; la segunda entra en el detalle y la teoría polivagal, igual que las dos mitades del formato de fin de semana.</p>
+          <ol class="cal-list">
+            <li><span class="m">Primera estancia</span><time>9 días · fecha por confirmar</time></li>
+            <li><span class="m">Vuelta a casa</span><time>tiempo para practicar e integrar</time></li>
+            <li><span class="m">Segunda estancia</span><time>9 días · fecha por confirmar</time></li>
+          </ol>
+        </div>
+      </div>
+      </div>
+
+      <!-- Cuerpo según el formato · fin de semana: el selector de sede solo existe aquí -->
+      <div class="fmt-bloque fmt-bloque--cal" data-fmt="anual">
+        <div class="fmt-bloque-lado">
+          <header class="fmt-bloque-head">
+            <p class="label">Fechas de los diez módulos</p>
+            <h3>Calendario del <em>formato de fin de semana</em></h3>
+            <p class="fmt-bloque-sub">El grupo de la sede que elijas, con su propio recorrido y sus fechas.</p>
+          </header>
+
+          <div class="sede-pick">
+            <p class="sede-ask">Elige tu sede</p>
+            <div class="sede-switch" role="group" aria-label="Elegir sede">
+              <button type="button" class="sede-opt is-active" data-sede-btn="madrid" aria-pressed="true">Madrid <span>Espacio Calithai</span></button>
+              <button type="button" class="sede-opt" data-sede-btn="barcelona" aria-pressed="false">Barcelona <span>Sede Central</span></button>
+            </div>
+          </div>
+        </div>
+
+      <div class="cal cal--una">
+        <div class="cal-col" data-sede="barcelona">
+          <h4>Barcelona <span>Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</span></h4>
+          <p class="cal-note">Dos maneras de empezar, un mismo grupo: puedes hacer el Módulo 1 en noviembre (opción A) o en febrero (opción B). Las dos entradas se unen en el Módulo 2, el 20-21 de marzo de 2027, y desde ahí seguís juntos hasta diciembre.</p>
+          <ol class="cal-list">
+            <li><span class="m">1 · opción A</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
+            <li><span class="m">1 · opción B</span><time datetime="2027-02-20">20-21 feb 2027</time></li>
+            <li><span class="m">2</span><time datetime="2027-03-20">20-21 mar 2027</time></li>
+            <li><span class="m">3</span><time datetime="2027-04-24">24-25 abr 2027</time></li>
+            <li><span class="m">4</span><time datetime="2027-05-22">22-23 may 2027</time></li>
+            <li><span class="m">5</span><time datetime="2027-06-19">19-20 jun 2027</time></li>
+            <li><span class="m">6</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
+            <li><span class="m">7</span><time datetime="2027-09-18">18-19 sep 2027</time></li>
+            <li><span class="m">8</span><time datetime="2027-10-16">16-17 oct 2027</time></li>
+            <li><span class="m">9</span><time datetime="2027-11-13">13-14 nov 2027</time></li>
+            <li><span class="m">10</span><time datetime="2027-12-11">11-12 dic 2027</time></li>
+          </ol>
+          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="#reserva">Reservar en Barcelona</a></p>
+          <p class="cal-pending"><span class="pending">[CONFIRMAR: qué ocurre entre el Módulo 1 de noviembre y el Módulo 2 de marzo — son cuatro meses sin clase en la opción A]</span></p>
+        </div>
+
+        <div class="cal-col" data-sede="madrid">
+          <h4>Madrid <span>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</span></h4>
+          <p class="cal-note">Grupo en curso: arrancó el 24-25 de octubre de 2026. Incorporación a partir del Módulo 2: <span class="pending">[CONFIRMAR: si se admite y en qué condiciones]</span>.</p>
+          <ol class="cal-list">
+            <li class="is-done"><span class="m">1</span><time datetime="2026-10-24">24-25 oct 2026 · realizado</time></li>
+            <li><span class="m">2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
+            <li><span class="m">3</span><time datetime="2026-12-19">19-20 dic 2026</time></li>
+            <li><span class="m">4</span><time datetime="2027-01-16">16-17 ene 2027</time></li>
+            <li><span class="m">5</span><time datetime="2027-02-13">13-14 feb 2027</time></li>
+            <li><span class="m">6</span><time datetime="2027-03-13">13-14 mar 2027</time></li>
+            <li><span class="m">7</span><time datetime="2027-04-10">10-11 abr 2027</time></li>
+            <li><span class="m">8</span><time datetime="2027-05-08">8-9 may 2027</time></li>
+            <li><span class="m">9</span><time datetime="2027-06-12">12-13 jun 2027</time></li>
+            <li><span class="m">10</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
+          </ol>
+          <p class="cal-foot"><a class="btn btn--outline btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a></p>
+          <p class="cal-pending"><span class="pending">[CONFIRMAR: choque con Barcelona el 3-4 de julio de 2027 — Madrid Módulo 10 y Barcelona Módulo 6 caen el mismo fin de semana]</span></p>
+        </div>
+      </div>
+      </div>
+
+      <p class="fmt-note">Elige un formato y el calendario, el precio y la reserva de abajo cambian con él. Los 2.250 € son del <b>formato de fin de semana</b>; el intensivo tiene sus propias fechas, precio y condiciones. <span class="pending">[CONFIRMAR: fechas, precio y plazas del intensivo]</span></p>
+    </div>
+
+    <!-- Imagen de apoyo: el reportaje es de un taller real, no de las sedes. El pie lo dice.
+         Solo en fin de semana: en intensivo podría leerse como la casa de Mallorca. -->
+    <figure class="band-photo" data-fmt="anual">
+      <img src="img/aula.webp" width="1800" height="1013" loading="lazy"
+           alt="Sala de piedra con arcos y varias camillas; una docente trabaja mientras el grupo observa.">
+      <figcaption>Taller de formación · julio de 2026</figcaption>
+    </figure>
+  </section>
+
+  <!-- BLOQUE 4 · PRECIO Y FORMAS DE PAGO -->
+  <section class="section pricing bg-paper" id="precio" data-fmt="anual" aria-labelledby="price-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Inscripción</p>
+          <h2 id="price-title">Precio y <em>formas de pago</em></h2>
+        </div>
+        <div class="sec-sub">
+          <p class="caps caps--pricing">10 módulos · 1 fin de semana al mes</p>
+          <p>Un solo precio: 2.250 € por la formación completa. Reservas la plaza con la matrícula de 500 € y el resto se abona según las condiciones que recibes al reservar.</p>
+        </div>
+      </header>
+
+      <div class="price-layout">
+        <ul class="cards cards--price cards--single">
+          <li class="price-card price-card--featured">
+            <p class="tag">Formato anual · precio único</p>
+            <h3>Los diez módulos</h3>
+            <p class="pc-price"><strong>2.250</strong><span class="cur">€</span> <span class="per">/ formación completa</span></p>
+            <ul class="checks">
+              <li>Diez fines de semana de formación, un fin de semana al mes</li>
+              <li>Sábado y domingo, de 10:00 a 19:30</li>
+              <li>Teoría, práctica y experiencia vivencial con el mismo grupo</li>
+              <li>Madrid o Barcelona</li>
+              <li>Mismo temario y misma titulación que el formato intensivo</li>
+            </ul>
+            <dl class="pc-break">
+              <div><dt>Precio total · 10 módulos</dt><dd>2.250&nbsp;€</dd></div>
+              <div><dt>Pagas hoy para reservar</dt><dd>500&nbsp;€</dd></div>
+              <div><dt>Queda pendiente</dt><dd>1.750&nbsp;€</dd></div>
+            </dl>
+            <p class="pc-pay">Los 1.750 € restantes se abonan antes del inicio de la formación <span class="pending">[CONFIRMAR: fecha límite]</span>. La plaza queda confirmada en el momento del pago, no antes.</p>
+          <p class="pc-nota"><span class="pending">[CONFIRMAR: que los 500 € se descuentan del total — si no se descontaran, el desembolso real sería de 2.750 €]</span></p>
+            <a class="btn btn--solid btn--block" href="#reserva"><span>Reservar mi plaza · 500&nbsp;€</span> <span class="arrow" aria-hidden="true">→</span></a>
+            <p class="pc-terms"><b>Matrícula de 500&nbsp;€ a cuenta del precio total, reembolsable.</b> Si no abrimos el grupo o si cancelas antes del inicio de la formación, te devolvemos los 500&nbsp;€ íntegros.</p>
+            <p class="pc-plazas"><span class="pending">[CONFIRMAR: plazas por convocatoria y cuántas están ocupadas — es la única escasez verdadera]</span></p>
+          </li>
+        </ul>
+
+        <div class="terms">
+          <section class="term" aria-labelledby="inc-title">
+            <h3 id="inc-title">Qué incluye</h3>
+            <p>Los diez módulos presenciales, sábado y domingo, en tu sede. <span class="pending">[CONFIRMAR: materiales, manual]</span></p>
+          </section>
+          <section class="term" aria-labelledby="exc-title">
+            <h3 id="exc-title">Qué no incluye</h3>
+            <p><span class="pending">[CONFIRMAR: comidas, alojamiento, desplazamientos]</span></p>
+          </section>
+          <section class="term" aria-labelledby="pay-title">
+            <h3 id="pay-title">Cómo se paga</h3>
+            <p>Reservas la plaza pagando la matrícula de 500 €. La plaza queda confirmada en el momento del pago, no antes. <span class="pending">[CONFIRMAR: si la matrícula se descuenta del total]</span></p>
+            <p class="term-extra"><b>Devolución:</b> los 500&nbsp;€ de la matrícula se devuelven íntegros si no abrimos el grupo o si cancelas antes del inicio. Titulación: la misma en los dos formatos. IVA: <span class="pending">[CONFIRMAR]</span> ¿Quieres pagar a plazos? <span class="pending">[CONFIRMAR: si se ofrece financiación]</span></p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 5 · PROGRAMA: LOS DIEZ MÓDULOS -->
+  <section class="section days" id="programa" aria-labelledby="prog-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Programa</p>
+          <h2 id="prog-title">Diez módulos, <em>dos mitades</em></h2>
+        </div>
+        <p class="sec-sub">Del Módulo 1 al 5 asientas las bases del masaje californiano con elementos de regulación del sistema nervioso. Del 6 al 10 profundizas con la teoría polivagal y la atención al detalle.</p>
+      </header>
+
+      <p class="program-lead">Más de 200 técnicas en diez fines de semana. Una formación densa, sostenida por un trabajo de fondo: el rol terapéutico, el trabajo somático de límites, la presencia sin juicios ni interpretaciones y un principio que atraviesa el año: <b>no esfuerzo, menos es más</b>.</p>
+
+      <div class="program">
+        <div class="program-half">
+          <h3>Parte 1 · Bases</h3>
+          <p>Los cinco primeros módulos: las bases del masaje californiano con los elementos de regulación del sistema nervioso.<br><span class="pending">[CONFIRMAR: el reparto exacto de contenidos por módulo y el título de cada uno]</span></p>
+          <ul class="mod-list">
+            <li><span class="n">01</span><span>Autorregulación, setting terapéutico y regulación del sistema nervioso.</span></li>
+            <li><span class="n">02</span><span>Terminología somática: neurocepción, propiocepción e interocepción. Descarga, vórtice-contra vórtice.</span></li>
+            <li><span class="n">03</span><span>Qué es el trauma y cómo se manifiesta en el cuerpo; la fisiología del sistema de defensa.</span></li>
+            <li><span class="n">04</span><span>Acompañar procesos emocionales.</span></li>
+            <li><span class="n">05</span><span>Ejercicios somáticos y meditaciones activas basadas en las prácticas de 5 ritmos y otras dinámicas.</span></li>
+          </ul>
+        </div>
+        <div class="program-half">
+          <h3>Parte 2 · Profundización</h3>
+          <p>Los cinco últimos: el detalle del masaje californiano y la teoría polivagal.</p>
+          <ul class="mod-list">
+            <li><span class="n">06</span><span>El rol terapéutico.</span></li>
+            <li><span class="n">07</span><span>Trabajo somático de límites.</span></li>
+            <li><span class="n">08</span><span>Respuestas de defensa en camilla: lucha, huida y congelación.</span></li>
+            <li><span class="n">09</span><span>Detectar las huellas traumáticas y re-significar el trauma.</span></li>
+            <li><span class="n">10</span><span>Integrar: caderas, antebrazos y muñecas, capas profundas del cuello y secuencias en supino.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="more"><a class="link-arrow" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20el%20programa%20de%20la%20Formaci%C3%B3n%20Anual" target="_blank" rel="noopener">Consultar el programa por WhatsApp <span aria-hidden="true">→</span></a></p>
+    </div>
+
+    <figure class="band-photo band-photo--programa">
+      <img src="img/programa.webp" width="1800" height="1013" loading="lazy"
+           alt="Detalle de la práctica: una mano sostiene un brazo sobre la camilla, con el fondo desenfocado.">
+      <figcaption>Técnica en sala · julio de 2026</figcaption>
+    </figure>
+  </section>
+
+  <!-- BLOQUE 6 · LA ESCALERA -->
+  <section class="section band ladder" aria-labelledby="ladder-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">El recorrido</p>
+          <h2 id="ladder-title">Dónde está <em>este paso</em></h2>
+        </div>
+        <p class="sec-sub">La Formación Anual es un tramo de un recorrido más largo. Antes, los talleres e introductorios y la formación básica intensiva; después, para quien quiera seguir, la carrera profesional. Si no sabes en qué punto estás, lo vemos contigo.</p>
+      </header>
+
+      <ol class="steps">
+        <li>
+          <h3>Talleres e introductorios</h3>
+          <p>El primer contacto con el masaje californiano y el trabajo corporal psicosomático.</p>
+        </li>
+        <li>
+          <h3>Formación básica intensiva</h3>
+          <p>Nueve días de inmersión para iniciarse con práctica diaria y supervisión.</p>
+        </li>
+        <li class="is-here">
+          <span class="here-tag">Estás aquí</span>
+          <h3>Formación Anual</h3>
+          <p>Diez módulos a lo largo de un año: el oficio, el grupo y el tiempo para incorporarlo.</p>
+        </li>
+        <li>
+          <h3>Carrera profesional</h3>
+          <p>Para quien quiere seguir formándose y acompañar procesos con más herramientas.</p>
+        </li>
+      </ol>
+      <p class="more"><a class="link-arrow" href="https://wa.me/34693059088?text=Hola%2C%20no%20s%C3%A9%20en%20qu%C3%A9%20punto%20del%20recorrido%20estoy" target="_blank" rel="noopener">Si no sabes en qué punto estás, escríbenos <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- BLOQUE 7 · PRUEBA -->
+  <section class="section reviews bg-paper" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head">
+        <div class="reviews-score">
+          <p class="label">Reseñas en Google</p>
+          <h2 id="reviews-title">Lo que cuentan quienes <em>han pasado</em></h2>
+          <p class="score"><span class="score-num">5,0</span> <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></p>
+          <ul class="score-list">
+            <li><span>323 reseñas</span> Barcelona</li>
+            <li><span>20 reseñas</span> Madrid</li>
+          </ul>
+          <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto+Spazio+Bodywork+Barcelona" target="_blank" rel="noopener">Leer todas las reseñas en Google <span aria-hidden="true">→</span></a>
+        </div>
+      <div class="reviews-note">
+        <p>Reseñas publicadas en Google sobre Spazio Bodywork, tal como las escribieron sus autores.</p>
+        <p class="reviews-score-line">5,0 de media · 323 reseñas en Barcelona · 20 en Madrid</p>
+      </div>
+      </div>
+    </div>
+    <ul class="reviews-track" aria-label="Reseñas de alumnas y alumnos">
+      <li class="review">
+        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p class="review-text">«Una hermosa experiencia con el grupo de Spazio Bodywork… el contacto consciente y de calidad es una de sus bases».</p>
+        <p class="review-author">Ignacio Giordano</p>
+      </li>
+      <li class="review">
+        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p class="review-text">«Un espacio y un lugar cálido y acogedor donde se siente el acompañamiento, la escucha y el cuidado del grupo».</p>
+        <p class="review-author">Miriam García Fernández-Reija</p>
+      </li>
+      <li class="review">
+        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p class="review-text">«Un viaje experiencial altamente recomendable… te eleva en tu sendero espiritual».</p>
+        <p class="review-author">María P. L.</p>
+      </li>
+      <li class="review">
+        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p class="review-text">«Ha sido un antes y un después en mi vida».</p>
+        <p class="review-author">Luis Yanguas</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- BLOQUE 8 · QUIÉN ENSEÑA -->
+  <section class="section teacher" id="docentes" aria-labelledby="teacher-title">
+    <div class="teacher-grid">
+      <figure class="teacher-photo">
+        <img src="img/sujati-alt.webp"
+             width="900" height="1125" loading="lazy"
+             alt="Sujati trabajando sobre la camilla, mirando a cámara, con el pelo recogido y una prenda blanca.">
+        <figcaption>Sujati (Sandra C. Lacanna), creadora y directora de Spazio Bodywork®.</figcaption>
+      </figure>
+      <div class="teacher-text">
+        <p class="label">Docentes</p>
+        <h2 id="teacher-title">Quién <em>enseña</em></h2>
+        <p class="teacher-intro">En el trabajo corporal, la manera de tocar se aprende también recibiéndola. Por eso importa quién enseña y quién acompaña en la sala.</p>
+        <div class="person">
+          <h3>Sujati (Sandra C. Lacanna)</h3>
+          <p class="role">Creadora y directora de Spazio Bodywork®. Dirige el grupo de Barcelona.</p>
+          <p>Fundó la primera escuela de Masaje Californiano en España (2006). Más de 23 años de experiencia profesional: comenzó su formación como terapeuta en India en 1994, vivió dos años en la Comuna Internacional de Osho, se formó en Masaje Californiano en 2000 en la Oasis Massage School (donde fue asistente e instructora seis años) y está certificada internacionalmente como terapeuta de Masaje Esalen® por el Instituto Esalen de Big Sur (California), con formación en Experiencia Somática®.</p>
+          <figure class="signature">
+            <img src="img/sujati-signature-plum.png" width="1394" height="567" loading="lazy" alt="Firma de Sujati.">
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="teacher-grid teacher-grid--alt">
+      <figure class="teacher-photo teacher-photo--alt">
+        <img src="img/maria-lucas.webp" width="1000" height="608" loading="lazy"
+             alt="Retrato de María Lucas tumbada sobre la hierba entre margaritas, mirando a cámara.">
+        <figcaption>María Lucas, directora de Espacio Calithai Masajes (Madrid).</figcaption>
+      </figure>
+      <div class="teacher-text">
+        <div class="person">
+          <h3>María Lucas</h3>
+          <p class="role">Directora de Espacio Calithai, la sede de Madrid. Imparte allí el Módulo 1. <span class="pending">[CONFIRMAR: quién imparte los módulos 2 a 10 en Madrid]</span></p>
+          <p>Terapeuta en Masaje Californiano y Masaje Esalen, directora de Espacio Calithai Masajes. Comienza su formación en Masaje Californiano viviendo en Argentina en el año 2006 donde descubre la Escuela de Masajes y Artes Curativas Oasis. En el 2008 se instala de nuevo en Madrid donde conoce a Sujati, con quien colaborará como asistenta para el Instituto Spazio Bodywork®.</p>
+          <p>Realiza la Certificación en Masaje Esalen, Tejido Profundo (con Yamuna y Roger – Oasis) y talleres de especialización con Ingrid May (Oasis). En el 2015 inaugura su propio espacio de trabajo en Madrid: Espacio Calithai Masajes, donde se dedica a dar sesiones de Masaje Californiano Esalen y a abrir el espacio de prácticas para los alumnos.</p>
+          <blockquote class="person-quote"><p>«Contemplo el cuerpo como una llave de exploración interna que nos conduce al silencio y a la alegría intrínseca de la vida.»</p></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="teacher-note"><span class="pending">[CONFIRMAR: tamaño del grupo y número de ayudantes]</span></p>
+    </div>
+  </section>
+
+  <!-- BLOQUE 9 · LA RESERVA -->
+  <section class="section dudas reserva-sec bg-paper" id="reserva" data-fmt="anual" aria-labelledby="reserva-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">La reserva</p>
+          <h2 id="reserva-title">Qué pasa cuando pulsas <em>«Reservar»</em></h2>
+        </div>
+        <p class="sec-sub">Tres pasos. El último es el pago de la matrícula: hasta ahí no hay reserva.</p>
+      </header>
+
+      <ol class="steps steps--3">
+        <li>
+          <h3>Te informas</h3>
+          <p>Aquí o escribiéndonos, antes de decidir nada.</p>
+        </li>
+        <li>
+          <h3>Eliges sede y fecha</h3>
+          <p>Las dos entradas de Barcelona o el grupo de Madrid, con el calendario a la vista.</p>
+        </li>
+        <li>
+          <h3>Pagas la matrícula</h3>
+          <p>500 € con tarjeta, en el mismo paso. No hay un «te escribimos luego»: la reserva se cierra ahí.</p>
+        </li>
+      </ol>
+
+      <div class="booking">
+        <!-- HUECO: aquí se incrusta el widget de reserva con cobro de la matrícula de 500 € -->
+        <div class="booking-slot" id="form-reserva">
+          <p class="booking-slot-title">Widget de reserva con cobro</p>
+          <p class="booking-slot-sel" id="booking-sel">Barcelona · Módulo 1 · 21-22 de noviembre de 2026 (opción A)</p>
+          <p class="booking-slot-note">Aquí van los dos botones de fecha del widget, con el cobro de la matrícula de 500 € dentro del mismo formulario. Hoy el widget termina en «recibirás información»: hay que cambiar el paso final a pago.</p>
+        </div>
+        <div>
+          <p class="table-note">La reserva de Barcelona se cierra en el widget, con la fecha elegida y la matrícula de 500&nbsp;€. <b>Esos 500&nbsp;€ son reembolsables:</b> si no abrimos el grupo o cancelas antes del inicio, se devuelven íntegros. Para Madrid, el grupo está en curso: escríbenos y lo vemos contigo.</p>
+          <p class="consent"><label><input type="checkbox" required> He leído y acepto la <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</label></p>
+          <ul class="book-btns">
+            <li><button class="btn btn--solid btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 21-22 de noviembre de 2026 (opción A)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar · Barcelona, 21-22 nov 2026 (opción A)</button></li>
+            <li><button class="btn btn--outline btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 20-21 de febrero de 2027 (opción B)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar · Barcelona, 20-21 feb 2027 (opción B)</button></li>
+          </ul>
+          <p class="book-alt">¿Madrid? <a href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
+          <p class="table-note">+34 693 059 088 (teléfono y WhatsApp) · <a href="mailto:info@spaziobodywork.com">info@spaziobodywork.com</a></p>
+        </div>
+      </div>
+      <p class="ethic">La Formación Anual es una formación vivencial. No es una terapia ni sustituye a un tratamiento.</p>
+    </div>
+  </section>
+
+
+  <!-- BLOQUE 10 · PREGUNTAS FRECUENTES -->
+  <section class="section faq" aria-labelledby="faq-title">
+    <div class="wrap split">
+      <div class="split-aside">
+        <p class="label">Dudas</p>
+        <h2 id="faq-title">Preguntas <em>frecuentes</em></h2>
+      </div>
+      <div class="split-main faq-list">
+        <details open>
+          <summary>¿Necesito experiencia previa?</summary>
+          <p>La formación arranca donde terminan los cursos introductorios, semi-intensivos e intensivos: las bases del masaje californiano y los elementos de regulación del sistema nervioso. Si no has hecho ninguno de ellos, escríbenos y te decimos por dónde empezar. <span class="pending">[CONFIRMAR: si el curso introductorio es requisito o recomendación]</span></p>
+        </details>
+        <details>
+          <summary>¿Qué tengo que hacer para reservar mi plaza?</summary>
+          <p>Elegir sede y fecha y pagar la matrícula de 500 €. La plaza queda confirmada en el momento del pago, no antes.</p>
+        </details>
+        <details>
+          <summary>¿Y si al final no puedo hacer la formación?</summary>
+          <p>Si cancelas antes del inicio, te devolvemos los 500 € de la matrícula íntegros. Si no abrimos el grupo, también.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto se paga y cuándo?</summary>
+          <p>2.250 € en total. Hoy pagas 500 € para reservar y los 1.750 € restantes, antes del inicio de la formación. <span class="pending">[CONFIRMAR: fecha límite del resto]</span></p>
+        </details>
+        <details>
+          <summary>¿Cuánto dura cada módulo?</summary>
+          <p>Un fin de semana completo: sábado y domingo de 10:00 a 19:30, con pausa al mediodía.</p>
+        </details>
+        <details>
+          <summary>¿Dónde se imparte?</summary>
+          <p>En Madrid, en Espacio Calithai (C/ Gonzalo de Córdoba 17, oficina B) y en Barcelona, en Spazio Bodywork (C/ Viladomat 152, 2ª planta).</p>
+        </details>
+        <details>
+          <summary>¿Hay otra manera de hacerla?</summary>
+          <p>Sí: el formato intensivo, dos estancias de nueve días en Sant Joan (Mallorca), con el mismo temario y la misma titulación. Está explicado <a href="#formatos">arriba</a>.</p>
+        </details>
+        <details>
+          <summary>¿Puedo pagar a plazos?</summary>
+          <p>Estamos cerrando las condiciones del pago. Escríbenos y te contamos las opciones que haya en el momento de reservar. <span class="pending">[CONFIRMAR: si se ofrece financiación]</span></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 10b · DUDAS (formulario; en la maqueta no envía) -->
+  <section class="section dudas bg-paper" id="dudas" aria-labelledby="dudas-title">
+    <div class="wrap split">
+      <div class="split-aside">
+        <p class="label">Dudas y consultas</p>
+        <h2 id="dudas-title">¿Te queda <em>alguna duda?</em></h2>
+        <p class="dudas-intro">Escríbenos y te contestamos en menos de 24&nbsp;h.</p>
+      </div>
+      <form class="split-main dudas-form" action="#" method="post">
+        <label>Nombre<input type="text" name="nombre" autocomplete="name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Ciudad
+          <select name="ciudad">
+            <option>Barcelona</option>
+            <option>Madrid</option>
+            <option>Mallorca (intensivo)</option>
+            <option>Otra ciudad</option>
+          </select>
+        </label>
+        <label class="dudas-msg">Tu duda<textarea name="mensaje" rows="4" required></textarea></label>
+        <button class="btn btn--solid" type="submit">Enviar consulta</button>
+        <p class="dudas-ok" hidden>Gracias. Te contestamos en menos de 24 h.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- PIE -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-close">
+      <h2 id="closing-title">Un año para aprender el oficio <em>desde el cuerpo</em>, con un grupo que sostiene el proceso.</h2>
+      <div class="footer-cta">
+        <div data-fmt="anual">
+          <p class="footer-date">Barcelona, Módulo 1: 21-22 de noviembre de 2026.</p>
+          <a class="btn btn--light" href="#reserva"><span>Elegir fecha y reservar</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div data-fmt="intensivo">
+          <p class="footer-date">Mallorca · dos estancias de nueve días.</p>
+          <a class="btn btn--light" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener"><span>Pedir fechas del intensivo</span> <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="wordmark" href="#inicio"><img class="isotipo" src="img/isotipo-spazio.webp" width="256" height="256" alt=""><span>Spazio Bodywork<sup>®</sup></span></a>
+        <p class="footer-name">Instituto Spazio Bodywork®</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">Sedes</h2>
+        <address>
+          <p><span>Barcelona</span> Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</p>
+          <p><span>Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</p>
+        </address>
+      </div>
+      <div class="footer-col footer-contact">
+        <h2 class="footer-h">Contacto</h2>
+        <p><a href="tel:+346****9088">+34 693 059 088</a></p>
+        <p><a href="mailto:info@spaziobodywork.com">info@spaziobodywork.com</a></p>
+        <p><a href="https://spaziobodywork.com/" target="_blank" rel="noopener">spaziobodywork.com</a></p>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/spaziobodywork/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.facebook.com/Spaziobodywork" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@spaziobodywork4322" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.2 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Secciones (pie)">
+        <a href="#para-quien">Para quién</a>
+        <a href="#formatos">Formatos</a>
+        <a href="#calendario" data-elegir="anual">Calendario</a>
+        <a href="#precio">Precio</a>
+        <a href="#programa">Programa</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#reserva">Reservar</a>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      <nav class="legal" aria-label="Legal">
+        <a href="https://spaziobodywork.com/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+        <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
+        <a href="https://spaziobodywork.com/politica-de-cookies/" target="_blank" rel="noopener">Política de cookies</a>
+        <a href="https://spaziobodywork.com/politica-de-cancelacion/" target="_blank" rel="noopener">Política de cancelación</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- PANEL FLOTANTE DE RESERVA -->
+<div class="reserva" id="reserva-panel" hidden>
+  <div class="reserva-card" role="dialog" aria-labelledby="reserva-sede">
+    <button class="reserva-close" type="button" aria-label="Cerrar">×</button>
+    <p class="label">Tu convocatoria</p>
+    <h2 class="reserva-sede" id="reserva-sede">Barcelona</h2>
+    <p class="reserva-fecha">Módulo 1 · 21-22 de noviembre de 2026 (opción A)</p>
+    <p class="reserva-lugar">Spazio Bodywork · C/ Viladomat 152, 2ª planta</p>
+    <p class="reserva-imparte">Imparte Sujati</p>
+    <dl class="reserva-precio">
+      <div><dt>Precio de la formación</dt><dd>2.250&nbsp;€</dd></div>
+      <div><dt>Reservas hoy</dt><dd>500&nbsp;€</dd></div>
+    </dl>
+    <a class="btn btn--solid btn--block" href="#form-reserva">Continuar con la reserva</a>
+    <p class="reserva-nota">La matrícula de 500&nbsp;€ confirma la plaza y es reembolsable hasta el inicio.</p>
+  </div>
+</div>
+
+<script src="main.js?v=33" defer></script>
+</body>
+</html>

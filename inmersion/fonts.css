@@ -1,0 +1,18 @@
+/* Fuentes oficiales entregadas por el cliente (Nyght Serif: woff2 del paquete WEB; Nourd: ttf).
+   Solo para la maqueta; en el sitio las carga Elementor. Nourd no tiene itálica. */
+@font-face { font-family: 'Nyght Serif'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/oficial/NyghtSerif-Light.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/oficial/NyghtSerif-LightItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/oficial/NyghtSerif-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/oficial/NyghtSerif-RegularItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/oficial/NyghtSerif-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: italic; font-weight: 500; font-display: swap; src: url('fonts/oficial/NyghtSerif-MediumItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/oficial/NyghtSerif-Bold.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: italic; font-weight: 700; font-display: swap; src: url('fonts/oficial/NyghtSerif-BoldItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: normal; font-weight: 800; font-display: swap; src: url('fonts/oficial/NyghtSerif-Dark.woff2') format('woff2'); }
+@font-face { font-family: 'Nyght Serif'; font-style: italic; font-weight: 800; font-display: swap; src: url('fonts/oficial/NyghtSerif-DarkItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/oficial/nourd_light.ttf') format('truetype'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/oficial/nourd_regular.ttf') format('truetype'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/oficial/nourd_medium.ttf') format('truetype'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/oficial/nourd_semi_bold.ttf') format('truetype'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/oficial/nourd_bold.ttf') format('truetype'); }
+@font-face { font-family: 'Nourd'; font-style: normal; font-weight: 800; font-display: swap; src: url('fonts/oficial/nourd_heavy.ttf') format('truetype'); }
