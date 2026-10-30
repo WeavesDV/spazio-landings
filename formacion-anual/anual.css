@@ -602,6 +602,9 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
   #precio .price-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   #precio .sec-head h2,
   .ladder .sec-head h2 { max-width: none; }
+  /* El programa: misma retícula de dos columnas iguales que su contenido */
+  #programa .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  #programa .sec-sub { max-width: none; }
   #precio .sec-sub,
   .ladder .sec-sub { max-width: none; }
 }
