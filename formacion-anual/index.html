@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" data-formato="anual" data-sede="madrid">
+<html lang="es" data-formato="anual">
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formación Anual de Masaje Californiano Psicosomático · Spazio Bodywork®</title>
   <meta name="description" content="Una formación de un año: diez módulos, un fin de semana al mes, para convertirte en practicante de trabajo corporal holístico. Barcelona y Madrid.">
   <!--
@@ -16,9 +15,9 @@
     LOS MARCADORES [CONFIRMAR: …] SON VISIBLES A PROPÓSITO: son lo que falta cerrar con Sujati.
     No quitar ninguno hasta que lo responda por escrito. Lista completa: REVISION.md en esta carpeta.
   -->
-  <link rel="stylesheet" href="fonts.css?v=33">
-  <link rel="stylesheet" href="styles.css?v=33">
-  <link rel="stylesheet" href="anual.css?v=33">
+  <link rel="stylesheet" href="fonts.css?v=34">
+  <link rel="stylesheet" href="styles.css?v=34">
+  <link rel="stylesheet" href="anual.css?v=34">
 </head>
 <body>
 
@@ -138,7 +137,9 @@
 
   <!-- BLOQUE 2b · DOS MANERAS DE CURSARLO (texto del cliente, literal) -->
   <section class="section formats" id="formatos" aria-labelledby="fmt-title">
-    <div class="wrap">
+    <div class="wrap fmt-pieza">
+      <!-- Columna fija: título, selector y resumen del formato -->
+      <div class="fmt-lado">
       <header class="sec-head">
         <div class="sec-head-title">
           <p class="label">Dos maneras de cursarlo</p>
@@ -159,7 +160,6 @@
         </button>
       </div>
 
-      <div class="fmt-panel">
         <div class="fmt-card" data-fmt="anual">
           <p class="tag">Formato fin de semana</p>
           <h3>Un fin de semana al mes</h3>
@@ -169,7 +169,7 @@
             <div><dt>Para quién</dt><dd>Vives cerca y prefieres un proceso largo y sostenido</dd></div>
           </dl>
           <p class="fmt-price"><strong>2.250&nbsp;€</strong> <span>reservas con 500&nbsp;€ a cuenta del total</span></p>
-          <a class="btn btn--solid btn--block" href="#calendario" data-elegir="anual"><span>Ver las fechas de mi sede</span> <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--solid btn--block" href="#calendario" data-elegir="anual"><span>Ver fechas y reservar</span> <span class="arrow" aria-hidden="true">→</span></a>
         </div>
 
         <div class="fmt-card" data-fmt="intensivo">
@@ -181,9 +181,14 @@
             <div><dt>Para quién</dt><dd>No puedes comprometer diez fines de semana, o quieres inmersión</dd></div>
           </dl>
           <p class="fmt-price"><span class="pending">[CONFIRMAR: precio y fechas]</span></p>
-          <a class="btn btn--outline btn--block" href="#intensivo" data-elegir="intensivo"><span>Ver cómo funciona</span> <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--solid btn--block" href="#intensivo" data-elegir="intensivo"><span>Ver cómo funciona</span> <span class="arrow" aria-hidden="true">→</span></a>
         </div>
 
+        <p class="fmt-note">Elige un formato y el calendario, el precio y la reserva de abajo cambian con él. Los 2.250 € son del <b>formato de fin de semana</b>; el intensivo tiene sus propias fechas, precio y condiciones. <span class="pending">[CONFIRMAR: fechas, precio y plazas del intensivo]</span></p>
+      </div>
+
+      <!-- Columna que cambia con el formato -->
+      <div class="fmt-cuerpo">
         <div class="fmt-text">
           <div data-fmt="anual">
             <p class="fmt-lead">Diez meses de proceso con el mismo grupo. El cuerpo asienta entre módulo y módulo, y lo que se abre tiene tiempo de integrarse.</p>
@@ -196,7 +201,6 @@
             <p class="fmt-extra">Mismo temario y misma titulación que el formato de fin de semana. Puedes empezar en un formato y continuar en el otro.</p>
           </div>
         </div>
-      </div>
 
       <!-- Ancla fuera de los bloques con data-fmt: existe y se puede saltar a ella en los dos formatos -->
       <div id="calendario" class="fmt-ancla"></div>
@@ -228,29 +232,37 @@
       </div>
       </div>
 
-      <!-- Cuerpo según el formato · fin de semana: el selector de sede solo existe aquí -->
+      <!-- Cuerpo según el formato · fin de semana: las dos sedes a la vez -->
       <div class="fmt-bloque fmt-bloque--cal" data-fmt="anual">
-        <div class="fmt-bloque-lado">
-          <header class="fmt-bloque-head">
-            <p class="label">Fechas de los diez módulos</p>
-            <h3>Calendario del <em>formato de fin de semana</em></h3>
-            <p class="fmt-bloque-sub">El grupo de la sede que elijas, con su propio recorrido y sus fechas.</p>
-          </header>
+        <header class="fmt-bloque-head">
+          <p class="label">Fechas de los diez módulos</p>
+          <h3>Calendario del <em>formato de fin de semana</em></h3>
+        </header>
 
-          <div class="sede-pick">
-            <p class="sede-ask">Elige tu sede</p>
-            <div class="sede-switch" role="group" aria-label="Elegir sede">
-              <button type="button" class="sede-opt is-active" data-sede-btn="madrid" aria-pressed="true">Madrid <span>Espacio Calithai</span></button>
-              <button type="button" class="sede-opt" data-sede-btn="barcelona" aria-pressed="false">Barcelona <span>Sede Central</span></button>
-            </div>
-          </div>
+      <div class="cal">
+        <div class="cal-col cal-col--madrid">
+          <h4>Madrid <span>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</span></h4>
+          <p class="cal-note">Grupo en curso: arrancó el 24-25 de octubre de 2026. Incorporación a partir del Módulo 2: <span class="pending">[CONFIRMAR: si se admite y en qué condiciones]</span>.</p>
+          <ol class="cal-list cal-list--5">
+            <li class="is-done"><span class="m">1</span><time datetime="2026-10-24">24-25 oct 2026 · realizado</time></li>
+            <li><span class="m">2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
+            <li><span class="m">3</span><time datetime="2026-12-19">19-20 dic 2026</time></li>
+            <li><span class="m">4</span><time datetime="2027-01-16">16-17 ene 2027</time></li>
+            <li><span class="m">5</span><time datetime="2027-02-13">13-14 feb 2027</time></li>
+            <li><span class="m">6</span><time datetime="2027-03-13">13-14 mar 2027</time></li>
+            <li><span class="m">7</span><time datetime="2027-04-10">10-11 abr 2027</time></li>
+            <li><span class="m">8</span><time datetime="2027-05-08">8-9 may 2027</time></li>
+            <li><span class="m">9</span><time datetime="2027-06-12">12-13 jun 2027</time></li>
+            <li><span class="m">10</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
+          </ol>
+          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a></p>
+          <p class="cal-pending"><span class="pending">[CONFIRMAR: choque con Barcelona el 3-4 de julio de 2027 — Madrid Módulo 10 y Barcelona Módulo 6 caen el mismo fin de semana]</span></p>
         </div>
 
-      <div class="cal cal--una">
-        <div class="cal-col" data-sede="barcelona">
+        <div class="cal-col cal-col--barcelona">
           <h4>Barcelona <span>Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</span></h4>
           <p class="cal-note">Dos maneras de empezar, un mismo grupo: puedes hacer el Módulo 1 en noviembre (opción A) o en febrero (opción B). Las dos entradas se unen en el Módulo 2, el 20-21 de marzo de 2027, y desde ahí seguís juntos hasta diciembre.</p>
-          <ol class="cal-list">
+          <ol class="cal-list cal-list--6">
             <li><span class="m">1 · opción A</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
             <li><span class="m">1 · opción B</span><time datetime="2027-02-20">20-21 feb 2027</time></li>
             <li><span class="m">2</span><time datetime="2027-03-20">20-21 mar 2027</time></li>
@@ -266,39 +278,20 @@
           <p class="cal-foot"><a class="btn btn--solid btn--sm" href="#reserva">Reservar en Barcelona</a></p>
           <p class="cal-pending"><span class="pending">[CONFIRMAR: qué ocurre entre el Módulo 1 de noviembre y el Módulo 2 de marzo — son cuatro meses sin clase en la opción A]</span></p>
         </div>
-
-        <div class="cal-col" data-sede="madrid">
-          <h4>Madrid <span>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</span></h4>
-          <p class="cal-note">Grupo en curso: arrancó el 24-25 de octubre de 2026. Incorporación a partir del Módulo 2: <span class="pending">[CONFIRMAR: si se admite y en qué condiciones]</span>.</p>
-          <ol class="cal-list">
-            <li class="is-done"><span class="m">1</span><time datetime="2026-10-24">24-25 oct 2026 · realizado</time></li>
-            <li><span class="m">2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
-            <li><span class="m">3</span><time datetime="2026-12-19">19-20 dic 2026</time></li>
-            <li><span class="m">4</span><time datetime="2027-01-16">16-17 ene 2027</time></li>
-            <li><span class="m">5</span><time datetime="2027-02-13">13-14 feb 2027</time></li>
-            <li><span class="m">6</span><time datetime="2027-03-13">13-14 mar 2027</time></li>
-            <li><span class="m">7</span><time datetime="2027-04-10">10-11 abr 2027</time></li>
-            <li><span class="m">8</span><time datetime="2027-05-08">8-9 may 2027</time></li>
-            <li><span class="m">9</span><time datetime="2027-06-12">12-13 jun 2027</time></li>
-            <li><span class="m">10</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
-          </ol>
-          <p class="cal-foot"><a class="btn btn--outline btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a></p>
-          <p class="cal-pending"><span class="pending">[CONFIRMAR: choque con Barcelona el 3-4 de julio de 2027 — Madrid Módulo 10 y Barcelona Módulo 6 caen el mismo fin de semana]</span></p>
-        </div>
       </div>
       </div>
-
-      <p class="fmt-note">Elige un formato y el calendario, el precio y la reserva de abajo cambian con él. Los 2.250 € son del <b>formato de fin de semana</b>; el intensivo tiene sus propias fechas, precio y condiciones. <span class="pending">[CONFIRMAR: fechas, precio y plazas del intensivo]</span></p>
+      </div>
     </div>
-
-    <!-- Imagen de apoyo: el reportaje es de un taller real, no de las sedes. El pie lo dice.
-         Solo en fin de semana: en intensivo podría leerse como la casa de Mallorca. -->
-    <figure class="band-photo" data-fmt="anual">
-      <img src="img/aula.webp" width="1800" height="1013" loading="lazy"
-           alt="Sala de piedra con arcos y varias camillas; una docente trabaja mientras el grupo observa.">
-      <figcaption>Taller de formación · julio de 2026</figcaption>
-    </figure>
   </section>
+
+  <!-- Imagen de apoyo: el reportaje es de un taller real, no de las sedes. El pie lo dice.
+       Solo en fin de semana: en intensivo podría leerse como la casa de Mallorca.
+       Fuera de #formatos para que la sección quepa en una pantalla. -->
+  <figure class="band-photo band-photo--formatos" data-fmt="anual">
+    <img src="img/aula.webp" width="1800" height="1013" loading="lazy"
+         alt="Sala de piedra con arcos y varias camillas; una docente trabaja mientras el grupo observa.">
+    <figcaption>Taller de formación · julio de 2026</figcaption>
+  </figure>
 
   <!-- BLOQUE 4 · PRECIO Y FORMAS DE PAGO -->
   <section class="section pricing bg-paper" id="precio" data-fmt="anual" aria-labelledby="price-title">
@@ -734,6 +727,6 @@
   </div>
 </div>
 
-<script src="main.js?v=33" defer></script>
+<script src="main.js?v=34" defer></script>
 </body>
 </html>
