@@ -496,8 +496,8 @@ html[data-formato="intensivo"] [data-fmt="anual"] { display: none; }
 /* 31 · Concepto «una decisión por pantalla»: #formatos elige el formato, #calendario da las fechas */
 .formats { background: var(--white); }
 .band-photo--formatos { margin: 0; background: var(--white); }
-.section.formats, .section.cuando { padding-block: clamp(4rem, 11vh, 9rem); }
-@media (min-width: 1000px) { .section.formats, .section.cuando { padding-block: clamp(4.5rem, 11vh, 9.5rem); } }
+/* Todas las secciones comparten el mismo aire: el ritmo más alto de la página (--section) */
+.section.formats, .section.cuando { padding-block: var(--section); }
 html[data-formato="intensivo"] .cuando { border-bottom: 1px solid var(--line); }
 .formats .sec-head, .cuando .sec-head { display: block; margin: 0; }
 .formats .sec-head h2, .cuando .sec-head h2 { max-width: 22ch; font-size: clamp(2.1rem, 1.5rem + 1.5vw, 3.25rem); line-height: 1.1; }
@@ -590,9 +590,6 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
 }
 
 /* Pantallas bajas: mismo aire proporcional, sin pasarse del alto útil */
-@media (max-width: 1600px) and (max-height: 800px) {
-  .section.formats, .section.cuando { padding-block: clamp(3.5rem, 10vh, 6.5rem); }
-}
 
 /* 31 · Rejillas simétricas: la cabecera y el contenido comparten las mismas dos columnas
    (antes la cabecera iba a 7/5 y el contenido a 1/1, y la columna derecha arrancaba en dos sitios distintos) */
@@ -608,3 +605,30 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
   #precio .sec-sub,
   .ladder .sec-sub { max-width: none; }
 }
+
+/* 32 · Programa uniforme: las dos mitades comparten filas (título, entradilla, lista)
+   para que las listas de módulos arranquen a la misma altura aunque una entradilla sea más larga */
+@media (min-width: 900px) {
+  .program { grid-template-rows: auto auto 1fr; }
+  .program-half {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    align-content: start;
+  }
+  .program-half > p { max-width: none; align-self: start; }
+  .program-half .mod-list { align-self: start; }
+}
+
+.program-nota {
+  margin: var(--s-3) 0 0;
+  max-width: 70ch;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--muted);
+  padding-top: var(--s-2);
+  border-top: 1px solid var(--line);
+}
+
+/* La entradilla del programa ocupa el ancho de las dos columnas: así no queda un desierto a su derecha */
+#programa .program-lead { max-width: none; }
