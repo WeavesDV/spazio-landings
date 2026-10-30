@@ -492,8 +492,8 @@ html[data-formato="intensivo"] [data-fmt="anual"] { display: none; }
 /* 31 · Concepto «una decisión por pantalla»: #formatos elige el formato, #calendario da las fechas */
 .formats { background: var(--white); }
 .band-photo--formatos { margin: 0; background: var(--white); }
-.section.formats, .section.cuando { padding-block: clamp(3rem, 7vh, 6rem); }
-@media (min-width: 1000px) { .section.formats, .section.cuando { padding-top: max(4.5rem, 8vh); } }
+.section.formats, .section.cuando { padding-block: clamp(4rem, 11vh, 9rem); }
+@media (min-width: 1000px) { .section.formats, .section.cuando { padding-block: clamp(4.5rem, 11vh, 9.5rem); } }
 html[data-formato="intensivo"] .cuando { border-bottom: 1px solid var(--line); }
 .formats .sec-head, .cuando .sec-head { display: block; margin: 0; }
 .formats .sec-head h2, .cuando .sec-head h2 { max-width: 22ch; font-size: clamp(2.1rem, 1.5rem + 1.5vw, 3.25rem); line-height: 1.1; }
@@ -583,4 +583,9 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
 /* Pantallas altas: las filas de fechas recuperan aire */
 @media (min-width: 1000px) and (min-height: 1000px) {
   .cal-list li { padding-block: .6rem; }
+}
+
+/* Pantallas bajas: mismo aire proporcional, sin pasarse del alto útil */
+@media (max-width: 1600px) and (max-height: 800px) {
+  .section.formats, .section.cuando { padding-block: clamp(3.5rem, 10vh, 6.5rem); }
 }

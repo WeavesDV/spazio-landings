@@ -33,7 +33,7 @@
 
   /* — Espacio (unidad 8) — */
   --s-1: .5rem; --s-2: 1rem; --s-3: 1.5rem; --s-4: 2rem; --s-5: 3rem; --s-6: 4rem; --s-7: 6rem;
-  --section: clamp(4.5rem, 3rem + 7vw, 10rem);
+  --section: clamp(4.5rem, 3rem + 7.4vw, 11.5rem);
   --pad: clamp(1.25rem, .4rem + 4.4vw, 6rem);
   --max: 1680px;
   --radius: 0;
