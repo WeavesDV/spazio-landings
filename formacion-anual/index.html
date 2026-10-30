@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-formato="anual">
+<html lang="es" data-formato="anual" data-sede="madrid">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +15,9 @@
     LOS MARCADORES [CONFIRMAR: …] SON VISIBLES A PROPÓSITO: son lo que falta cerrar con Sujati.
     No quitar ninguno hasta que lo responda por escrito. Lista completa: REVISION.md en esta carpeta.
   -->
-  <link rel="stylesheet" href="fonts.css?v=35">
-  <link rel="stylesheet" href="styles.css?v=35">
-  <link rel="stylesheet" href="anual.css?v=35">
+  <link rel="stylesheet" href="fonts.css?v=36">
+  <link rel="stylesheet" href="styles.css?v=36">
+  <link rel="stylesheet" href="anual.css?v=36">
 </head>
 <body>
 
@@ -135,11 +135,9 @@
     </div>
   </section>
 
-  <!-- BLOQUE 2b · DOS MANERAS DE CURSARLO (texto del cliente, literal) -->
+  <!-- BLOQUE 2b · CÓMO SE CURSA: una sola decisión, qué formato (texto del cliente) -->
   <section class="section formats" id="formatos" aria-labelledby="fmt-title">
-    <div class="wrap fmt-pieza">
-      <!-- Columna fija: título, selector y resumen del formato -->
-      <div class="fmt-lado">
+    <div class="wrap">
       <header class="sec-head">
         <div class="sec-head-title">
           <p class="label">Dos maneras de cursarlo</p>
@@ -148,138 +146,128 @@
         <p class="sec-sub">Mismo temario y misma titulación. Cambia el calendario y la experiencia, no lo que aprendes. Puedes empezar en un formato y continuar en el otro.</p>
       </header>
 
-      <p class="sede-ask fmt-ask">Elige cómo quieres cursarlo</p>
-      <div class="fmt-switch" role="group" aria-label="Elegir formato">
-        <button type="button" class="fmt-opt is-active" data-elegir="anual" aria-pressed="true">
-          <span class="fmt-opt-k">Fin de semana</span>
-          <span class="fmt-opt-v">Madrid y Barcelona</span>
-        </button>
-        <button type="button" class="fmt-opt" data-elegir="intensivo" aria-pressed="false">
-          <span class="fmt-opt-k">Intensivo</span>
-          <span class="fmt-opt-v">Mallorca · dos estancias</span>
-        </button>
-      </div>
-
-        <div class="fmt-card" data-fmt="anual">
-          <p class="tag">Formato fin de semana</p>
+      <div class="fmt-tarjetas">
+        <article class="fmt-tarjeta fmt-tarjeta--anual">
           <h3>Un fin de semana al mes</h3>
-          <dl class="fmt-data">
-            <div><dt>Dónde</dt><dd>Madrid y Barcelona</dd></div>
-            <div><dt>Ritmo</dt><dd>10 módulos en un año</dd></div>
-            <div><dt>Para quién</dt><dd>Vives cerca y prefieres un proceso largo y sostenido</dd></div>
-          </dl>
-          <p class="fmt-price"><strong>2.250&nbsp;€</strong> <span>reservas con 500&nbsp;€ a cuenta del total</span></p>
-          <a class="btn btn--solid btn--block" href="#calendario" data-elegir="anual"><span>Ver fechas y reservar</span> <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
+          <p class="fmt-lead">Diez meses de proceso con el mismo grupo. El cuerpo asienta entre módulo y módulo, y lo que se abre tiene tiempo de integrarse.</p>
+          <p class="fmt-hechos">Madrid y Barcelona · 10 módulos en un año</p>
+          <p class="fmt-hechos"><b>Para quién</b> Vives cerca y prefieres un proceso largo y sostenido</p>
+          <a class="btn btn--solid btn--sm fmt-opt is-active" role="button" href="#calendario" data-elegir="anual" aria-pressed="true">Ver fechas y reservar</a>
+        </article>
 
-        <div class="fmt-card" data-fmt="intensivo">
-          <p class="tag">Formato intensivo</p>
+        <article class="fmt-tarjeta fmt-tarjeta--intensivo">
           <h3>Nueve días en Mallorca</h3>
-          <dl class="fmt-data">
-            <div><dt>Dónde</dt><dd>Sant Joan, Mallorca · casa rural</dd></div>
-            <div><dt>Ritmo</dt><dd>Dos estancias de nueve días</dd></div>
-            <div><dt>Para quién</dt><dd>No puedes comprometer diez fines de semana, o quieres inmersión</dd></div>
-          </dl>
-          <p class="fmt-price"><strong>2.250&nbsp;€</strong> <span>reservas con 500&nbsp;€ a cuenta del total</span></p>
-          <a class="btn btn--solid btn--block" href="#intensivo" data-elegir="intensivo"><span>Ver cómo funciona</span> <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
-
-        <p class="fmt-note">Elige un formato y el calendario y la reserva cambian con él. El precio es el mismo en los dos: <b>2.250 € con 500 € de matrícula</b>. Cambian las fechas, la sede y las condiciones de la estancia. <span class="pending">[CONFIRMAR: fechas y plazas del intensivo]</span></p>
+          <p class="fmt-lead">Una casa rural en plena naturaleza, comida vegetariana y un grupo que convive. Te formas mientras desconectas de todo lo demás.</p>
+          <p class="fmt-hechos">Sant Joan, Mallorca · casa rural · Dos estancias de nueve días</p>
+          <p class="fmt-hechos"><b>Para quién</b> No puedes comprometer diez fines de semana, o quieres inmersión</p>
+          <a class="btn btn--solid btn--sm fmt-opt" role="button" href="#intensivo" data-elegir="intensivo" aria-pressed="false">Ver cómo funciona</a>
+        </article>
       </div>
 
-      <!-- Columna que cambia con el formato -->
-      <div class="fmt-cuerpo">
-        <div class="fmt-text">
-          <div data-fmt="anual">
-            <p class="fmt-lead">Diez meses de proceso con el mismo grupo. El cuerpo asienta entre módulo y módulo, y lo que se abre tiene tiempo de integrarse.</p>
-            <p>Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Madrid o en Barcelona. Cada sede mantiene su propio grupo y su propio recorrido.</p>
-            <p class="fmt-extra">Si un fin de semana al mes no te encaja, el formato intensivo da el mismo temario en dos estancias de nueve días.</p>
+      <p class="fmt-precio">El precio es el mismo en los dos: <strong>2.250&nbsp;€</strong>, y reservas con 500&nbsp;€ a cuenta del total. <span class="pending">[CONFIRMAR: fechas y plazas del intensivo]</span></p>
+    </div>
+  </section>
+
+  <!-- BLOQUE 2c · CUÁNDO: cambia con el formato. Una sede a la vez; el selector de sede es el único control. -->
+  <section class="section cuando bg-paper" id="calendario" aria-label="Fechas y sedes">
+    <div class="wrap">
+      <!-- Fin de semana -->
+      <div class="cuando-pieza" data-fmt="anual">
+        <div class="cuando-lado">
+          <header class="sec-head">
+            <div class="sec-head-title">
+              <p class="label">Fechas de los diez módulos</p>
+              <h2>Calendario del <em>formato de fin de semana</em></h2>
+            </div>
+          </header>
+          <p class="cuando-sub">Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Madrid o en Barcelona. Cada sede mantiene su propio grupo y su propio recorrido.</p>
+
+          <div class="sede-tabs" role="group" aria-label="Elegir sede">
+            <button type="button" class="sede-opt is-active" data-sede-btn="madrid" aria-pressed="true">Madrid</button>
+            <button type="button" class="sede-opt" data-sede-btn="barcelona" aria-pressed="false">Barcelona</button>
           </div>
-          <div data-fmt="intensivo">
-            <p class="fmt-lead">Una casa rural en plena naturaleza, comida vegetariana y un grupo que convive. Te formas mientras desconectas de todo lo demás.</p>
-            <p>Dos estancias de nueve días en Sant Joan (Mallorca), con el tiempo entre ellas para practicar e integrar lo aprendido.</p>
-            <p class="fmt-extra">Mismo temario y misma titulación que el formato de fin de semana. Puedes empezar en un formato y continuar en el otro.</p>
+
+          <div class="sede-info" data-sede-panel="madrid">
+            <p>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</p>
+            <p>Grupo en curso: arrancó el 24-25 de octubre de 2026.</p>
+          </div>
+          <div class="sede-info" data-sede-panel="barcelona">
+            <p>Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</p>
+            <p>Módulo 1 en noviembre (opción A) o en febrero (opción B). Las dos entradas se unen en el Módulo 2 y desde ahí seguís juntos hasta diciembre.</p>
           </div>
         </div>
 
-      <!-- Ancla fuera de los bloques con data-fmt: existe y se puede saltar a ella en los dos formatos -->
-      <div id="calendario" class="fmt-ancla"></div>
-
-      <!-- Cuerpo según el formato · intensivo -->
-      <div class="fmt-bloque" id="intensivo" data-fmt="intensivo">
-        <header class="fmt-bloque-head">
-          <p class="label">Formato intensivo</p>
-          <h3>Cómo funciona <em>el intensivo</em></h3>
-        </header>
-
-      <div class="cal">
-        <div class="cal-col">
-          <h4>Dónde <span>Sant Joan, Mallorca · casa rural</span></h4>
-          <p class="cal-note">Alojamiento y comida vegetariana en la misma casa: el grupo convive durante los nueve días.</p>
-          <p class="cal-pending"><span class="pending">[CONFIRMAR: fechas de las dos estancias, qué incluye (alojamiento, comidas) y plazas]</span></p>
-          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener">Pedir fechas del intensivo</a></p>
+        <div class="cuando-fechas">
+          <ol class="cal-list" data-sede-panel="madrid" aria-label="Fechas en Madrid">
+            <li class="is-done"><span class="m">Módulo 1</span><time datetime="2026-10-24">24-25 oct 2026 · realizado</time></li>
+            <li><span class="m">Módulo 2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
+            <li><span class="m">Módulo 3</span><time datetime="2026-12-19">19-20 dic 2026</time></li>
+            <li><span class="m">Módulo 4</span><time datetime="2027-01-16">16-17 ene 2027</time></li>
+            <li><span class="m">Módulo 5</span><time datetime="2027-02-13">13-14 feb 2027</time></li>
+            <li><span class="m">Módulo 6</span><time datetime="2027-03-13">13-14 mar 2027</time></li>
+            <li><span class="m">Módulo 7</span><time datetime="2027-04-10">10-11 abr 2027</time></li>
+            <li><span class="m">Módulo 8</span><time datetime="2027-05-08">8-9 may 2027</time></li>
+            <li><span class="m">Módulo 9</span><time datetime="2027-06-12">12-13 jun 2027</time></li>
+            <li><span class="m">Módulo 10</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
+          </ol>
+          <ol class="cal-list" data-sede-panel="barcelona" aria-label="Fechas en Barcelona">
+            <li><span class="m">Módulo 1 · opción A</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
+            <li><span class="m">Módulo 1 · opción B</span><time datetime="2027-02-20">20-21 feb 2027</time></li>
+            <li><span class="m">Módulo 2</span><time datetime="2027-03-20">20-21 mar 2027</time></li>
+            <li><span class="m">Módulo 3</span><time datetime="2027-04-24">24-25 abr 2027</time></li>
+            <li><span class="m">Módulo 4</span><time datetime="2027-05-22">22-23 may 2027</time></li>
+            <li><span class="m">Módulo 5</span><time datetime="2027-06-19">19-20 jun 2027</time></li>
+            <li><span class="m">Módulo 6</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
+            <li><span class="m">Módulo 7</span><time datetime="2027-09-18">18-19 sep 2027</time></li>
+            <li><span class="m">Módulo 8</span><time datetime="2027-10-16">16-17 oct 2027</time></li>
+            <li><span class="m">Módulo 9</span><time datetime="2027-11-13">13-14 nov 2027</time></li>
+            <li><span class="m">Módulo 10</span><time datetime="2027-12-11">11-12 dic 2027</time></li>
+          </ol>
         </div>
 
-        <div class="cal-col">
-          <h4>Cómo se cursa <span>Dos estancias, un mismo grupo</span></h4>
-          <p class="cal-note">La primera estancia abre las bases del masaje californiano y la regulación del sistema nervioso; la segunda entra en el detalle y la teoría polivagal, igual que las dos mitades del formato de fin de semana.</p>
-          <ol class="cal-list">
+        <div class="cuando-cta">
+          <a class="btn btn--solid btn--sm" data-sede-panel="madrid" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a>
+          <a class="btn btn--solid btn--sm" data-sede-panel="barcelona" href="#reserva">Reservar en Barcelona</a>
+        </div>
+
+        <div class="cuando-avisos">
+          <p>Incorporación a Madrid a partir del Módulo 2: <span class="pending">[CONFIRMAR: si se admite y en qué condiciones]</span></p>
+          <p><span class="pending">[CONFIRMAR: choque con Barcelona el 3-4 de julio de 2027 — Madrid Módulo 10 y Barcelona Módulo 6 caen el mismo fin de semana]</span></p>
+          <p><span class="pending">[CONFIRMAR: qué ocurre entre el Módulo 1 de noviembre y el Módulo 2 de marzo — son cuatro meses sin clase en la opción A]</span></p>
+        </div>
+      </div>
+
+      <!-- Intensivo -->
+      <div class="cuando-pieza" id="intensivo" data-fmt="intensivo">
+        <div class="cuando-lado">
+          <header class="sec-head">
+            <div class="sec-head-title">
+              <p class="label">Formato intensivo</p>
+              <h2>Cómo funciona <em>el intensivo</em></h2>
+            </div>
+          </header>
+          <p class="cuando-sub">Dos estancias de nueve días en Sant Joan (Mallorca), con el tiempo entre ellas para practicar e integrar lo aprendido.</p>
+          <div class="sede-info">
+            <p>Alojamiento y comida vegetariana en la misma casa: el grupo convive durante los nueve días.</p>
+          </div>
+        </div>
+
+        <div class="cuando-fechas">
+          <ol class="cal-list" aria-label="Dos estancias, un mismo grupo">
             <li><span class="m">Primera estancia</span><time>9 días · fecha por confirmar</time></li>
             <li><span class="m">Vuelta a casa</span><time>tiempo para practicar e integrar</time></li>
             <li><span class="m">Segunda estancia</span><time>9 días · fecha por confirmar</time></li>
           </ol>
-        </div>
-      </div>
-      </div>
-
-      <!-- Cuerpo según el formato · fin de semana: las dos sedes a la vez -->
-      <div class="fmt-bloque fmt-bloque--cal" data-fmt="anual">
-        <header class="fmt-bloque-head">
-          <p class="label">Fechas de los diez módulos</p>
-          <h3>Calendario del <em>formato de fin de semana</em></h3>
-        </header>
-
-      <div class="cal">
-        <div class="cal-col cal-col--madrid">
-          <h4>Madrid <span>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</span></h4>
-          <p class="cal-note">Grupo en curso: arrancó el 24-25 de octubre de 2026. Incorporación a partir del Módulo 2: <span class="pending">[CONFIRMAR: si se admite y en qué condiciones]</span>.</p>
-          <ol class="cal-list cal-list--5">
-            <li class="is-done"><span class="m">1</span><time datetime="2026-10-24">24-25 oct 2026 · realizado</time></li>
-            <li><span class="m">2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
-            <li><span class="m">3</span><time datetime="2026-12-19">19-20 dic 2026</time></li>
-            <li><span class="m">4</span><time datetime="2027-01-16">16-17 ene 2027</time></li>
-            <li><span class="m">5</span><time datetime="2027-02-13">13-14 feb 2027</time></li>
-            <li><span class="m">6</span><time datetime="2027-03-13">13-14 mar 2027</time></li>
-            <li><span class="m">7</span><time datetime="2027-04-10">10-11 abr 2027</time></li>
-            <li><span class="m">8</span><time datetime="2027-05-08">8-9 may 2027</time></li>
-            <li><span class="m">9</span><time datetime="2027-06-12">12-13 jun 2027</time></li>
-            <li><span class="m">10</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
-          </ol>
-          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a></p>
-          <p class="cal-pending"><span class="pending">[CONFIRMAR: choque con Barcelona el 3-4 de julio de 2027 — Madrid Módulo 10 y Barcelona Módulo 6 caen el mismo fin de semana]</span></p>
+          <p class="cuando-nota">La primera estancia abre las bases del masaje californiano y la regulación del sistema nervioso; la segunda entra en el detalle y la teoría polivagal, igual que las dos mitades del formato de fin de semana.</p>
         </div>
 
-        <div class="cal-col cal-col--barcelona">
-          <h4>Barcelona <span>Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</span></h4>
-          <p class="cal-note">Dos maneras de empezar, un mismo grupo: puedes hacer el Módulo 1 en noviembre (opción A) o en febrero (opción B). Las dos entradas se unen en el Módulo 2, el 20-21 de marzo de 2027, y desde ahí seguís juntos hasta diciembre.</p>
-          <ol class="cal-list cal-list--6">
-            <li><span class="m">1 · opción A</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
-            <li><span class="m">1 · opción B</span><time datetime="2027-02-20">20-21 feb 2027</time></li>
-            <li><span class="m">2</span><time datetime="2027-03-20">20-21 mar 2027</time></li>
-            <li><span class="m">3</span><time datetime="2027-04-24">24-25 abr 2027</time></li>
-            <li><span class="m">4</span><time datetime="2027-05-22">22-23 may 2027</time></li>
-            <li><span class="m">5</span><time datetime="2027-06-19">19-20 jun 2027</time></li>
-            <li><span class="m">6</span><time datetime="2027-07-03">3-4 jul 2027</time></li>
-            <li><span class="m">7</span><time datetime="2027-09-18">18-19 sep 2027</time></li>
-            <li><span class="m">8</span><time datetime="2027-10-16">16-17 oct 2027</time></li>
-            <li><span class="m">9</span><time datetime="2027-11-13">13-14 nov 2027</time></li>
-            <li><span class="m">10</span><time datetime="2027-12-11">11-12 dic 2027</time></li>
-          </ol>
-          <p class="cal-foot"><a class="btn btn--solid btn--sm" href="#reserva">Reservar en Barcelona</a></p>
-          <p class="cal-pending"><span class="pending">[CONFIRMAR: qué ocurre entre el Módulo 1 de noviembre y el Módulo 2 de marzo — son cuatro meses sin clase en la opción A]</span></p>
+        <div class="cuando-cta">
+          <a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener">Pedir fechas del intensivo</a>
         </div>
-      </div>
-      </div>
+
+        <div class="cuando-avisos">
+          <p><span class="pending">[CONFIRMAR: fechas de las dos estancias, qué incluye (alojamiento, comidas) y plazas]</span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -735,6 +723,6 @@
   </div>
 </div>
 
-<script src="main.js?v=35" defer></script>
+<script src="main.js?v=36" defer></script>
 </body>
 </html>
