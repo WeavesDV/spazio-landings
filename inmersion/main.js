@@ -82,9 +82,9 @@
     '.booking', '.faq-list', '.footer-close', '.footer-main'
   ];
   // Piezas sueltas
-  var singles = ['.sec-head', '.scene .label', '.scene-title', '#scene-title', '.scene-hours', '.answer',
+  var singles = ['.sec-head', '.scene .label', '.scene-title', '#scene-title', '.scene-hours', '.sedes', '.answer',
     '.teacher-text', '.archive-head', '.ethic', '.split-aside', '.reviews-score'];
-  var imgs = ['.rooms-stage', '.teacher-photo img'];  // la img, no la figure: el clip-path recortaba los círculos de marca
+  var imgs = ['.teacher-photo img'];  // la img, no la figure: el clip-path recortaba los círculos de marca
   singles.push('.reviews-track');  // carrusel horizontal: entra entero (sus tarjetas fuera de pantalla nunca «intersecan»)
 
   var els = [];

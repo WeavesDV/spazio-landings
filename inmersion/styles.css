@@ -281,78 +281,22 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-5px) rotate(-
   text-align: center; margin: 0 0 clamp(1.75rem, 1rem + 2vw, 3rem);
   font-weight: 600; font-size: .8125rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
 }
-/* Salas por sede: foto a sangre que cambia al pulsar la sede (radio + label, sin JS) */
-.rooms { margin: 0 0 clamp(2.5rem, 1.5rem + 3vw, 5rem); display: grid; gap: clamp(.9rem, .6rem + .8vw, 1.4rem); }
-.room-radio { position: absolute; opacity: 0; pointer-events: none; }
-/* Altura ligada a la ventana: titular + sedes + foto caben en una pantalla */
-.rooms-stage {
-  position: relative; isolation: isolate; overflow: hidden; background: var(--paper);
-  height: clamp(320px, calc(100svh - 27rem - 1vw), 800px);
+/* Sedes: ciudad, fecha y espacio. Sin foto de sala mientras no haya fotos reales del cliente. */
+.sedes {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 0 clamp(2.5rem, 1.5rem + 3vw, 5rem);
+  border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
 }
-.room { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .6s ease; }
-.room img { width: 100%; height: 100%; object-fit: cover; }
-.room--barcelona img { object-position: 50% 62%; }
-.room--madrid img { object-position: 50% 50%; }
-.room--vigo img { object-position: 50% 60%; }
-.rooms-stage::after { /* velo inferior para la barra */
-  content: ""; position: absolute; inset: auto 0 0 0; height: 45%; z-index: 1; pointer-events: none;
-  background: linear-gradient(0deg, rgb(53 36 62 / .55), rgb(53 36 62 / 0));
-}
-#sala-barcelona:checked ~ .rooms-stage .room--barcelona,
-#sala-madrid:checked    ~ .rooms-stage .room--madrid,
-#sala-vigo:checked      ~ .rooms-stage .room--vigo { opacity: 1; }
+.sede { padding: clamp(1.1rem, .75rem + 1.2vw, 1.8rem) 0; }
+.sede + .sede { border-left: 1px solid var(--line-strong); padding-left: clamp(1.1rem, .75rem + 1.4vw, 2rem); }
+.sede-city { margin: 0; font-family: var(--serif); font-weight: 400; font-size: var(--fs-h3); line-height: 1.15; }
+.sede-date { margin: .35rem 0 0; font-weight: 600; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.sede-place { margin: .55rem 0 0; font-size: var(--fs-small); color: var(--text); line-height: 1.5; }
 
-.room-flag {
-  position: absolute; top: var(--s-3); right: var(--pad); z-index: 2; margin: 0;
-  padding: .35rem .75rem; background: rgb(251 248 246 / .8);
-  font-size: .68rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--text);
-}
-.rooms-bar {
-  display: flex; justify-content: center;
-  margin-inline: auto;
-}
-.rooms-tabs {
-  display: inline-flex; flex-wrap: wrap; padding: 3px; gap: 2px;
-  background: transparent; border: 1px solid var(--line-strong);
-}
-.rooms-tabs label {
-  display: grid; gap: .15rem; cursor: pointer; padding: .6rem 1.35rem;
-  border: 1px solid transparent; color: var(--text);
-  transition: background-color .25s ease, color .25s ease;
-}
-.rooms-tabs label b { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; line-height: 1.1; letter-spacing: 0; }
-.rooms-tabs label span { font-weight: 600; font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
-.rooms-tabs label:hover { background: var(--paper); }
-#sala-barcelona:checked ~ .rooms-bar label[for="sala-barcelona"],
-#sala-madrid:checked    ~ .rooms-bar label[for="sala-madrid"],
-#sala-vigo:checked      ~ .rooms-bar label[for="sala-vigo"] { background: var(--primary); color: #fff; }
-#sala-barcelona:checked ~ .rooms-bar label[for="sala-barcelona"] span,
-#sala-madrid:checked    ~ .rooms-bar label[for="sala-madrid"] span,
-#sala-vigo:checked      ~ .rooms-bar label[for="sala-vigo"] span { color: rgb(255 255 255 / .82); }
-#sala-barcelona:focus-visible ~ .rooms-bar label[for="sala-barcelona"],
-#sala-madrid:focus-visible    ~ .rooms-bar label[for="sala-madrid"],
-#sala-vigo:focus-visible      ~ .rooms-bar label[for="sala-vigo"] { outline: 2px solid var(--text); outline-offset: 2px; }
-
-/* Lugar: sobre la foto, abajo a la derecha (como en v5) */
-.room-info {
-  display: none; position: absolute; right: var(--pad); bottom: var(--s-4); z-index: 2; margin: 0;
-  max-width: min(46rem, 70%); color: rgb(251 248 246 / .92); font-size: var(--fs-small); text-align: right;
-  text-shadow: 0 1px 12px rgb(53 36 62 / .5);
-}
-.room-info span { display: block; font-family: var(--serif); font-size: var(--fs-h3); color: #fff; line-height: 1.2; }
-#sala-barcelona:checked ~ .rooms-stage .room-info--barcelona,
-#sala-madrid:checked    ~ .rooms-stage .room-info--madrid,
-#sala-vigo:checked      ~ .rooms-stage .room-info--vigo { display: block; }
-
-@media (max-width: 699px) { .rooms-stage { height: clamp(320px, calc(100svh - 25rem), 470px); } }
 @media (max-width: 699px) {
-  .rooms-tabs { width: 100%; flex-direction: column; }
-  .rooms-tabs label { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; padding: .6rem .8rem; }
-  .rooms-tabs label b { font-size: 1.05rem; }
-  .rooms-tabs label span { font-size: .64rem; letter-spacing: .12em; text-align: right; }
-  .room-info { left: var(--pad); right: var(--pad); bottom: var(--s-3); max-width: none; text-align: left; }
+  .sedes { grid-template-columns: 1fr; }
+  .sede + .sede { border-left: 0; padding-left: 0; border-top: 1px solid var(--line-strong); }
 }
-@media (prefers-reduced-motion: reduce) { .room { transition: none; } }
 .scene-body { display: grid; gap: var(--s-4) var(--s-6); }
 .scene-lead {
   font-family: var(--sans); font-weight: 400; font-size: var(--fs-lead); line-height: 1.65;
@@ -770,12 +714,6 @@ html.js .reveal--img.is-in { clip-path: inset(0 0 0 0); }
 @keyframes float-b { 50% { transform: translate(8px, 6px); } }
 .teacher-photo::before { animation: float-a 11s ease-in-out infinite; }
 .teacher-photo::after  { animation: float-b 13s ease-in-out infinite; }
-
-/* Salas: la foto que entra hace un zoom suave al cambiar de sede */
-.room img { transform: scale(1.04); transition: transform 2.4s var(--ease-calm); }
-#sala-barcelona:checked ~ .rooms-stage .room--barcelona img,
-#sala-madrid:checked    ~ .rooms-stage .room--madrid img,
-#sala-vigo:checked      ~ .rooms-stage .room--vigo img { transform: scale(1); }
 
 /* FAQ: la respuesta aparece suave */
 .faq-list details[open] p { animation: rise .6s var(--ease-calm) both; }

@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inmersión en la esencia · Spazio Bodywork®</title>
   <meta name="description" content="Dos días de práctica viva para incorporar los fundamentos del Masaje Californiano y del trabajo corporal psicosomático. Barcelona y Madrid.">
   <!--
-    MAQUETA HTML/CSS · Landing «Inmersión Esencia Bodywork» · MLAB-427 · v6
+    MAQUETA HTML/CSS · Landing «Inmersión Esencia Bodywork» · MLAB-427 · MLAB-580 · v7
+    (v7, 02-11-2026: correcciones de Sujati del 31-10 — «Instructora» en vez de «Docentes»,
+     fuera Vigo, fuera fotos simuladas de sala, 170 € en efectivo el día del curso,
+     fuera «camillas y aceites», ropa sin límite de movimiento, «cómo se enseña» sin
+     «centro de la sala» / «acompañamiento directo» / «eje corporal» y con «hara».)
     (v6, 29-10-2026: revisión con Consultoría MTA — banner y naming, menú más grande,
      sedes y fechas debajo del horario, convocatorias reservables con panel flotante,
      formulario de dudas en el pie, menú móvil.)
@@ -17,7 +21,7 @@
     Versiones anteriores: index.v4.html / index.v3.html
   -->
   <link rel="stylesheet" href="fonts.css?v=9">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -26,7 +30,7 @@
   <a class="wordmark" href="#inicio"><img class="isotipo" src="img/isotipo-spazio.webp" width="256" height="256" alt=""><span>Spazio Bodywork<sup>®</sup></span></a>
   <nav class="site-nav" id="site-nav" aria-label="Secciones">
     <a href="#programa">Programa</a>
-    <a href="#docentes">Docentes</a>
+    <a href="#docentes">Instructora</a>
     <a href="#precio">Precio</a>
     <a class="nav-cta" href="#reserva">Reservar plaza</a>
   </nav>
@@ -75,43 +79,20 @@
     </div>
 
     <!--
-      SEDES: radio + label + figure (sin JS). El selector de sede va DEBAJO de los horarios,
-      separado de la imagen, como pidió la revisión del 29-10.
-      FOTOS SIMULADAS (Unsplash, ver img/simuladas/CREDITOS.md): sustituir por las fotos reales de cada sala antes de publicar.
-      Para añadir una sede: copiar un <input>, un <label> con su fecha, un <figure class="room"> y su p de .room-info.
+      SEDES: las dos convocatorias con su espacio, sin foto.
+      Las fotos de sala que había eran simuladas y Sujati las descartó el 31-10-2026
+      («quiero cosas reales, no mentiras de IA»). Cuando envíe las reales se añaden aquí, con su pie.
     -->
-    <div class="rooms">
-      <input class="room-radio" type="radio" name="sala" id="sala-barcelona" checked>
-      <input class="room-radio" type="radio" name="sala" id="sala-madrid">
-      <input class="room-radio" type="radio" name="sala" id="sala-vigo">
-
-      <div class="rooms-bar wrap">
-        <div class="rooms-tabs" role="group" aria-label="Elegir sede">
-          <label for="sala-barcelona"><b>Barcelona</b> <span>21 y 22 de noviembre de 2026</span></label>
-          <label for="sala-madrid"><b>Madrid</b> <span>17 y 18 de abril 2027</span></label>
-          <label for="sala-vigo"><b>Vigo</b> <span>Fecha por confirmar</span></label>
-        </div>
+    <div class="sedes wrap">
+      <div class="sede">
+        <p class="sede-city">Barcelona</p>
+        <p class="sede-date">21 y 22 de noviembre de 2026</p>
+        <p class="sede-place">Sede Central · C/ Viladomat 152, 2ª</p>
       </div>
-
-      <div class="rooms-stage">
-        <figure class="room room--barcelona">
-          <img src="img/simuladas/sala-barcelona-simulada.webp" width="1800" height="2700" loading="lazy"
-               alt="Foto simulada: sala de formación con muros de ladrillo, ventanales altos y suelo de madera con luz de tarde.">
-        </figure>
-        <figure class="room room--madrid">
-          <img src="img/simuladas/sala-madrid-simulada.webp" width="1800" height="1013" loading="lazy"
-               alt="Foto simulada: sala amplia tipo loft con pared de ladrillo, lámparas colgantes y luz lateral.">
-        </figure>
-        <figure class="room room--vigo">
-          <img src="img/simuladas/sala-vigo-simulada.webp" width="1800" height="1200" loading="lazy"
-               alt="Foto simulada: sala de práctica con techo de madera, ventanales y esterillas en el suelo.">
-        </figure>
-
-        <p class="room-flag">Foto simulada</p>
-
-        <p class="room-info room-info--barcelona"><span>Sala de formación · Barcelona</span> Sede Central · C/ Viladomat 152, 2ª</p>
-        <p class="room-info room-info--madrid"><span>Sala de formación · Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</p>
-        <p class="room-info room-info--vigo"><span>Sala de formación · Vigo</span> Espacio por confirmar</p>
+      <div class="sede">
+        <p class="sede-city">Madrid</p>
+        <p class="sede-date">17 y 18 de abril de 2027</p>
+        <p class="sede-place">Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</p>
       </div>
     </div>
 
@@ -182,11 +163,11 @@
       <div class="days-extra">
         <div>
           <h3>Cómo se enseña</h3>
-          <p>Demostración explicada en el centro de la sala y práctica en pareja con acompañamiento directo a tu lado, cuidando tu eje corporal, tu respiración y la calidad del toque.</p>
+          <p>Demostración explicada y práctica en pareja, con supervisión cercana mientras practicas. El toque nace del hara y del peso del cuerpo, no de la fuerza de los brazos, y se sostiene con la respiración.</p>
         </div>
         <div>
           <h3>Nivel y qué llevar</h3>
-          <p>No hace falta experiencia previa. Ropa cómoda que pueda mancharse de aceite. Camillas y aceites los ponemos nosotros.</p>
+          <p>No hace falta experiencia previa. Ropa cómoda que no limite tu movimiento, nada más.</p>
         </div>
       </div>
     </div>
@@ -215,7 +196,7 @@
           <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
           <ul class="checks">
             <li>Los dos días de formación</li>
-            <li>Camillas y aceites</li>
+            <li>Práctica por parejas</li>
             <li>Reserva online de 80 €</li>
             <li>Sábado y domingo 10:00–19:30</li>
           </ul>
@@ -228,7 +209,7 @@
           <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
           <ul class="checks">
             <li>Los dos días de formación</li>
-            <li>Camillas y aceites</li>
+            <li>Práctica por parejas</li>
             <li>Reserva online de 80 €</li>
             <li>Sábado y domingo 10:00–19:30</li>
           </ul>
@@ -241,7 +222,7 @@
           <p class="pc-price"><strong>250</strong><span class="cur">€</span> <span class="per">/ fin de semana</span></p>
           <ul class="checks">
             <li>Los dos días de formación</li>
-            <li>Camillas y aceites</li>
+            <li>Práctica por parejas</li>
             <li>Reserva online de 80 €</li>
             <li>Sábado y domingo 10:00–19:30</li>
           </ul>
@@ -257,14 +238,14 @@
             <dd>80&nbsp;€</dd>
           </div>
           <div>
-            <dt>El resto, antes del inicio</dt>
+            <dt>El resto, el día del curso</dt>
             <dd>170&nbsp;€</dd>
           </div>
         </dl>
         <!-- PENDIENTE [CONFIRMAR]: fecha límite del resto, certificado y qué pasa con los 80 € si no puedes asistir -->
         <section class="term" aria-labelledby="inc-title">
           <h3 id="inc-title">Qué incluye</h3>
-          <p>Los dos días de formación, camillas y aceites.</p>
+          <p>Los dos días de formación.</p>
         </section>
         <section class="term" aria-labelledby="exc-title">
           <h3 id="exc-title">Qué no incluye</h3>
@@ -272,7 +253,7 @@
         </section>
         <section class="term" aria-labelledby="pay-title">
           <h3 id="pay-title">Cómo se paga</h3>
-          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro. Los 170 € restantes, por transferencia bancaria antes del inicio: al reservar recibes los datos de ingreso.</p>
+          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro. Los 170 € restantes se abonan en efectivo el día del curso, al inicio de la formación.</p>
         </section>
       </div>
     </div>
@@ -306,7 +287,7 @@
         <figcaption>Sujati (Sandra C. Lacanna), creadora y directora de Spazio Bodywork®.</figcaption>
       </figure>
       <div class="teacher-text">
-        <p class="label">Docentes</p>
+        <p class="label">Instructora</p>
         <h2 id="teacher-title">Quién lo <em>imparte</em></h2>
         <p class="teacher-intro">El Instituto Spazio Bodywork® lleva La Inmersión en la esencia a distintas ciudades de España, manteniendo en todas las sedes el mismo programa, ritmo y cuidado del grupo.</p>
         <div class="person">
@@ -471,7 +452,7 @@
       </table>
 
       <div class="booking">
-        <p class="table-note">La fecha más próxima viene preseleccionada en el formulario. ¿Nos escribes desde otra ciudad (Vigo, Málaga, Mallorca…)? Abre el desplegable de dudas del formulario o déjanos tu contacto y te avisaremos en cuanto abramos fecha en tu zona.</p>
+        <p class="table-note">La fecha más próxima viene preseleccionada en el formulario. ¿Nos escribes desde otra ciudad (Málaga, Mallorca…)? Abre el desplegable de dudas del formulario o déjanos tu contacto y te avisaremos en cuanto abramos fecha en tu zona.</p>
         <!-- HUECO: aquí se incrusta el widget de reserva del sitio (formulario de 4 pasos) -->
         <div class="booking-slot" id="form-reserva">
           <p class="booking-slot-title">Formulario de reserva</p>
@@ -505,11 +486,11 @@
         </details>
         <details>
           <summary>¿Cómo se paga la reserva?</summary>
-          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro al elegir sede y fecha. El resto, 170 €, se abona por transferencia bancaria antes del inicio de la formación.</p>
+          <p>La reserva de 80 € se paga online, en esta misma página, con pago seguro al elegir sede y fecha. El resto, 170 €, se abona en efectivo el día del curso.</p>
         </details>
         <details>
           <summary>¿Qué tengo que llevar?</summary>
-          <p>Ropa cómoda que pueda mancharse. Camillas y aceites los ponemos nosotros.</p>
+          <p>Ropa cómoda que no limite tu movimiento. Nada más.</p>
         </details>
         <details>
           <summary>¿Puedo venir solo a recibir?</summary>
@@ -535,7 +516,6 @@
           <select name="ciudad">
             <option>Barcelona</option>
             <option>Madrid</option>
-            <option>Vigo</option>
             <option>Otra ciudad</option>
           </select>
         </label>
@@ -566,7 +546,7 @@
       </div>
       <div class="footer-col">
         <h2 class="footer-h">Sedes</h2>
-        <!-- PENDIENTE: fotos reales de las salas por sede (Barcelona, Madrid, Vigo); Vigo: espacio por confirmar -->
+        <!-- PENDIENTE: fotos reales de las salas de Barcelona y Madrid, cuando las envíe el cliente -->
         <address>
           <p><span>Barcelona</span> Sede Central · C/ Viladomat 152, 2ª</p>
           <p><span>Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17 (Plaza de Olavide)</p>
@@ -588,7 +568,7 @@
       </div>
       <nav class="footer-col footer-nav" aria-label="Secciones (pie)">
         <a href="#programa">Programa</a>
-        <a href="#docentes">Docentes</a>
+        <a href="#docentes">Instructora</a>
         <a href="#precio">Precio</a>
         <a href="#reserva">Reserva</a>
         <a href="#dudas">Dudas</a>
@@ -620,10 +600,10 @@
       <div><dt>Reserva online</dt><dd>80&nbsp;€</dd></div>
     </dl>
     <a class="btn btn--solid btn--block" href="#form-reserva">Continuar con la reserva</a>
-    <p class="reserva-nota">Los 170&nbsp;€ restantes, por transferencia antes del inicio.</p>
+    <p class="reserva-nota">Los 170&nbsp;€ restantes, en efectivo el día del curso.</p>
   </div>
 </div>
 
-<script src="main.js?v=9" defer></script>
+<script src="main.js?v=10" defer></script>
 </body>
 </html>
