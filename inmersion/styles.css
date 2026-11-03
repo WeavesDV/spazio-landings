@@ -357,13 +357,6 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-5px) rotate(-
 .card h3 .sub { display: block; margin-top: .3em; font-family: var(--serif); font-style: italic; font-size: .7em; color: var(--muted); }
 .card p { flex: 1; margin: 0; }
 .card .link-arrow { align-self: flex-start; }
-.days-extra {
-  display: grid; gap: var(--s-4) var(--s-6); margin-top: clamp(3rem, 2rem + 3vw, 5rem);
-  border-top: 1px solid var(--line-strong); padding-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
-}
-.days-extra h3 { margin-bottom: 0; }
-.days-extra p { max-width: 68ch; margin-bottom: 0; }
-@media (min-width: 800px) { .days-extra { grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr); align-items: baseline; } }
 @media (min-width: 960px) { .cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* =========================================================================
