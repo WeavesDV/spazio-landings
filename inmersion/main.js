@@ -24,38 +24,67 @@
     });
   }
 
-  /* Convocatorias: al pulsar una fila (o su botón) se abre el panel flotante de reserva
-     con esa sede y fecha ya cargadas. */
+  /* Convocatorias: al pulsar una fila (o su botón) se elige esa fecha en el widget de reserva y se
+     salta directo al paso «Tus datos». El panel flotante queda solo como respaldo si el widget no
+     está en la página o el plugin cambia sus selectores. */
   var panel = document.getElementById('reserva-panel');
   var rows = document.querySelectorAll('.dates-table tbody tr');
-  if (panel && rows.length) {
-    var pSede = panel.querySelector('.reserva-sede');
-    var pFecha = panel.querySelector('.reserva-fecha');
-    var pLugar = panel.querySelector('.reserva-lugar');
-    var pImparte = panel.querySelector('.reserva-imparte');
-    var pClose = panel.querySelector('.reserva-close');
+
+  var elegirFecha = function (sessionId) {
+    var widget = document.querySelector('.spazio-booking-root');
+    if (!widget || !sessionId) return false;
+    var lista;
+    try { lista = JSON.parse(widget.getAttribute('data-events') || '[]'); } catch (e) { return false; }
+    var idx = -1;
+    for (var i = 0; i < lista.length; i++) { if (lista[i].id === sessionId) { idx = i; break; } }
+    if (idx < 0) return false;
+    var opcion = widget.querySelector('[data-event-index="' + idx + '"]');
+    if (!opcion) return false;
+    opcion.click();                                  // paso 1: fija la fecha
+    var reservar = widget.querySelector('.spazio-reserve');
+    if (reservar) reservar.click();                  // paso 2: se salta la pantalla de detalles
+    return true;
+  };
+
+  if (rows.length) {
+    var pSede = panel && panel.querySelector('.reserva-sede');
+    var pFecha = panel && panel.querySelector('.reserva-fecha');
+    var pLugar = panel && panel.querySelector('.reserva-lugar');
+    var pImparte = panel && panel.querySelector('.reserva-imparte');
+    var pClose = panel && panel.querySelector('.reserva-close');
     var pSel = document.getElementById('booking-sel');
 
     var abrir = function (row) {
+      if (!panel) return;
       pSede.textContent = row.dataset.sede;
       pFecha.textContent = row.dataset.fecha;
       pLugar.textContent = row.dataset.lugar;
       pImparte.textContent = 'Imparte ' + row.dataset.imparte;
       if (pSel) pSel.textContent = row.dataset.sede + ' · ' + row.dataset.fecha;
-      rows.forEach(function (r) { r.classList.toggle('is-sel', r === row); });
       panel.hidden = false;
       pClose.focus({ preventScroll: true });
     };
-    var cerrar = function () { panel.hidden = true; };
+    var cerrar = function () { if (panel) panel.hidden = true; };
+
+    var activar = function (row) {
+      rows.forEach(function (r) { r.classList.toggle('is-sel', r === row); });
+      var id = row.dataset.evento || String(row.id || '').replace(/^conv-/, '');
+      if (!elegirFecha(id)) { abrir(row); return; }
+      var destino = document.getElementById('form-reserva');
+      if (destino) destino.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    };
 
     rows.forEach(function (row) {
       var btn = row.querySelector('.js-reserva');
-      if (btn) btn.addEventListener('click', function (e) { e.stopPropagation(); abrir(row); });
-      row.addEventListener('click', function (e) { if (!e.target.closest('a, button')) abrir(row); });
+      if (btn) btn.addEventListener('click', function (e) { e.stopPropagation(); activar(row); });
+      row.addEventListener('click', function (e) { if (!e.target.closest('a, button')) activar(row); });
     });
-    pClose.addEventListener('click', cerrar);
-    panel.querySelector('a[href="#form-reserva"]').addEventListener('click', cerrar);
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) cerrar(); });
+    if (panel) {
+      pClose.addEventListener('click', cerrar);
+      var irAlFormulario = panel.querySelector('a[href="#form-reserva"]');
+      if (irAlFormulario) irAlFormulario.addEventListener('click', cerrar);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) cerrar(); });
+    }
   }
 
   /* Formulario de dudas del pie: en la maqueta no envía; al publicar va al formulario del sitio */
