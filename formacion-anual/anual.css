@@ -361,6 +361,7 @@
 .hero-data .wrap { display: grid; gap: .35rem var(--s-5); padding-block: var(--s-3); }
 .hero-data p { margin: 0; font-size: .9375rem; line-height: 1.45; color: var(--text); }
 .hero-data em { color: var(--muted); font-style: normal; }
+.hero-data .hd-fecha { font-size: 1.125rem; font-weight: 700; letter-spacing: .01em; }
 .hero-data a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
 @media (min-width: 900px) {
   .hero-data .wrap { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; }
@@ -477,15 +478,13 @@
   .price-layout { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--s-6); align-items: start; }
 }
 .price-layout .cards--single { max-width: none; margin-top: 0; }
-.price-layout .terms {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--s-3);
+.price-layout { align-items: stretch; }
+.price-photo { margin: 0; height: 100%; display: flex; flex-direction: column; }
+.price-photo img { flex: 1 1 auto; width: 100%; height: 100%; min-height: 18rem; object-fit: cover; object-position: 50% 55%; }
+.price-photo figcaption {
+  margin-top: .6rem; font-size: .8125rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted);
 }
-.price-layout .term { padding-top: var(--s-3); border-top: 1px solid var(--line-strong); }
-.price-layout .term h3 { margin-bottom: .35rem; }
 .pc-nota { margin: 0 0 var(--s-3); font-size: var(--fs-small); }
 .caps--pricing { letter-spacing: .12em; }
 
@@ -494,8 +493,7 @@ html[data-formato="anual"] [data-fmt="intensivo"],
 html[data-formato="intensivo"] [data-fmt="anual"] { display: none; }
 
 /* 31 · Concepto «una decisión por pantalla»: #formatos elige el formato, #calendario da las fechas */
-.formats { background: var(--white); }
-.band-photo--formatos { margin: 0; background: var(--white); }
+.formats { background: var(--paper); }
 /* Todas las secciones comparten el mismo aire: el ritmo más alto de la página (--section) */
 .section.formats, .section.cuando { padding-block: var(--section); }
 html[data-formato="intensivo"] .cuando { border-bottom: 1px solid var(--line); }
@@ -509,11 +507,20 @@ html[data-formato="intensivo"] .cuando { border-bottom: 1px solid var(--line); }
 .fmt-tarjeta {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
-  padding: var(--s-3);
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--white);
   border: 1px solid var(--line);
   border-top: 2px solid var(--line-strong);
 }
+.fmt-foto { margin: 0; }
+.fmt-foto img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.fmt-foto figcaption {
+  padding: .55rem var(--s-4) 0; font-size: .75rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted);
+}
+.fmt-cuerpo { display: flex; flex-direction: column; gap: .75rem; flex: 1; padding: var(--s-3) var(--s-4) var(--s-4); }
 html[data-formato="anual"] .fmt-tarjeta--anual,
 html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(--accent); }
 .fmt-tarjeta h3 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: var(--fs-h3); line-height: 1.15; color: var(--text); }
@@ -521,7 +528,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 .fmt-hechos { margin: 0; font-size: var(--fs-small); color: var(--muted); }
 .fmt-hechos b { margin-right: .35em; font-weight: 600; color: var(--text); }
 .fmt-tarjeta .btn { align-self: flex-start; margin-top: auto; }
-.fmt-tarjeta > :nth-last-child(2) { margin-bottom: .5rem; }
+.fmt-cuerpo > :nth-last-child(2) { margin-bottom: .5rem; }
 .fmt-precio { margin: var(--s-3) 0 0; color: var(--text); }
 .fmt-precio strong { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; }
 
@@ -563,7 +570,7 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
   border-bottom: 1px solid var(--line);
 }
 .cal-list .m { font-size: var(--fs-small); color: var(--muted); }
-.cal-list time { text-align: right; color: var(--text); }
+.cal-list time { text-align: right; color: var(--text); font-size: 1.0625rem; font-weight: 500; }
 .cal-list li.is-done .m, .cal-list li.is-done time { color: var(--muted); }
 .cuando-nota { margin: var(--s-3) 0 0; font-size: var(--fs-small); color: var(--muted); }
 .cuando-cta .btn { width: 100%; }
@@ -632,3 +639,6 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
 
 /* La entradilla del programa ocupa el ancho de las dos columnas: así no queda un desierto a su derecha */
 #programa .program-lead { max-width: none; }
+
+/* Fecha elegida en el panel de reserva: se lee como dato, no como nota */
+.booking-slot-sel { font-size: 1.125rem; font-weight: 600; color: var(--text); }
