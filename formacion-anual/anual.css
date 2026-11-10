@@ -21,7 +21,7 @@
   border-bottom: 1px dashed rgb(146 132 144 / .6);
   padding: 0 .15em;
 }
-.cal-pending, .teacher-note, .fit-note { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--muted); }
+.cal-pending, .fit-note { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--muted); }
 .term-extra { margin-top: var(--s-2); font-size: var(--fs-small); }
 
 /* ---------- Hero: meta de fechas y sedes + botones ---------- */
@@ -207,7 +207,6 @@
 /* 10 · Remates */
 .program .mod-list { margin-top: var(--s-3); }
 .more { margin-top: var(--s-4); }
-.teacher-note { margin-top: var(--s-4); }
 
 /* 11 · Segunda pasada del hero: contraste del CTA, micro-texto del precio y WhatsApp con aire */
 
@@ -467,7 +466,6 @@
   line-height: 1.5;
   color: var(--text);
 }
-.pc-plazas { margin: .5rem 0 0; font-size: var(--fs-small); }
 .book-alt { margin: var(--s-3) 0 0; font-size: var(--fs-small); color: var(--muted); }
 .book-alt a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
 .book-btns { margin-bottom: var(--s-2); }
@@ -485,7 +483,6 @@
   margin-top: .6rem; font-size: .8125rem; letter-spacing: .06em;
   text-transform: uppercase; color: var(--muted);
 }
-.pc-nota { margin: 0 0 var(--s-3); font-size: var(--fs-small); }
 .caps--pricing { letter-spacing: .12em; }
 
 /* Visibilidad por formato: solo lo que corresponde al estado activo */
@@ -574,8 +571,6 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
 .cal-list li.is-done .m, .cal-list li.is-done time { color: var(--muted); }
 .cuando-nota { margin: var(--s-3) 0 0; font-size: var(--fs-small); color: var(--muted); }
 .cuando-cta .btn { width: 100%; }
-.cuando-avisos { display: grid; gap: var(--s-1); font-size: var(--fs-small); color: var(--muted); }
-.cuando-avisos p { margin: 0; }
 
 @media (min-width: 620px) {
   .cuando-cta .btn { width: auto; }
@@ -588,8 +583,6 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
   .cuando-lado { grid-column: 1; grid-row: 1 / span 2; }
   .cuando-fechas { grid-column: 2; grid-row: 1; }
   .cuando-cta { grid-column: 2; grid-row: 2; }
-  .cuando-avisos { grid-column: 1 / -1; grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 4fr); gap: var(--s-3) var(--s-4); margin-top: var(--s-1); padding-top: var(--s-2); border-top: 1px solid var(--line); }
-  #intensivo .cuando-avisos { grid-template-columns: minmax(0, 1fr); }
 }
 /* Pantallas altas: las filas de fechas recuperan aire */
 @media (min-width: 1000px) and (min-height: 1000px) {
@@ -625,16 +618,6 @@ html[data-sede="barcelona"] [data-sede-panel="madrid"] { display: none; }
   }
   .program-half > p { max-width: none; align-self: start; }
   .program-half .mod-list { align-self: start; }
-}
-
-.program-nota {
-  margin: var(--s-3) 0 0;
-  max-width: 70ch;
-  font-size: var(--fs-small);
-  line-height: 1.5;
-  color: var(--muted);
-  padding-top: var(--s-2);
-  border-top: 1px solid var(--line);
 }
 
 /* La entradilla del programa ocupa el ancho de las dos columnas: así no queda un desierto a su derecha */
