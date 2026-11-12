@@ -398,7 +398,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
   /* la pista sangra hasta el borde de la ventana; la primera tarjeta arranca en el eje de la rejilla */
   --edge: calc(max(0px, (100vw - var(--max)) / 2) + var(--pad));
   list-style: none; margin: 0 calc(-1 * var(--edge)); padding: 0 var(--edge) 24px;
-  display: grid; grid-auto-flow: column; grid-auto-columns: min(90%, 24rem); gap: var(--gap);
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86vw, 22rem); gap: var(--gap);
   overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--edge);
 }
 .review { background: var(--white); padding: var(--card-pad); gap: 20px; scroll-snap-align: start; font-size: var(--fs-small); }
@@ -414,12 +414,18 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
   .review::scroll-marker { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
   .review::scroll-marker:target-current { background: var(--accent); }
 }
-@media (min-width: 640px) { .reviews-track { grid-auto-columns: calc((100% - var(--gap)) / 1.7); } }
+@media (min-width: 640px) { .reviews-track { grid-auto-columns: 22.5rem; } }
 @media (min-width: 900px) {
   /* tres tarjetas a la vista y la cuarta asomando: la pista dice que hay más */
-  .reviews-track { grid-auto-columns: calc((100% - 2 * var(--gap)) / 2.45); padding-bottom: 20px; }
+  .reviews-track { grid-auto-columns: 27.5rem; padding-bottom: 20px; }
 }
 .reviews-track { scrollbar-width: thin; scrollbar-color: var(--primary) transparent; }
+/* styles.css trae una rejilla estática de 5 columnas a partir de 1600 px (heredada de la
+   Inmersión); aquí hay 6 tarjetas y la sexta caía en una columna implícita de 440 px.
+   La pista se queda como carrusel en todos los anchos. */
+@media (min-width: 1600px) {
+  .reviews-track { grid-auto-flow: column; grid-template-columns: none; overflow-x: auto; }
+}
 
 /* =========================================================================
    8 · Instructora: una ficha, dos veces igual (foto 1–5 · texto 7–12)
