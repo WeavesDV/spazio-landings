@@ -18,7 +18,7 @@
   -->
   <link rel="stylesheet" href="fonts.css?v=45">
   <link rel="stylesheet" href="styles.css?v=47">
-  <link rel="stylesheet" href="anual.css?v=55">
+  <link rel="stylesheet" href="anual.css?v=56">
 </head>
 <body>
 
@@ -185,32 +185,30 @@
   <section class="section cuando" id="calendario" aria-label="Fechas y sedes">
     <div class="wrap">
       <!-- Fin de semana -->
-      <div class="cuando-pieza" data-fmt="anual">
-        <div class="cuando-lado">
-          <header class="sec-head">
+            <div class="cuando-pieza" data-fmt="anual">
+        <header class="sec-head">
             <div class="sec-head-title">
               <p class="label">Fechas de los diez módulos</p>
               <h2>Calendario del <em>formato de fin de semana</em></h2>
             </div>
           </header>
-          <p class="cuando-sub sec-sub">Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Madrid o en Barcelona. Cada sede mantiene su propio grupo y su propio recorrido.</p>
-
-          <div class="sede-tabs" role="group" aria-label="Elegir sede">
+        <p class="cuando-sub sec-sub">Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Madrid o en Barcelona. Cada sede mantiene su propio grupo y su propio recorrido.</p>
+        <div class="cuando-card">
+          <div class="cuando-lado">
+            <div class="sede-tabs" role="group" aria-label="Elegir sede">
             <button type="button" class="sede-opt is-active" data-sede-btn="madrid" aria-pressed="true">Madrid</button>
             <button type="button" class="sede-opt" data-sede-btn="barcelona" aria-pressed="false">Barcelona</button>
           </div>
-
-          <div class="sede-info" data-sede-panel="madrid">
+            <div class="sede-info" data-sede-panel="madrid">
             <p>Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</p>
             <p>Grupo en curso: arrancó el 24-25 de octubre de 2026.</p>
           </div>
-          <div class="sede-info" data-sede-panel="barcelona">
+            <div class="sede-info" data-sede-panel="barcelona">
             <p>Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</p>
             <p>Módulo 1 en noviembre (opción A) o en febrero (opción B). Las dos entradas se unen en el Módulo 2 y desde ahí seguís juntos hasta diciembre.</p>
           </div>
-        </div>
-
-        <div class="cuando-fechas">
+          </div>
+          <div class="cuando-fechas">
           <ol class="cal-list" data-sede-panel="madrid" aria-label="Fechas en Madrid">
             <li class="is-done"><span class="m">Módulo 1</span><time datetime="2026-10-24">24-25 oct 2026</time><span class="st">· realizado</span></li>
             <li class="is-next"><span class="m">Módulo 2</span><time datetime="2026-11-21">21-22 nov 2026</time></li>
@@ -237,29 +235,29 @@
             <li><span class="m">Módulo 10</span><time datetime="2027-12-11">11-12 dic 2027</time></li>
           </ol>
         </div>
-
-        <div class="cuando-cta">
+          <div class="cuando-cta">
           <a class="btn btn--solid btn--sm" data-sede-panel="madrid" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a>
           <a class="btn btn--solid btn--sm" data-sede-panel="barcelona" href="#reserva">Reservar en Barcelona</a>
+        </div>
         </div>
       </div>
 
       <!-- Intensivo -->
-      <div class="cuando-pieza" id="intensivo" data-fmt="intensivo">
-        <div class="cuando-lado">
-          <header class="sec-head">
+            <div class="cuando-pieza" id="intensivo" data-fmt="intensivo">
+        <header class="sec-head">
             <div class="sec-head-title">
               <p class="label">Formato intensivo</p>
               <h2>Cómo funciona <em>el intensivo</em></h2>
             </div>
           </header>
-          <p class="cuando-sub sec-sub">Dos estancias de nueve días en Sant Joan (Mallorca), con el tiempo entre ellas para practicar e integrar lo aprendido.</p>
-          <div class="sede-info">
+        <p class="cuando-sub sec-sub">Dos estancias de nueve días en Sant Joan (Mallorca), con el tiempo entre ellas para practicar e integrar lo aprendido.</p>
+        <div class="cuando-card">
+          <div class="cuando-lado">
+            <div class="sede-info">
             <p>Alojamiento y comida vegetariana en la misma casa: el grupo convive durante los nueve días.</p>
           </div>
-        </div>
-
-        <div class="cuando-fechas">
+          </div>
+          <div class="cuando-fechas">
           <ol class="cal-list" aria-label="Dos estancias, un mismo grupo">
             <li><span class="m">Primera estancia</span><time>9 días · fecha por confirmar</time></li>
             <li><span class="m">Vuelta a casa</span><time>tiempo para practicar e integrar</time></li>
@@ -267,11 +265,12 @@
           </ol>
           <p class="cuando-nota">La primera estancia abre las bases del masaje californiano y la regulación del sistema nervioso; la segunda entra en el detalle y la teoría polivagal, igual que las dos mitades del formato de fin de semana.</p>
         </div>
-
-        <div class="cuando-cta">
+          <div class="cuando-cta">
           <a class="btn btn--solid btn--sm" href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20el%20formato%20intensivo%20en%20Mallorca" target="_blank" rel="noopener">Pedir fechas del intensivo</a>
         </div>
+        </div>
       </div>
+</div>
     </div>
   </section>
 
