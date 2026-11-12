@@ -17,8 +17,8 @@
     ESTADO-CORRECCIONES-2026-11-10.md, fuera del HTML que lee el cliente.
   -->
   <link rel="stylesheet" href="fonts.css?v=45">
-  <link rel="stylesheet" href="styles.css?v=45">
-  <link rel="stylesheet" href="anual.css?v=48">
+  <link rel="stylesheet" href="styles.css?v=46">
+  <link rel="stylesheet" href="anual.css?v=49">
 </head>
 <body>
 
@@ -100,7 +100,7 @@
   </div>
 
   <!-- BLOQUE 2 · PARA QUIÉN ES / PARA QUIÉN NO -->
-  <section class="section questions bg-paper" id="para-quien" aria-labelledby="fit-title">
+  <section class="section questions" id="para-quien" aria-labelledby="fit-title">
     <div class="wrap">
       <div class="split">
         <div class="split-aside">
@@ -184,7 +184,7 @@
   </section>
 
   <!-- BLOQUE 2c · CUÁNDO: cambia con el formato. Una sede a la vez; el selector de sede es el único control. -->
-  <section class="section cuando bg-paper" id="calendario" aria-label="Fechas y sedes">
+  <section class="section cuando" id="calendario" aria-label="Fechas y sedes">
     <div class="wrap">
       <!-- Fin de semana -->
       <div class="cuando-pieza" data-fmt="anual">
@@ -340,9 +340,11 @@
           <p class="label">Programa</p>
           <h2 id="prog-title">Diez módulos, <em>dos mitades</em></h2>
         </div>
+        <div class="sec-sub">
+          <p class="program-lead">Más de 200 técnicas en diez fines de semana. Un principio atraviesa el año: <b>no esfuerzo, menos es más</b>.</p>
+          <p class="more"><a class="link-arrow" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20el%20programa%20de%20la%20Formaci%C3%B3n%20Anual" target="_blank" rel="noopener">Consultar el programa por WhatsApp <span aria-hidden="true">→</span></a></p>
+        </div>
       </header>
-
-      <p class="program-lead">Más de 200 técnicas en diez fines de semana. Un principio atraviesa el año: <b>no esfuerzo, menos es más</b>.</p>
 
       <div class="program">
         <div class="program-half">
@@ -369,14 +371,12 @@
         </div>
       </div>
 
-      <p class="more"><a class="link-arrow" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20el%20programa%20de%20la%20Formaci%C3%B3n%20Anual" target="_blank" rel="noopener">Consultar el programa por WhatsApp <span aria-hidden="true">→</span></a></p>
+      <figure class="band-photo band-photo--programa">
+        <img src="img/programa.webp" width="1800" height="1013" loading="lazy"
+             alt="Detalle de la práctica: una mano sostiene un brazo sobre la camilla, con el fondo desenfocado.">
+        <figcaption>Técnica en sala · julio de 2026</figcaption>
+      </figure>
     </div>
-
-    <figure class="band-photo band-photo--programa">
-      <img src="img/programa.webp" width="1800" height="1013" loading="lazy"
-           alt="Detalle de la práctica: una mano sostiene un brazo sobre la camilla, con el fondo desenfocado.">
-      <figcaption>Técnica en sala · julio de 2026</figcaption>
-    </figure>
   </section>
 
   <!-- BLOQUE 6 · LA ESCALERA -->
@@ -414,25 +414,26 @@
   </section>
 
   <!-- BLOQUE 7 · PRUEBA -->
-  <section class="section reviews bg-paper" aria-labelledby="reviews-title">
+  <section class="section reviews" aria-labelledby="reviews-title">
     <div class="wrap">
-      <div class="reviews-head">
-        <div class="reviews-score">
+      <header class="sec-head reviews-head">
+        <div class="sec-head-title">
           <p class="label">Reseñas en Google</p>
           <h2 id="reviews-title">Lo que cuentan quienes <em>han pasado</em></h2>
+        </div>
+        <div class="reviews-score">
           <p class="score"><span class="score-num">5,0</span> <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></p>
           <ul class="score-list">
             <li><span>323 reseñas</span> Barcelona</li>
             <li><span>20 reseñas</span> Madrid</li>
           </ul>
-          <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto+Spazio+Bodywork+Barcelona" target="_blank" rel="noopener">Leer todas las reseñas en Google <span aria-hidden="true">→</span></a>
+          <div class="reviews-note">
+            <p>Reseñas publicadas en Google sobre Spazio Bodywork, tal como las escribieron sus autores.</p>
+            <p class="reviews-score-line">5,0 de media · 323 reseñas en Barcelona · 20 en Madrid</p>
+          </div>
         </div>
-      <div class="reviews-note">
-        <p>Reseñas publicadas en Google sobre Spazio Bodywork, tal como las escribieron sus autores.</p>
-        <p class="reviews-score-line">5,0 de media · 323 reseñas en Barcelona · 20 en Madrid</p>
-      </div>
-      </div>
-    </div>
+      </header>
+
     <ul class="reviews-track" aria-label="Reseñas de alumnas y alumnos">
       <li class="review">
         <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
@@ -459,11 +460,24 @@
         <p class="review-text">«Nunca había contactado con el masaje Californiano y esta experiencia en Mallorca ha sido para mi de profunda transformación, un viaje hacia mi parte mas afectiva, compasiva y humana. Ha merecido la pena!!! El entorno, la sala, el contacto, la presencia, la atención cuidadosa, el respeto hacia mi propio cuerpo y el de los demás… Maravilloso!!! Gracias infinitas a Sujati y a todo el equipo por vuestra calidad humana y profesional. Hasta pronto!!!»</p>
         <p class="review-author">Eva Spreafico</p>
       </li>
+      <li class="review review--more">
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto+Spazio+Bodywork+Barcelona" target="_blank" rel="noopener">Leer todas las reseñas en Google <span aria-hidden="true">→</span></a>
+      </li>
     </ul>
+    </div>
   </section>
 
   <!-- BLOQUE 8 · QUIÉN ENSEÑA -->
   <section class="section teacher" id="instructora" aria-labelledby="teacher-title">
+    <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-head-title">
+        <p class="label">Instructora</p>
+        <h2 id="teacher-title">Quién <em>enseña</em></h2>
+      </div>
+      <p class="sec-sub teacher-intro">En el trabajo corporal, la manera de tocar se aprende también recibiéndola. Por eso importa quién enseña y quién acompaña en la sala.</p>
+    </header>
+
     <div class="teacher-grid">
       <figure class="teacher-photo">
         <img src="img/sujati-alt.webp"
@@ -472,9 +486,6 @@
         <figcaption>Sujati (Sandra C. Lacanna), creadora y directora de Spazio Bodywork®.</figcaption>
       </figure>
       <div class="teacher-text">
-        <p class="label">Instructora</p>
-        <h2 id="teacher-title">Quién <em>enseña</em></h2>
-        <p class="teacher-intro">En el trabajo corporal, la manera de tocar se aprende también recibiéndola. Por eso importa quién enseña y quién acompaña en la sala.</p>
         <div class="person">
           <h3>Sujati (Sandra C. Lacanna)</h3>
           <p class="role">Creadora y directora de Spazio Bodywork®. Dirige el grupo de Barcelona.</p>
@@ -502,11 +513,14 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- BLOQUE 9 · LA RESERVA -->
-  <section class="section dudas reserva-sec bg-paper" id="reserva" data-fmt="anual" aria-labelledby="reserva-title">
+  <section class="section dudas reserva-sec" id="reserva" data-fmt="anual" aria-labelledby="reserva-title">
     <div class="wrap">
+      <div class="reserva-grid">
+      <div class="reserva-intro">
       <header class="sec-head">
         <div class="sec-head-title">
           <p class="label">La reserva</p>
@@ -528,24 +542,23 @@
           <p>500 € con tarjeta, en el mismo paso. No hay un «te escribimos luego»: la reserva se cierra ahí.</p>
         </li>
       </ol>
+      </div>
 
       <div class="booking">
-        <!-- HUECO: aquí se incrusta el widget de reserva con cobro de la matrícula de 500 € -->
-        <div class="booking-slot" id="form-reserva">
-          <p class="booking-slot-title">Widget de reserva con cobro</p>
-          <p class="booking-slot-sel" id="booking-sel">Barcelona · Módulo 1 · 21-22 de noviembre de 2026 (opción A)</p>
-          <p class="booking-slot-note">Aquí van los dos botones de fecha del widget, con el cobro de la matrícula de 500 € dentro del mismo formulario. Hoy el widget termina en «recibirás información»: hay que cambiar el paso final a pago.</p>
-        </div>
-        <div>
+        <div class="booking-card" id="form-reserva">
+          <p class="booking-sel" id="booking-sel">Barcelona · Módulo 1 · 21-22 de noviembre de 2026 (opción A)</p>
           <p class="table-note">La reserva de Barcelona se cierra en el widget, con la fecha elegida y la matrícula de 500&nbsp;€. <b>Esos 500&nbsp;€ son reembolsables:</b> si no abrimos el grupo o cancelas antes del inicio, se devuelven íntegros. Para Madrid, el grupo está en curso: escríbenos y lo vemos contigo.</p>
-          <p class="consent"><label><input type="checkbox" required> He leído y acepto la <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</label></p>
+          <p class="consent"><label><input type="checkbox" required> <span>He leído y acepto la <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</span></label></p>
           <ul class="book-btns">
-            <li><button class="btn btn--solid btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 21-22 de noviembre de 2026 (opción A)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar · Barcelona, 21-22 nov 2026 (opción A)</button></li>
-            <li><button class="btn btn--outline btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 20-21 de febrero de 2027 (opción B)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar · Barcelona, 20-21 feb 2027 (opción B)</button></li>
+            <li><button class="btn btn--solid btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 21-22 de noviembre de 2026 (opción A)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar 21-22 nov (opción A)</button></li>
+            <li><button class="btn btn--outline btn--block js-reserva" type="button" data-sede="Barcelona" data-fecha="Módulo 1 · 20-21 de febrero de 2027 (opción B)" data-lugar="Spazio Bodywork · C/ Viladomat 152, 2ª planta" data-imparte="Sujati">Reservar 20-21 feb (opción B)</button></li>
           </ul>
+        </div>
+        <div class="booking-aside">
           <p class="book-alt">¿Madrid? <a href="https://wa.me/34693059088?text=Hola%2C%20me%20interesa%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
           <p class="table-note">+34 693 059 088 (teléfono y WhatsApp) · <a href="mailto:info@spaziobodywork.com">info@spaziobodywork.com</a></p>
         </div>
+      </div>
       </div>
       <p class="ethic">La Formación Anual es una formación vivencial. No es una terapia ni sustituye a un tratamiento.</p>
     </div>
@@ -554,12 +567,14 @@
 
   <!-- BLOQUE 10 · PREGUNTAS FRECUENTES -->
   <section class="section faq" aria-labelledby="faq-title">
-    <div class="wrap split">
-      <div class="split-aside">
-        <p class="label">Dudas</p>
-        <h2 id="faq-title">Preguntas <em>frecuentes</em></h2>
-      </div>
-      <div class="split-main faq-list">
+    <div class="wrap">
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Dudas</p>
+          <h2 id="faq-title">Preguntas <em>frecuentes</em></h2>
+        </div>
+      </header>
+      <div class="faq-list">
         <details open>
           <summary>¿Necesito experiencia previa?</summary>
           <p>La formación arranca donde terminan los cursos introductorios, semi-intensivos e intensivos: las bases del masaje californiano y los elementos de regulación del sistema nervioso. Si no has hecho ninguno de ellos, escríbenos y te decimos por dónde empezar.</p>
@@ -597,7 +612,7 @@
   </section>
 
   <!-- BLOQUE 10b · DUDAS (formulario; en la maqueta no envía) -->
-  <section class="section dudas bg-paper" id="dudas" aria-labelledby="dudas-title">
+  <section class="section dudas" id="dudas" aria-labelledby="dudas-title">
     <div class="wrap split">
       <div class="split-aside">
         <p class="label">Dudas y consultas</p>
