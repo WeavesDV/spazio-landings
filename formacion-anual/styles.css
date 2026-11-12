@@ -39,7 +39,7 @@
   /* Rejilla: un contenedor y 12 columnas */
   --pad: clamp(20px, 4vw, 56px);
   --max: 1240px;
-  --gap: 24px;
+  --gap: 40px;
   --radius: 0;
 }
 
@@ -87,7 +87,7 @@ b, strong { font-weight: 500; }
 .wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
 .section { padding-block: var(--sect-md); }
 @media (max-width: 760px) {
-  :root { --sect-lg: 64px; --sect-md: 48px; --sect-sm: 36px; --gap: 16px; }
+  :root { --sect-lg: 64px; --sect-md: 48px; --sect-sm: 36px; --gap: 20px; }
 }
 .bg-paper { background: var(--paper); }
 .band { background: rgb(219 193 173 / .28); }

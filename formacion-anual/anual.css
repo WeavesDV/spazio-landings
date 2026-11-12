@@ -325,7 +325,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 .program-half > p { max-width: none; font-size: var(--fs-small); color: var(--muted); }
 .mod-list { margin-top: 28px; }
 .program .mod-list { margin-top: 28px; }
-.mod-list li { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; padding-block: 13px; font-size: var(--fs-small); line-height: 1.6; }
+.mod-list li { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; padding-block: 16px; font-size: var(--fs-small); line-height: 1.6; }
 .mod-list .n { font-size: var(--fs-body); }
 @media (min-width: 720px) {
   .program { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto repeat(5, auto); row-gap: 0; }
@@ -563,7 +563,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
   .fmt-foto img { aspect-ratio: 3 / 1; }
   .fmt-cuerpo { gap: 12px; padding-top: 24px; }
   .cal-list li { padding-block: 11px; }
-  .mod-list li { padding-block: 11px; }
+  .mod-list li { padding-block: 13px; }
   .fit-list li { padding-block: 13px; }
   .price-card .checks { gap: 10px; margin-bottom: 24px; }
   .pc-price { margin: 20px 0; padding-block: 20px; }
