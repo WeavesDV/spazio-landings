@@ -271,10 +271,10 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 }
 .cuando-pieza + .cuando-pieza { margin-top: var(--sect-sm); }
 .cuando-sub { margin: 20px 0 0; font-size: var(--fs-body); color: var(--text); }
-.sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 1px solid var(--line-strong); }
+.sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 0; }
 .sede-opt { font-size: var(--fs-h3); }
 .sede-info { margin-top: 24px; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
-.cal-list { border-top: 1px solid var(--line-strong); }
+.cal-list { border-top: 0; }
 .cal-list li { grid-template-columns: max-content minmax(0, 1fr); gap: 16px; padding-block: 16px; align-items: baseline; }
 .cal-list .m { font-size: var(--fs-small); white-space: nowrap; }
 .cal-list time { font-size: var(--fs-body); font-weight: 500; }
@@ -290,9 +290,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
   .cuando-card { grid-template-columns: minmax(0, 1fr); }
   .cuando-cta { justify-content: flex-start; }
 }
-@media (min-width: 900px) {
-  .cal-list { display: grid; grid-template-rows: repeat(5, auto); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: 72px; }
-}
+
 
 /* =========================================================================
    4 · Precio: tarjeta única + foto, en dos mitades
