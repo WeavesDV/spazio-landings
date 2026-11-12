@@ -267,11 +267,11 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 .cuando-card {
   display: grid; gap: 24px;
   background: var(--white); border: 1px solid var(--line);
-  padding: clamp(24px, 3.2vw, 40px);
+  padding: clamp(24px, 3.2vw, 40px); max-width: 60rem;
 }
 .cuando-pieza + .cuando-pieza { margin-top: var(--sect-sm); }
 .cuando-sub { margin: 20px 0 0; font-size: var(--fs-body); color: var(--text); }
-.sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 0; }
+.sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 0; max-width: 60rem; }
 .sede-opt { font-size: var(--fs-h3); }
 .sede-info { margin-top: 24px; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
 .cal-list { border-top: 0; }
