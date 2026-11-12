@@ -43,7 +43,7 @@ h2 { font-size: var(--fs-h2); line-height: 1.15; }
 .fit-col h3 { margin: 0 0 16px; font-family: var(--sans); font-weight: 700; text-transform: uppercase; color: var(--muted); }
 .fit-yes h3 { color: var(--text); }
 .fit-list { list-style: none; margin: 0; padding: 0; }
-.fit-list li { border-bottom: 1px solid var(--line); }
+.fit-list li { border-bottom: 0; }
 .fit-no .fit-list li { color: var(--muted); }
 .mod-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-strong); }
 .mod-list li { display: grid; align-items: baseline; border-bottom: 1px solid var(--line); }
@@ -151,24 +151,22 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 
 /* Franja de datos bajo el hero */
 .hero-data { background: var(--paper); border-bottom: 1px solid var(--line); }
-.hero-data .wrap { display: grid; gap: 20px var(--gap); padding-block: 28px; }
-.hero-data p { margin: 0; font-size: var(--fs-small); line-height: 1.6; color: var(--text); }
+/* Dos datos (próxima entrada y Madrid), un solo filete vertical entre ellos.
+   Sedes y WhatsApp siguen en el pie y en la reserva: aquí se ocultan para que la banda respire. */
+.hero-data .wrap { display: grid; gap: 28px var(--gap); padding-block: 44px; }
+.hero-data p { margin: 0; font-size: var(--fs-small); line-height: 1.5; color: var(--text); }
+.hero-data p:nth-child(n+3) { display: none; }
 .hero-data em { color: var(--muted); font-style: normal; }
-.hero-data .hd-fecha { font-size: var(--fs-small); font-weight: 700; }
+.hero-data .hd-fecha { font-family: var(--serif); font-weight: 400; font-size: 1.375rem; letter-spacing: -.005em; }
 .hero-data a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
-.hd-k { display: block; margin-bottom: 8px; font-size: var(--fs-label); font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-@media (min-width: 720px) {
-  .hero-data .wrap { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-  .hero-data .wrap > p:nth-child(1) { grid-column: 1 / 7; }
-  .hero-data .wrap > p:nth-child(2) { grid-column: 7 / 13; }
-  .hero-data .wrap > p:nth-child(3) { grid-column: 1 / 7; }
-  .hero-data .wrap > p:nth-child(4) { grid-column: 7 / 13; }
+.hd-k { display: block; margin-bottom: 10px; font-size: var(--fs-label); font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 760px) {
+  .hero-data .hd-fecha { font-size: var(--fs-small); }
 }
-@media (min-width: 1000px) {
-  .hero-data .wrap > p:nth-child(1) { grid-column: 1 / 4; }
-  .hero-data .wrap > p:nth-child(2) { grid-column: 4 / 7; }
-  .hero-data .wrap > p:nth-child(3) { grid-column: 7 / 10; }
-  .hero-data .wrap > p:nth-child(4) { grid-column: 10 / 13; }
+@media (min-width: 1200px) {
+  .hero-data .wrap { grid-template-columns: auto minmax(0, 1fr); column-gap: 48px; }
+  .hero-data .wrap > p:nth-child(1) { white-space: nowrap; }
+  .hero-data .wrap > p:nth-child(2) { padding-left: 48px; border-left: 1px solid var(--line-strong); }
 }
 
 /* Hero en tablet y móvil: foto arriba sin texto encima, decisión debajo en ciruela */
@@ -431,7 +429,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
    8 · Instructora: una ficha, dos veces igual (foto 1–5 · texto 7–12)
    ========================================================================= */
 .teacher .teacher-grid, .teacher .teacher-grid--alt { display: grid; gap: 32px var(--gap); margin-top: 0; align-items: start; }
-.teacher .teacher-grid + .teacher-grid { margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--line); }
+.teacher .teacher-grid + .teacher-grid { margin-top: 64px; padding-top: 0; border-top: 0; }
 .teacher .teacher-photo, .teacher .teacher-photo--alt { margin: 0; position: static; }
 .teacher .teacher-photo::before, .teacher .teacher-photo::after { content: none; display: none; }
 .teacher .teacher-photo img, .teacher .teacher-photo--alt img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 50% 25%; }
@@ -446,7 +444,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 .person h3 { margin: 0 0 12px; }
 .role { margin: 0 0 24px; font-size: var(--fs-label); font-weight: 600; line-height: 1.6; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .teacher .person p:not(.role) { max-width: none; font-size: var(--fs-body); }
-.teacher .signature, .teacher .person-quote { margin: 32px 0 0; padding: 32px 0 0; border: 0; border-top: 1px solid var(--line); }
+.teacher .signature, .teacher .person-quote { margin: 32px 0 0; padding: 0; border: 0; }
 .teacher .signature img { width: 180px; }
 .person-quote p { max-width: none; font-size: var(--fs-quote); line-height: 1.4; }
 @media (min-width: 720px) {
@@ -560,7 +558,7 @@ html[data-formato="intensivo"] .fmt-tarjeta--intensivo { border-top-color: var(-
 @media (max-width: 760px) {
   .book-btns .btn { font-size: .8125rem; letter-spacing: 1px; padding-inline: 12px; }
   .score-num { font-size: 3.5rem; }
-  .hero-data .wrap { gap: 14px var(--gap); padding-block: 24px; }
+  .hero-data .wrap { gap: 22px var(--gap); padding-block: 32px; }
   .fit { gap: 28px; }
   .fmt-foto img { aspect-ratio: 3 / 1; }
   .fmt-cuerpo { gap: 12px; padding-top: 24px; }
