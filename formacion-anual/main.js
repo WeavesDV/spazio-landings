@@ -65,31 +65,7 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) cerrar(); });
   }
 
-  /* Formato de entrega: fin de semana o intensivo.
-     Un solo estado en <html data-formato>, y las secciones con data-fmt se muestran u ocultan.
-     El selector y las tarjetas de «dos maneras» comparten el mismo estado. */
-  var opts = document.querySelectorAll('[data-elegir]');
-  if (opts.length) {
-    var aplicarFormato = function (formato, mover) {
-      if (formato !== 'anual' && formato !== 'intensivo') return;
-      document.documentElement.dataset.formato = formato;
-      document.querySelectorAll('.fmt-opt').forEach(function (b) {
-        var on = b.dataset.elegir === formato;
-        b.classList.toggle('is-active', on);
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-      var destino = document.getElementById(formato === 'anual' ? 'calendario' : 'intensivo');
-      if (mover && destino) destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-    opts.forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        if (el.tagName === 'A') e.preventDefault();
-        aplicarFormato(el.dataset.elegir, el.tagName === 'A');
-      });
-    });
-  }
-
-  /* Sede del calendario: Madrid por defecto, Barcelona a un clic. */
+  /* Sede del calendario: Barcelona por defecto, Madrid a un clic. */
   var sedes = document.querySelectorAll('[data-sede-btn]');
   if (sedes.length) {
     var aplicarSede = function (sede) {
@@ -101,6 +77,7 @@
         b.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
     };
+    aplicarSede(document.documentElement.dataset.sede === 'madrid' ? 'madrid' : 'barcelona');
     sedes.forEach(function (b) {
       b.addEventListener('click', function () { aplicarSede(b.dataset.sedeBtn); });
     });
