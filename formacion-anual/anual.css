@@ -161,7 +161,7 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
    WhatsApp sigue en el pie y en la reserva: aquí se oculta. */
 .hero-data .wrap { display: grid; gap: 24px var(--gap); padding-block: 32px; }
 .hero-data p { margin: 0; font-size: var(--fs-small); line-height: 1.5; color: var(--text); }
-.hero-data p:nth-child(n+5) { display: none; }
+.hero-data p:nth-child(n+4) { display: none; }
 .hero-data em { color: var(--muted); font-style: normal; }
 .hero-data .hd-fecha { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.875rem; line-height: 1.2; letter-spacing: -.005em; }
 .hero-data .hd-pend { color: var(--muted); }
@@ -174,21 +174,21 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .hd-k { margin-bottom: 6px; }
 }
 @media (min-width: 761px) and (max-width: 999px) {
-  .hero-data .wrap { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0; row-gap: 16px; }
+  .hero-data .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 0; row-gap: 16px; }
   .hero-data .hd-rotulo { grid-column: 1 / -1; }
   .hero-data .hd-fecha { font-size: 1.375rem; line-height: 1.2; }
   .hero-data .wrap > p:nth-child(n+2) { padding-inline: 20px; }
   .hero-data .wrap > p:nth-child(2) { padding-left: 0; }
-  .hero-data .wrap > p:nth-child(4) { padding-right: 0; }
+  .hero-data .wrap > p:nth-child(3) { padding-right: 0; }
   .hero-data .wrap > p:nth-child(n+3) { border-left: 1px solid var(--line-strong); }
 }
 @media (min-width: 1000px) {
-  .hero-data .wrap { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0; row-gap: 20px; }
+  /* Dos datos anclados a los dos bordes de la banda (Barcelona a la izquierda, Madrid a la derecha):
+     el aire queda en el centro, que es lo que se lee como equilibrado. */
+  .hero-data .wrap { grid-template-columns: auto 1fr auto; row-gap: 20px; }
   .hero-data .hd-rotulo { grid-column: 1 / -1; }
-  .hero-data .wrap > p:nth-child(n+2) { padding-inline: 28px; }
-  .hero-data .wrap > p:nth-child(2) { padding-left: 0; }
-  .hero-data .wrap > p:nth-child(4) { padding-right: 0; }
-  .hero-data .wrap > p:nth-child(n+3) { border-left: 1px solid var(--line-strong); }
+  .hero-data .wrap > p:nth-child(2) { grid-column: 1; }
+  .hero-data .wrap > p:nth-child(3) { grid-column: 3; justify-self: end; }
 }
 
 /* Hero en tablet y móvil: foto arriba sin texto encima, decisión debajo en ciruela */
@@ -234,11 +234,11 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 @media (min-width: 720px) {
   .questions .wrap { grid-template-columns: repeat(12, minmax(0, 1fr)); row-gap: 44px; }
   .questions .split { grid-column: 1 / -1; margin-bottom: 0; }
-  .fit { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto repeat(3, auto); row-gap: 0; }
-  .fit-col { display: grid; grid-template-rows: subgrid; grid-row: span 4; }
-  .fit-list { display: grid; grid-template-rows: subgrid; grid-row: span 3; }
+  .fit { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto repeat(5, auto); row-gap: 0; }
+  .fit-col { display: grid; grid-template-rows: subgrid; grid-row: span 6; }
+  .fit-list { display: grid; grid-template-rows: subgrid; grid-row: span 5; }
   .fit-note { grid-column: 1 / 7; align-self: center; }
-  .questions .more { grid-column: 7 / 13; align-self: center; }
+  .questions .more { grid-column: 1 / -1; justify-self: start; align-self: start; }
 }
 
 /* =========================================================================
