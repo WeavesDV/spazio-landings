@@ -253,9 +253,9 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cuando .sec-head h2 { max-width: none; }
 .cuando-pieza { display: grid; gap: 20px; }
 .cuando-card {
-  display: grid; gap: 24px;
-  background: var(--white); border: 1px solid var(--line);
-  padding: clamp(24px, 3.2vw, 40px); max-width: 60rem;
+  display: grid; gap: 32px;
+  background: var(--paper); border: 0; border-radius: 18px;
+  padding: clamp(28px, 3.6vw, 52px) clamp(24px, 3.6vw, 48px); max-width: 60rem;
 }
 .cuando-pieza + .cuando-pieza { margin-top: var(--sect-sm); }
 .cuando-sub { margin: 20px 0 0; font-size: var(--fs-body); color: var(--text); }
@@ -263,10 +263,16 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .sede-opt { font-size: var(--fs-h3); }
 .sede-info { margin-top: 24px; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
 .cal-list { border-top: 0; }
-.cal-list li { grid-template-columns: max-content minmax(0, 1fr); gap: 16px; padding-block: 16px; align-items: baseline; }
-.cal-list .m { font-size: var(--fs-small); white-space: nowrap; }
-.cal-list time { font-size: var(--fs-body); font-weight: 500; }
-.cal-list .st { font-size: var(--fs-small); font-weight: 400; color: var(--muted); }
+/* Diez filas en dos columnas de cinco: el numeral y su fecha se leen juntos y el panel no deja
+   un desierto a la derecha. En móvil vuelve a una sola columna. */
+@media (min-width: 761px) {
+  .cal-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: clamp(40px, 5vw, 76px); align-items: start; }
+}
+.cal-list li { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0 24px; padding-block: 14px; align-items: baseline; border-bottom: 0; }
+.cal-list .n { font-family: var(--serif); font-size: 3rem; line-height: 1; font-weight: 400; color: var(--primary); font-variant-numeric: lining-nums; }
+.cal-list li.is-done .n { opacity: .55; }
+.cal-list time { font-size: var(--fs-body); font-weight: 500; text-align: right; }
+.cal-list .st { display: block; font-size: var(--fs-small); font-weight: 400; color: var(--muted); }
 .cuando-nota { margin: 24px 0 0; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
 .sede-tabs + .sede-info { margin-top: 0; }
 .cuando-cta { display: flex; flex-wrap: wrap; gap: 16px; }
@@ -327,7 +333,7 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .program-half h3 { margin: 0 0 12px; font-size: var(--fs-h3); }
 .program-half > p { max-width: none; font-size: var(--fs-small); color: var(--muted); }
 /* Propuesta: cada mitad es un bloque de papel; el número del módulo en serif grande, sin filetes */
-.program-half { padding: var(--card-pad); background: var(--paper); }
+.program-half { padding: var(--card-pad); background: var(--paper); border-radius: 18px; }
 .program-half h3 { color: var(--accent); }
 .mod-list { margin-top: 24px; border-top: 0; }
 .program .mod-list { margin-top: 24px; }
@@ -563,7 +569,8 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .score-num { font-size: 3.5rem; }
   .hero-data .wrap { gap: 22px var(--gap); padding-block: 32px; }
   .fit { gap: 28px; }
-  .cal-list li { padding: 16px; }
+  .cal-list li { padding-block: 12px; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 0 14px; }
+  .cal-list .n { font-size: 2.4rem; }
   .mod-list li { padding-block: 10px; grid-template-columns: 60px minmax(0, 1fr); }
   .mod-list .n { font-size: 2.25rem; }
   .fit-list li { padding-block: 13px; }
