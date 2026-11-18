@@ -253,36 +253,36 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cuando .sec-head h2 { max-width: none; }
 .cuando-pieza { display: grid; gap: 20px; }
 .cuando-card {
-  display: grid; gap: 32px;
-  background: var(--paper); border: 0; border-radius: 18px;
-  padding: clamp(28px, 3.6vw, 52px) clamp(24px, 3.6vw, 48px); max-width: 60rem;
+  display: grid; gap: 0;
+  background: var(--paper);
+  border: 1px solid var(--line-strong); border-top: 3px solid var(--text);
+  padding: 6px clamp(20px, 3.4vw, 40px) clamp(22px, 2.6vw, 32px);
+  max-width: 40rem;
 }
 .cuando-pieza + .cuando-pieza { margin-top: var(--sect-sm); }
 .cuando-sub { margin: 20px 0 0; font-size: var(--fs-body); color: var(--text); }
 .sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 0; max-width: 60rem; }
 .sede-opt { font-size: var(--fs-h3); }
 .sede-info { margin-top: 24px; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
+/* Calendario: etiqueta en versalitas a la izquierda y fecha en serif a la derecha, filete por fila.
+   Base: mockup de Héctor del 18-nov (panel con filete superior, pie con el recuento y el CTA). */
 .cal-list { border-top: 0; }
-/* Diez filas en dos columnas de cinco: el numeral y su fecha se leen juntos y el panel no deja
-   un desierto a la derecha. En móvil vuelve a una sola columna. */
-@media (min-width: 761px) {
-  .cal-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: clamp(40px, 5vw, 76px); align-items: start; }
-}
-.cal-list li { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0 24px; padding-block: 14px; align-items: baseline; border-bottom: 0; }
-.cal-list .n { font-family: var(--serif); font-size: 3rem; line-height: 1; font-weight: 400; color: var(--primary); font-variant-numeric: lining-nums; }
-.cal-list li.is-done .n { opacity: .55; }
-.cal-list time { font-size: var(--fs-body); font-weight: 500; text-align: right; }
-.cal-list .st { display: block; font-size: var(--fs-small); font-weight: 400; color: var(--muted); }
+.cal-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.cal-list .m { font-family: var(--sans); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.cal-list .m .tag { color: var(--text); }
+.cal-list time { font-family: var(--serif); font-size: 1.375rem; line-height: 1.2; color: var(--text); text-align: right; }
+.cal-list time small { font-family: var(--sans); font-size: .875rem; font-weight: 400; color: var(--muted); margin-left: 6px; }
 .cuando-nota { margin: 24px 0 0; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
 .sede-tabs + .sede-info { margin-top: 0; }
+.cuando-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+.cal-count { margin: 0; font-size: .875rem; color: var(--muted); }
 .cuando-cta { display: flex; flex-wrap: wrap; gap: 16px; }
 .cuando-cta .btn { width: 100%; }
 .cuando-cta a[data-sede-panel="madrid"] { background: transparent; color: var(--accent); border-color: var(--accent); }
 @media (hover: hover) { .cuando-cta a[data-sede-panel="madrid"]:hover { background: var(--accent); color: #fff; } }
 @media (min-width: 620px) { .cuando-cta .btn { width: auto; } }
-@media (min-width: 720px) {
-  .cuando-card { grid-template-columns: minmax(0, 1fr); }
-  .cuando-cta { justify-content: flex-start; }
+@media (max-width: 600px) {
+  .cuando-foot { flex-direction: column; align-items: stretch; text-align: center; gap: 12px; }
 }
 
 
@@ -569,8 +569,8 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .score-num { font-size: 3.5rem; }
   .hero-data .wrap { gap: 22px var(--gap); padding-block: 32px; }
   .fit { gap: 28px; }
-  .cal-list li { padding-block: 12px; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 0 14px; }
-  .cal-list .n { font-size: 2.4rem; }
+  .cal-list li { padding: 14px 0; }
+  .cal-list time { font-size: 1.1875rem; }
   .mod-list li { padding-block: 10px; grid-template-columns: 60px minmax(0, 1fr); }
   .mod-list .n { font-size: 2.25rem; }
   .fit-list li { padding-block: 13px; }
