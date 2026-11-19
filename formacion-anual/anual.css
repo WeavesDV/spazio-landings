@@ -252,6 +252,10 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cuando .sec-head { display: block; margin: 0; }
 .cuando .sec-head h2 { max-width: none; }
 .cuando-pieza { display: grid; gap: 20px; }
+/* Sección centrada (pedido de Héctor, 18-nov): cabecera, pestañas, nota y panel comparten eje */
+.cuando .sec-head, .cuando .sec-sub, .sede-info { text-align: center; }
+.sede-tabs, .sede-info, .cuando-card { margin-inline: auto; }
+.sede-tabs { justify-content: center; }
 .cuando-card {
   display: grid; gap: 0;
   background: var(--paper);
