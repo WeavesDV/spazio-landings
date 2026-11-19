@@ -339,7 +339,9 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .program-half h3 { color: var(--accent); }
 .mod-list { margin-top: 24px; border-top: 0; }
 .program .mod-list { margin-top: 24px; }
-.mod-list li { grid-template-columns: 76px minmax(0, 1fr); gap: 12px; align-items: start; padding-block: 14px; border-bottom: 0; font-size: var(--fs-small); line-height: 1.6; }
+.mod-list li { grid-template-columns: 7px minmax(0, 1fr); gap: 16px; align-items: start; padding-block: 14px; border-bottom: 0; font-size: var(--fs-small); line-height: 1.6; }
+/* viñetas en lugar de los numerales 01-10 (pedido de Héctor, 18-nov) */
+.mod-list li::before { content: ""; width: 6px; height: 6px; margin-top: .6em; border-radius: 50%; background: var(--primary); }
 .mod-list .n { font-size: 2.75rem; line-height: .95; color: var(--primary); }
 @media (min-width: 720px) {
   .program { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto repeat(5, auto); row-gap: 0; }
@@ -574,8 +576,7 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .cal-list li { padding: 14px 0; }
   .cal-list time { font-size: 1.25rem; }
   .cal-list .m { font-size: .875rem; }
-  .mod-list li { padding-block: 10px; grid-template-columns: 60px minmax(0, 1fr); }
-  .mod-list .n { font-size: 2.25rem; }
+  .mod-list li { padding-block: 10px; grid-template-columns: 7px minmax(0, 1fr); }
   .fit-list li { padding-block: 13px; }
   .price-card .checks { gap: 10px; margin-bottom: 24px; }
   .pc-price { margin: 20px 0; padding-block: 20px; }
