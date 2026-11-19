@@ -280,6 +280,9 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 /* =========================================================================
    4 · Precio: tarjeta única + foto, en dos mitades
    ========================================================================= */
+.price-lines { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+.price-lines li { margin: 0; padding: 0; }
+.price-lines b { font-weight: 600; color: var(--text); }
 .price-layout { display: grid; gap: var(--gap); margin-top: 0; align-items: stretch; }
 .price-layout .cards--single { grid-template-columns: minmax(0, 1fr) !important; max-width: none; margin: 0; }
 .price-card { padding: var(--card-pad); }
