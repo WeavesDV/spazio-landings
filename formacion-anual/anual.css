@@ -256,17 +256,17 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cuando-pieza { display: grid; gap: 20px; }
 /* Sección centrada (pedido de Héctor, 18-nov): cabecera, pestañas, nota y panel comparten eje */
 .cuando .sec-head, .cuando .sec-sub, .sede-info { text-align: center; }
-.sede-tabs, .sede-info, .cuando-card { margin-inline: auto; }
+.sede-tabs, .sede-info, .cuando-sub, .cuando-card { margin-inline: auto; }
 .sede-tabs { justify-content: center; }
 .cuando-card {
   display: grid; gap: 0;
   background: var(--paper);
   border: 1px solid var(--line-strong); border-top: 3px solid var(--text);
   padding: 6px clamp(20px, 3.4vw, 40px) clamp(22px, 2.6vw, 32px);
-  max-width: 40rem;
+  width: 100%; max-width: 40rem;
 }
 .cuando-pieza + .cuando-pieza { margin-top: var(--sect-sm); }
-.cuando-sub { margin: 20px 0 0; font-size: var(--fs-body); color: var(--text); }
+.cuando-sub { margin: 20px auto 0; font-size: var(--fs-body); color: var(--text); }
 .sede-tabs { display: flex; gap: 32px; margin-top: 0; border-bottom: 0; max-width: 60rem; }
 .sede-opt { font-size: var(--fs-h3); }
 .sede-info { margin-top: 24px; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
