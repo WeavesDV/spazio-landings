@@ -276,16 +276,13 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cal-list time { font-family: var(--serif); font-size: 1.5rem; line-height: 1.2; color: var(--text); text-align: right; }
 .cal-list time small { font-family: var(--sans); font-size: .9375rem; font-weight: 400; color: var(--muted); margin-left: 6px; }
 .cuando-nota { margin: 24px 0 0; max-width: 60ch; font-size: var(--fs-small); color: var(--muted); }
-.cuando-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+.cuando-foot { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 32px; text-align: center; }
 .cal-count { margin: 0; font-size: .875rem; color: var(--muted); }
-.cuando-cta { display: flex; flex-wrap: wrap; gap: 16px; }
+.cuando-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
 .cuando-cta .btn { width: 100%; }
 .cuando-cta a[data-sede-panel="madrid"] { background: transparent; color: var(--accent); border-color: var(--accent); }
 @media (hover: hover) { .cuando-cta a[data-sede-panel="madrid"]:hover { background: var(--accent); color: #fff; } }
 @media (min-width: 620px) { .cuando-cta .btn { width: auto; } }
-@media (max-width: 600px) {
-  .cuando-foot { flex-direction: column; align-items: stretch; text-align: center; gap: 12px; }
-}
 
 
 /* =========================================================================
