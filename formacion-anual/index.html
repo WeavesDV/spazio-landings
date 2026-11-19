@@ -18,7 +18,7 @@
   -->
   <link rel="stylesheet" href="fonts.css?v=45">
   <link rel="stylesheet" href="styles.css?v=47">
-  <link rel="stylesheet" href="anual.css?v=80">
+  <link rel="stylesheet" href="anual.css?v=81">
 </head>
 <body>
 
@@ -119,59 +119,64 @@
     </div>
   </section>
 
-  <!-- BLOQUE 2c · CUÁNDO: cambia con el formato. Una sede a la vez; el selector de sede es el único control. -->
+  <!-- BLOQUE 2c · CUÁNDO: las dos sedes a la vez, cada una con su tarjeta (guía de Héctor, 18-nov) -->
   <section class="section cuando" id="calendario" aria-label="Fechas y sedes">
     <div class="wrap">
-      <!-- Fin de semana -->
-            <div class="cuando-pieza">
-        <header class="sec-head">
-            <div class="sec-head-title">
-              <p class="label">Fechas de los diez módulos</p>
-              <h2>Calendario del <em>formato de fin de semana</em></h2>
-            </div>
-          </header>
-        <p class="cuando-sub sec-sub">Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Barcelona o en Madrid.</p>
-        <div class="sede-tabs" role="group" aria-label="Elegir sede">
-            <button type="button" class="sede-opt is-active" data-sede-btn="barcelona" aria-pressed="true">Barcelona</button>
-            <button type="button" class="sede-opt" data-sede-btn="madrid" aria-pressed="false">Madrid</button>
-          </div>
-        <div class="cuando-card">
-          <div class="cuando-fechas">
-          <ol class="cal-list" data-sede-panel="barcelona" aria-label="Fechas en Barcelona">
-            <li class="is-next"><span class="m">Módulo 01<span class="tag"> · Inicio</span></span><time datetime="2027-02-20">20-21 <small>feb 2027</small></time></li>
-            <li><span class="m">Módulo 02</span><time datetime="2027-03-20">20-21 <small>mar 2027</small></time></li>
-            <li><span class="m">Módulo 03</span><time datetime="2027-04-24">24-25 <small>abr 2027</small></time></li>
-            <li><span class="m">Módulo 04</span><time datetime="2027-05-22">22-23 <small>may 2027</small></time></li>
-            <li><span class="m">Módulo 05</span><time datetime="2027-06-19">19-20 <small>jun 2027</small></time></li>
-            <li><span class="m">Módulo 06</span><time datetime="2027-07-03">3-4 <small>jul 2027</small></time></li>
-            <li><span class="m">Módulo 07</span><time datetime="2027-09-18">18-19 <small>sep 2027</small></time></li>
-            <li><span class="m">Módulo 08</span><time datetime="2027-10-16">16-17 <small>oct 2027</small></time></li>
-            <li><span class="m">Módulo 09</span><time datetime="2027-11-13">13-14 <small>nov 2027</small></time></li>
-            <li><span class="m">Módulo 10</span><time datetime="2027-12-11">11-12 <small>dic 2027</small></time></li>
-          </ol>
-          <ol class="cal-list" data-sede-panel="madrid" aria-label="Fechas en Madrid">
-            <li class="is-done"><span class="m">Módulo 01<span class="tag"> · en curso</span></span><time datetime="2026-10-24">24-25 <small>oct 2026</small></time></li>
-            <li class="is-next"><span class="m">Módulo 02<span class="tag"> · Inicio</span></span><time datetime="2026-11-21">21-22 <small>nov 2026</small></time></li>
-            <li><span class="m">Módulo 03</span><time datetime="2026-12-19">19-20 <small>dic 2026</small></time></li>
-            <li><span class="m">Módulo 04</span><time datetime="2027-01-16">16-17 <small>ene 2027</small></time></li>
-            <li><span class="m">Módulo 05</span><time datetime="2027-02-13">13-14 <small>feb 2027</small></time></li>
-            <li><span class="m">Módulo 06</span><time datetime="2027-03-13">13-14 <small>mar 2027</small></time></li>
-            <li><span class="m">Módulo 07</span><time datetime="2027-04-10">10-11 <small>abr 2027</small></time></li>
-            <li><span class="m">Módulo 08</span><time datetime="2027-05-08">8-9 <small>may 2027</small></time></li>
-            <li><span class="m">Módulo 09</span><time datetime="2027-06-12">12-13 <small>jun 2027</small></time></li>
-            <li><span class="m">Módulo 10</span><time datetime="2027-07-03">3-4 <small>jul 2027</small></time></li>
-          </ol>
+      <header class="sec-head">
+        <div class="sec-head-title">
+          <p class="label">Fechas de los diez módulos</p>
+          <h2>Calendario del <em>formato de fin de semana</em></h2>
         </div>
-          <div class="cuando-foot">
-          <p class="cal-count">10 módulos · 20 días de formación</p>
-          <div class="cuando-cta">
-          <a class="btn btn--solid btn--sm" data-sede-panel="barcelona" href="#reserva">Reservar en Barcelona</a>
-          <a class="btn btn--solid btn--sm" data-sede-panel="madrid" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a>
-          </div>
-        </div>
-        </div>
-      </div>
+      </header>
+      <p class="cuando-sub sec-sub">Un fin de semana al mes, sábado y domingo de 10:00 a 19:30, en Barcelona o en Madrid.</p>
 
+      <div class="cities">
+        <section class="cal-card" aria-label="Calendario de Barcelona">
+          <div class="cal-card-head">
+            <h3>Barcelona</h3>
+            <span class="cal-status">Nuevo grupo · Inscripción abierta</span>
+          </div>
+          <ol class="cal-list">
+            <li class="is-next"><span class="m">Módulo 01<span class="state"> · Próximo</span></span><time datetime="2027-02-20"><span class="d">20-21</span><span class="mo">feb</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 02</span><time datetime="2027-03-20"><span class="d">20-21</span><span class="mo">mar</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 03</span><time datetime="2027-04-24"><span class="d">24-25</span><span class="mo">abr</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 04</span><time datetime="2027-05-22"><span class="d">22-23</span><span class="mo">may</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 05</span><time datetime="2027-06-19"><span class="d">19-20</span><span class="mo">jun</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 06</span><time datetime="2027-07-03"><span class="d">3-4</span><span class="mo">jul</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 07</span><time datetime="2027-09-18"><span class="d">18-19</span><span class="mo">sep</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 08</span><time datetime="2027-10-16"><span class="d">16-17</span><span class="mo">oct</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 09</span><time datetime="2027-11-13"><span class="d">13-14</span><span class="mo">nov</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 10</span><time datetime="2027-12-11"><span class="d">11-12</span><span class="mo">dic</span><span class="yr">2027</span></time></li>
+          </ol>
+          <div class="cal-foot">
+            <a class="btn btn--solid btn--block" href="#reserva">Reservar en Barcelona</a>
+            <p class="cal-note">Matrícula de 500&nbsp;€, reembolsable</p>
+          </div>
+        </section>
+
+        <section class="cal-card" aria-label="Calendario de Madrid">
+          <div class="cal-card-head">
+            <h3>Madrid</h3>
+            <span class="cal-status">Grupo en curso</span>
+          </div>
+          <ol class="cal-list">
+            <li class="is-past"><span class="m">Módulo 01<span class="state"> · Realizado</span></span><time datetime="2026-10-24"><span class="d">24-25</span><span class="mo">oct</span><span class="yr">2026</span></time></li>
+            <li class="is-next"><span class="m">Módulo 02<span class="state"> · Próximo</span></span><time datetime="2026-11-21"><span class="d">21-22</span><span class="mo">nov</span><span class="yr">2026</span></time></li>
+            <li><span class="m">Módulo 03</span><time datetime="2026-12-19"><span class="d">19-20</span><span class="mo">dic</span><span class="yr">2026</span></time></li>
+            <li><span class="m">Módulo 04</span><time datetime="2027-01-16"><span class="d">16-17</span><span class="mo">ene</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 05</span><time datetime="2027-02-13"><span class="d">13-14</span><span class="mo">feb</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 06</span><time datetime="2027-03-13"><span class="d">13-14</span><span class="mo">mar</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 07</span><time datetime="2027-04-10"><span class="d">10-11</span><span class="mo">abr</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 08</span><time datetime="2027-05-08"><span class="d">8-9</span><span class="mo">may</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 09</span><time datetime="2027-06-12"><span class="d">12-13</span><span class="mo">jun</span><span class="yr">2027</span></time></li>
+            <li><span class="m">Módulo 10</span><time datetime="2027-07-03"><span class="d">3-4</span><span class="mo">jul</span><span class="yr">2027</span></time></li>
+          </ol>
+          <div class="cal-foot">
+            <a class="btn btn--outline btn--block" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Anual%20en%20Madrid" target="_blank" rel="noopener">Preguntar por Madrid</a>
+            <p class="cal-note">Te contamos si aún puedes incorporarte</p>
+          </div>
+        </section>
+      </div>
     </div>
   </section>
 
