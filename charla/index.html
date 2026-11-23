@@ -79,7 +79,15 @@
   .retrato figcaption{font-family:var(--serif);font-size:18px;line-height:1.45;color:var(--plum);
     margin-top:16px;padding-top:14px;border-top:1px solid var(--line);max-width:34ch}
   .cierre-datos{margin:0;font-size:16px;line-height:1.7;color:var(--plum-soft)}
-  .form-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+  .reserva{background:var(--cream)}
+  .form-wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:start}
+  .reserva-txt .label{color:var(--mauve)}
+  .reserva-txt h2{font-size:clamp(28px,3.4vw,42px);max-width:20ch;margin-bottom:20px}
+  .reserva-txt h2 em{font-style:italic}
+  .mini{list-style:none;margin:26px 0 0;padding:0}
+  .mini li{position:relative;padding:0 0 12px 26px;color:var(--plum-soft);font-size:16px}
+  .mini li:before{content:"";position:absolute;left:0;top:12px;width:12px;height:1px;background:var(--mauve)}
+  .form.card{background:#fff;border:1px solid var(--line);padding:34px 30px 30px}
   .form{display:grid;gap:14px}
   .form label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mauve)}
   .form input[type=text],.form input[type=email],.form input[type=tel]{
@@ -110,6 +118,7 @@
     section.blk{padding:52px 0}
     .cols{grid-template-columns:1fr;gap:26px}
     .form-wrap{grid-template-columns:1fr;gap:30px}
+    .form.card{padding:26px 22px 22px}
     .cierre{padding:56px 0 62px}
     .cierre-in{grid-template-columns:1fr;gap:34px}
   }
@@ -178,15 +187,20 @@
     </div>
   </section>
 
-  <section class="blk" id="reserva">
+  <section class="blk reserva" id="reserva">
     <div class="wrap form-wrap">
-      <div>
-        <h2>Inscripción a la charla en Barcelona</h2>
+      <div class="reserva-txt">
+        <p class="label">Reserva de plaza</p>
+        <h2>Inscripción a la charla <em>en Barcelona</em></h2>
         <p>Déjanos tus datos y te confirmamos el sitio por email. Si luego no puedes venir, avísanos y liberamos la plaza.</p>
-        <p class="form-nota">La charla es gratuita.</p>
+        <ul class="mini">
+          <li>Charla gratuita, 22 de enero a las 18:30.</li>
+          <li>Hora y media, en la Sede Central de Barcelona.</li>
+          <li>Te confirmamos la plaza por email.</li>
+        </ul>
       </div>
       <!-- FORM: en WordPress se sustituye por el formulario del plugin de reservas -->
-      <form class="form" method="post" action="#reserva">
+      <form class="form card" method="post" action="#reserva">
         <label>Nombre y apellido<input type="text" name="nombre" autocomplete="name" required></label>
         <label>Email<input type="email" name="email" autocomplete="email" required></label>
         <label>WhatsApp<input type="tel" name="telefono" autocomplete="tel" required></label>
