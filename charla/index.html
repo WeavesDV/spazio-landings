@@ -108,8 +108,29 @@
   .form .btn{margin-top:6px;border:0;cursor:pointer;font-family:var(--sans)}
   .form-aviso{margin:2px 0 0;font-size:12px;color:var(--mauve)}
   .form-nota{font-size:14px;color:var(--mauve)}
-  footer{padding:34px 0 42px;font-size:13px;color:var(--mauve)}
-  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  /* pie de página (mismo patrón que la landing de Formación Anual) */
+  .site-footer{background:var(--accent);color:rgb(251 248 246/.85);padding:72px 0 28px;font-size:1rem}
+  .site-footer a{text-decoration:none}
+  .site-footer a:hover{text-decoration:underline;text-underline-offset:5px}
+  .site-footer :focus-visible{outline-color:var(--white)}
+  .footer-main{display:grid;grid-template-columns:3fr 4fr 3fr 2fr;gap:40px;padding-bottom:38px}
+  .wordmark{display:inline-flex;align-items:center;gap:.7rem;color:#fff;font-family:var(--serif);font-size:1.35rem;letter-spacing:-.005em}
+  .isotipo{width:38px;height:38px;display:block}
+  .footer-name{margin:.7rem 0 0;color:rgb(251 248 246/.6);font-size:.875rem}
+  .footer-h{font-family:var(--sans);font-weight:700;font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin:0 0 14px}
+  .site-footer address{font-style:normal;font-size:.95rem;line-height:1.6}
+  .site-footer address span{display:block;color:#fff}
+  .site-footer address p{margin:0 0 .6rem}
+  .footer-col p{margin:0 0 .4rem}
+  .footer-col a{color:#fff}
+  .social{list-style:none;margin:14px 0 0;padding:0;display:flex;gap:.6rem}
+  .social a{display:grid;place-content:center;width:2.6rem;height:2.6rem;border:1px solid rgb(251 248 246/.35);color:rgb(251 248 246/.85);transition:background .2s,color .2s}
+  .social a:hover{background:#fff;color:var(--accent);border-color:#fff;text-decoration:none}
+  .footer-nav{display:flex;flex-direction:column;gap:.5rem;font-size:.95rem}
+  .footer-legal{padding-top:22px;border-top:1px solid rgb(251 248 246/.18)}
+  .legal{display:flex;flex-wrap:wrap;gap:24px;font-size:.82rem;margin:0}
+  @media (max-width:900px){.footer-main{grid-template-columns:1fr 1fr;gap:32px}}
+  @media (max-width:600px){.site-footer{padding:52px 0 24px}.footer-main{grid-template-columns:1fr;gap:28px}}
   @media (max-width:900px){
     .datos{grid-template-columns:repeat(2,minmax(0,1fr))}
     .dato:nth-child(3){padding-left:0;border-left:0;border-top:1px solid var(--line)}
@@ -161,7 +182,7 @@
     </div>
   </section>
 
-  <section class="blk">
+  <section class="blk" id="que-vas-a-ver">
     <div class="wrap cols">
       <div>
         <h2>Qué vas a ver</h2>
@@ -180,7 +201,7 @@
     </div>
   </section>
 
-  <section class="blk">
+  <section class="blk" id="quien-imparte">
     <div class="wrap cols quiente">
       <figure class="retrato">
         <img src="../formacion-anual/img/sujati.webp" alt="Sujati, directora y fundadora de Spazio Bodywork®">
@@ -238,10 +259,56 @@
   </section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <span>Spazio Bodywork® · Barcelona</span>
-    <span>info@spaziobodywork.com · +34 693 059 088</span>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="wordmark" href="https://spaziobodywork.com/" target="_blank" rel="noopener">
+          <img class="isotipo" src="../formacion-anual/img/isotipo-spazio.webp" width="256" height="256" alt="">
+          <span>Spazio Bodywork<sup>®</sup></span>
+        </a>
+        <p class="footer-name">Instituto Spazio Bodywork®</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-h">Sedes</h2>
+        <address>
+          <p><span>Barcelona</span> Spazio Bodywork · C/ Viladomat 152, 2ª planta, 08015</p>
+          <p><span>Madrid</span> Espacio Calithai · C/ Gonzalo de Córdoba 17, oficina B, 28010</p>
+        </address>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h2 class="footer-h">Contacto</h2>
+        <p><a href="tel:+34693059088">+34 693 059 088</a></p>
+        <p><a href="mailto:info@spaziobodywork.com">info@spaziobodywork.com</a></p>
+        <p><a href="https://spaziobodywork.com/" target="_blank" rel="noopener">spaziobodywork.com</a></p>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/spaziobodywork/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.facebook.com/Spaziobodywork" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@spaziobodywork4322" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.2 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col footer-nav" aria-label="Secciones">
+        <a href="#que-vas-a-ver">Qué vas a ver</a>
+        <a href="#quien-imparte">Quién imparte</a>
+        <a href="#reserva">Reservar</a>
+        <a href="../formacion-anual/">Formación Anual</a>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      <nav class="legal" aria-label="Legal">
+        <a href="https://spaziobodywork.com/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+        <a href="https://spaziobodywork.com/politicas-de-privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
+        <a href="https://spaziobodywork.com/politica-de-cookies/" target="_blank" rel="noopener">Política de cookies</a>
+        <a href="https://spaziobodywork.com/politica-de-cancelacion/" target="_blank" rel="noopener">Política de cancelación</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
