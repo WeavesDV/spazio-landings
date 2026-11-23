@@ -263,7 +263,19 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .cuando-sub { margin: 20px auto 0; font-size: var(--fs-body); color: var(--text); text-align: center; }
 
 .cities { display: grid; gap: 28px; margin-top: 40px; }
-@media (min-width: 1024px) { .cities { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; } }
+/* Las dos sedes, una al lado de otra desde 768 px y con el bloque más recogido:
+   en pantallas medianas se apilaban y quedaban lejísimos. */
+@media (min-width: 768px) { .cities { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; max-width: 1040px; margin-inline: auto; gap: 20px; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cal-card-head { padding: 20px 18px 14px; }
+  .cal-list { padding-inline: 18px; }
+  .cal-list li { padding: 10px 0; }
+  .cal-list .m { font-size: .6875rem; letter-spacing: .1em; }
+  .cal-list time { grid-template-columns: 3.1rem 2rem 2.2rem; column-gap: 4px; }
+  .cal-list .d { font-size: 1rem; }
+  .cal-list .mo, .cal-list .yr { font-size: .75rem; }
+  .cal-foot { padding: 16px 18px 18px; }
+}
 
 .cal-card {
   display: flex; flex-direction: column; min-width: 0;
