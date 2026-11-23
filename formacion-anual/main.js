@@ -42,7 +42,7 @@
       pFecha.textContent = d.fecha;
       pLugar.textContent = d.lugar;
       pImparte.textContent = 'Imparte ' + d.imparte;
-      if (pSel) pSel.textContent = d.sede + ' · ' + d.fecha;
+      if (pSel) pSel.textContent = d.sede + '\n' + d.fecha;
       panel.hidden = false;
       pClose.focus({ preventScroll: true });
     };
