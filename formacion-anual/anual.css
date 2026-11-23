@@ -210,6 +210,8 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .hero-price-box { grid-template-columns: minmax(0, 1fr); padding: 24px; }
   .hero-price-det { padding: 12px 0 0; border-left: 0; border-top: 1px solid rgb(251 248 246 / .3); }
   .hero-btns, .hero-sec-link { grid-column: auto; }
+  /* En columna, align-self:end encogía el botón y lo pegaba a la derecha */
+  .hero-btns { align-self: stretch; justify-content: stretch; }
   .hero-sec-link, .hero-btn-note { text-align: left; }
 }
 /* tablet: caja de precio y botón en una fila */
