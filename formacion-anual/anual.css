@@ -363,11 +363,11 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 .mod-list li::before { content: ""; width: 6px; height: 6px; margin-top: .6em; border-radius: 50%; background: var(--primary); }
 .mod-list .n { font-size: 2.75rem; line-height: .95; color: var(--primary); }
 @media (min-width: 720px) {
-  .program { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto repeat(5, auto); row-gap: 0; }
-  .program-half { display: grid; grid-template-rows: subgrid; grid-row: span 7; align-content: start; }
-  .program-half > p { align-self: start; }
-  .program-half .mod-list { display: grid; grid-template-rows: subgrid; grid-row: span 5; }
+  /* Cada mitad va por su cuenta: no se fuerzan filas alineadas entre las dos columnas */
+  .program { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+/* Lista de módulos: letra un punto mayor y menos aire entre líneas */
+.program .mod-list li { padding-block: 9px; font-size: 1rem; line-height: 1.45; }
 .band-photo { margin: 48px 0 0; }
 .band-photo img { width: 100%; height: clamp(160px, 18vw, 240px); object-fit: cover; object-position: 50% 40%; }
 .band-photo figcaption { padding: 14px 0 0; font-size: var(--fs-label); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
@@ -597,7 +597,7 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
   .cal-list .m { font-size: .8125rem; letter-spacing: .1em; }
   .cal-list time { grid-template-columns: 3.1rem 2rem 2.2rem; column-gap: 4px; }
   .cal-list .d { font-size: 1.1875rem; }
-  .mod-list li { padding-block: 10px; grid-template-columns: 7px minmax(0, 1fr); }
+  .mod-list li { padding-block: 8px; grid-template-columns: 7px minmax(0, 1fr); }
   .fit-list li { padding-block: 13px; }
   .price-card .checks { gap: 10px; margin-bottom: 24px; }
   .pc-price { margin: 20px 0; padding-block: 20px; }
