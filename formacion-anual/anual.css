@@ -398,7 +398,10 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 }
 .ladder .more { margin-top: 36px; }
 /* Dos pasos: talleres y esta formación. */
-@media (min-width: 640px) { .ladder .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 640px) {
+  /* Cada tarjeta mide lo que mide su texto: sin bloque blanco de relleno */
+  .ladder .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+}
 
 /* Pasos de la reserva: lista vertical con número a la izquierda */
 /* móvil: los cuatro pasos del recorrido pasan a filas compactas (el actual sigue en bloque ciruela) */
