@@ -269,9 +269,9 @@ section.reserva-sec { background: var(--paper); padding-block: var(--sect-md); }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cal-card-head { padding: 20px 18px 14px; }
   .cal-list { padding-inline: 18px; }
-  .cal-list li { padding: 10px 0; }
-  .cal-list .m { font-size: .6875rem; letter-spacing: .1em; }
-  .cal-list time { grid-template-columns: 3.1rem 2rem 2.2rem; column-gap: 4px; }
+  .cal-list li { padding: 10px 0; gap: 10px; }
+  .cal-list .m { font-size: .6875rem; letter-spacing: .08em; white-space: normal; }
+  .cal-list time { grid-template-columns: 2.9rem 1.9rem 2.1rem; column-gap: 3px; }
   .cal-list .d { font-size: 1rem; }
   .cal-list .mo, .cal-list .yr { font-size: .75rem; }
   .cal-foot { padding: 16px 18px 18px; }
