@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Charla · Formación Anual de Masaje Californiano Psicosomático · Barcelona</title>
-<meta name="description" content="Charla de presentación de la Formación Anual de Masaje Californiano Psicosomático. Barcelona, 27 de enero de 2027.">
+<meta name="description" content="Charla de presentación de la Formación Anual de Masaje Californiano Psicosomático. Barcelona, 22 de enero de 2027, de 18:30 a 20:00.">
 <style>
   :root{
     --plum:#433e49; --plum-soft:#5c5566; --mauve:#928491; --line:#e2dcd6; --line-soft:#efeae5;
@@ -55,6 +55,19 @@
   .retrato{margin:0}
   .retrato img{width:100%;height:auto;display:block;filter:saturate(.95)}
   .cierre-datos{margin:0;font-size:15px;color:var(--plum)}
+  .form-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+  .form{display:grid;gap:14px}
+  .form label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mauve)}
+  .form input[type=text],.form input[type=email],.form input[type=tel]{
+    display:block;width:100%;margin-top:7px;padding:12px 14px;border:1px solid var(--line);
+    background:#fff;font-family:var(--sans);font-size:16px;color:var(--ink)}
+  .form input:focus{outline:none;border-color:var(--mauve)}
+  .form .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;letter-spacing:0;text-transform:none;color:var(--plum-soft)}
+  .form .check input{margin-top:3px}
+  .form .btn{margin-top:6px;border:0;cursor:pointer;font-family:var(--sans)}
+  .form-aviso{margin:2px 0 0;font-size:12px;color:var(--mauve)}
+  .form-nota{font-size:14px;color:var(--mauve)}
+  @media (max-width:760px){.form-wrap{grid-template-columns:1fr;gap:30px}}
   footer{padding:34px 0 42px;font-size:13px;color:var(--mauve)}
   footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   @media (max-width:760px){
@@ -84,11 +97,11 @@
     <p class="lead">Un encuentro para ver cómo se enseña el masaje californiano psicosomático, qué se trabaja en cada módulo y resolver tus dudas antes de decidir.</p>
 
     <dl class="datos">
-      <div class="dato"><dt>Fecha</dt><dd>27 de enero de 2027<span>Miércoles</span></dd></div>
-      <div class="dato"><dt>Hora</dt><dd>Por confirmar<span>Te lo decimos en cuanto esté cerrada</span></dd></div>
+      <div class="dato"><dt>Fecha</dt><dd>22 de enero de 2027<span>Viernes</span></dd></div>
+      <div class="dato"><dt>Hora</dt><dd>18:30 – 20:00<span>Hora y media</span></dd></div>
       <div class="dato"><dt>Lugar</dt><dd>Spazio Bodywork<span>C/ Viladomat 152, 2ª · Barcelona</span></dd></div>
     </dl>
-    <p class="hero-cta"><a href="https://wa.me/34693059088?text=Hola%2C%20quiero%20ir%20a%20la%20charla%20del%2027%20de%20enero%20en%20Barcelona">Escríbenos por WhatsApp y te guardamos sitio</a></p>
+    <p class="hero-cta"><a href="#reserva">Reservar mi plaza</a></p>
   </div>
 
   <section class="blk">
@@ -123,12 +136,31 @@
     </div>
   </section>
 
+  <section class="blk" id="reserva">
+    <div class="wrap form-wrap">
+      <div>
+        <h2>Reserva tu plaza</h2>
+        <p>Déjanos tus datos y te confirmamos el sitio por email. Si luego no puedes venir, avísanos y liberamos la plaza.</p>
+        <p class="form-nota">Aforo limitado a la sala.</p>
+      </div>
+      <!-- FORM: en WordPress se sustituye por el formulario del plugin de reservas -->
+      <form class="form" method="post" action="#reserva">
+        <label>Nombre y apellido<input type="text" name="nombre" autocomplete="name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>WhatsApp<input type="tel" name="telefono" autocomplete="tel" required></label>
+        <label class="check"><input type="checkbox" name="consent" required> Acepto que me contactéis por este motivo.</label>
+        <button class="btn" type="submit">Enviar inscripción</button>
+        <p class="form-aviso">Formulario de muestra: en la web queda conectado al sistema de reservas.</p>
+      </form>
+    </div>
+  </section>
+
   <section class="cierre">
     <div class="wrap">
       <h2>Si quieres venir, escríbenos y te guardamos sitio</h2>
-      <p class="cierre-datos">27 de enero de 2027 · Spazio Bodywork, C/ Viladomat 152, 2ª · Barcelona</p>
-      <a class="btn" href="https://wa.me/34693059088?text=Hola%2C%20quiero%20ir%20a%20la%20charla%20del%2027%20de%20enero%20en%20Barcelona">Reservar por WhatsApp</a>
-      <p class="nota">Te confirmamos por WhatsApp.</p>
+      <p class="cierre-datos">22 de enero de 2027, 18:30 h · Spazio Bodywork, C/ Viladomat 152, 2ª · Barcelona</p>
+      <a class="btn" href="#reserva">Reservar mi plaza</a>
+      <p class="nota">Te confirmamos por email.</p>
     </div>
   </section>
 </main>
