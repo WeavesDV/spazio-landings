@@ -23,7 +23,9 @@
   .brand{font-family:var(--serif);font-size:19px;letter-spacing:.02em;text-decoration:none}
   .top a.back{font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--mauve)}
   /* hero */
-  .hero{padding:88px 0 64px}
+  .hero-foto{margin:0;background:#efeae4}
+  .hero-foto img{display:block;width:100%;height:clamp(260px,46vw,560px);object-fit:cover;object-position:50% 42%}
+  .hero{padding:64px 0 64px}
   .label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mauve);margin:0 0 22px}
   h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5.4vw,68px);line-height:1.06;letter-spacing:-.01em;margin:0;max-width:20ch;color:var(--plum)}
   h1 em{font-style:italic}
@@ -71,7 +73,8 @@
   footer{padding:34px 0 42px;font-size:13px;color:var(--mauve)}
   footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   @media (max-width:760px){
-    .hero{padding:56px 0 44px}
+    .hero{padding:40px 0 44px}
+    .hero-foto img{height:clamp(220px,56vw,340px)}
     .lead{font-size:18px}
     .datos{grid-template-columns:1fr;margin-top:36px}
     .dato{padding:16px 0}
@@ -91,6 +94,10 @@
 </header>
 
 <main>
+  <figure class="hero-foto">
+    <img src="img/charla-hero.jpg" alt="Sujati acompañando una práctica de masaje californiano ante un grupo de alumnos" fetchpriority="high">
+  </figure>
+
   <div class="wrap hero">
     <p class="label">Charla · Barcelona</p>
     <h1>Una charla para conocer la Formación Anual <em>de cerca</em></h1>
